@@ -1,6 +1,12 @@
 2004-03-10  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
-	* gtkglext.nsi.in: Rewritten for the latest NSIS 2 beta.
+	* ==== Released 1.0.6 ====
+
+	* configure.in: Version 1.0.6, binary age 6, interface age 4.
+
+2004-03-10  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
+
+	* gtkglext.nsi.in: Rewritten for the NSIS 2.0.
 
 2004-02-21  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
