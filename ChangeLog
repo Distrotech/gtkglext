@@ -1,3 +1,9 @@
+2003-11-20  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
+
+	* ==== Released 1.0.5 ====
+
+	* configure.in: Version 1.0.5, binary age 5, interface age 3.
+
 2003-11-14  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
 	* examples/low-level.c (realize): Set a background of "None" on
