@@ -46,12 +46,19 @@ print <<EOF;
 
 #include <GL/gl.h>
 
-#include <gdk/GL/glext.h>
-#include <gdk/GL/glext-extra.h>
-
+#include <gdk/gdkgldefs.h>
 #include <gdk/gdkglquery.h>
 
 G_BEGIN_DECLS
+
+#ifndef HAVE_GLHALFNV
+#if defined(GL_NV_half_float) && defined(GDKGLEXT_NEED_GLHALFNV_TYPEDEF)
+typedef unsigned short GLhalfNV;
+#endif
+#endif
+
+#include <gdk/GL/glext.h>
+#include <gdk/GL/glext-extra.h>
 
 EOF
 #---------------

@@ -1,3 +1,10 @@
+2003-07-28  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
+
+	* gdk/gdkglglext.h: 
+	* gdk/GL/gen-gdkglglext-h.pl: Typedef GLhalfNV if needed.
+
+	* configure.in: Check whether GLhalfNV typedef is needed.
+
 2003-07-27  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
 	* ==== Released 1.0.1 ====
