@@ -30,7 +30,9 @@
 #include <windows.h>
 #endif
 
+#define __glext_h_
 #include <GL/gl.h>
+#undef __glext_h_
 
 #include <gdk/gdkgldefs.h>
 #include <gdk/gdkglquery.h>
