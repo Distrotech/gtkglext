@@ -333,7 +333,7 @@ fi
 AC_SUBST([REBUILD])
 
 # Honor aclocal flags
-ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
+ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS -I $srcdir/m4macros"
 
 ## Initial sanity check, done here so that users get told they 
 ## have the wrong dependencies as early in the process as possible.
@@ -1009,12 +1009,13 @@ gdk/x11/Makefile
 gdk/win32/Makefile
 gtk/Makefile
 gtk/gtkglversion.h
-examples/Makefile
+m4macros/Makefile
 docs/Makefile
 docs/reference/Makefile
 docs/reference/gtkglext/Makefile
 docs/reference/gtkglext/version.xml
-m4macros/Makefile
+examples/Makefile
+examples/glade/Makefile
 ])
 
 AC_OUTPUT

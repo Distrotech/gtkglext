@@ -83,7 +83,7 @@ gdk_gl_window_impl_win32_class_init (GdkGLWindowImplWin32Class *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-  GDK_GL_NOTE (FUNC, g_message (" -- gdk_gl_window_impl_win32_class_init ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   parent_class = g_type_class_peek_parent (klass);
 
@@ -95,7 +95,7 @@ _gdk_gl_window_destroy (GdkGLWindow *glwindow)
 {
   GdkGLWindowImplWin32 *impl = GDK_GL_WINDOW_IMPL_WIN32 (glwindow);
 
-  GDK_GL_NOTE (FUNC, g_message (" -- _gdk_gl_window_destroy ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   if (impl->is_destroyed)
     return;
@@ -112,7 +112,7 @@ _gdk_gl_window_destroy (GdkGLWindow *glwindow)
     {
       glFinish ();
 
-      GDK_GL_NOTE (IMPL, g_message (" * wglMakeCurrent ()"));
+      GDK_GL_NOTE_FUNC_IMPL ("wglMakeCurrent");
       wglMakeCurrent (NULL, NULL);
     }
 
@@ -131,7 +131,7 @@ gdk_gl_window_impl_win32_finalize (GObject *object)
 {
   GdkGLWindowImplWin32 *impl = GDK_GL_WINDOW_IMPL_WIN32 (object);
 
-  GDK_GL_NOTE (FUNC, g_message (" -- gdk_gl_window_impl_win32_finalize ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   _gdk_gl_window_destroy (GDK_GL_WINDOW (object));
 
@@ -143,7 +143,7 @@ gdk_gl_window_impl_win32_finalize (GObject *object)
 static void
 gdk_gl_window_impl_win32_gl_drawable_interface_init (GdkGLDrawableClass *iface)
 {
-  GDK_GL_NOTE (FUNC, g_message (" -- gdk_gl_window_impl_win32_gl_drawable_interface_init ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   iface->create_new_context   = _gdk_win32_gl_context_new;
   iface->make_context_current =  gdk_gl_window_impl_win32_make_context_current;
@@ -176,7 +176,7 @@ gdk_gl_window_new (GdkGLConfig *glconfig,
   PIXELFORMATDESCRIPTOR pfd;
   int pixel_format;
 
-  GDK_GL_NOTE (FUNC, g_message (" - gdk_gl_window_new ()"));
+  GDK_GL_NOTE_FUNC ();
 
   g_return_val_if_fail (GDK_IS_GL_CONFIG_IMPL_WIN32 (glconfig), NULL);
   g_return_val_if_fail (GDK_IS_WINDOW (window), NULL);
@@ -216,7 +216,7 @@ gdk_gl_window_new (GdkGLConfig *glconfig,
   /* Request pfd.cColorBits should exclude alpha bitplanes. */
   pfd.cColorBits = pfd.cRedBits + pfd.cGreenBits + pfd.cBlueBits;
 
-  GDK_GL_NOTE (IMPL, g_message (" * ChoosePixelFormat ()"));
+  GDK_GL_NOTE_FUNC_IMPL ("ChoosePixelFormat");
 
   pixel_format = ChoosePixelFormat (hdc, &pfd);
   if (pixel_format == 0)
@@ -229,7 +229,7 @@ gdk_gl_window_new (GdkGLConfig *glconfig,
    * Set pixel format.
    */
 
-  GDK_GL_NOTE (IMPL, g_message (" * SetPixelFormat ()"));
+  GDK_GL_NOTE_FUNC_IMPL ("SetPixelFormat");
 
   if (!SetPixelFormat (hdc, pixel_format, &pfd))
     {
@@ -308,7 +308,7 @@ gdk_gl_window_impl_win32_make_context_current (GdkGLDrawable *draw,
   /* Get GLRC. */
   hglrc = GDK_GL_CONTEXT_HGLRC (glcontext);
 
-  GDK_GL_NOTE (IMPL, g_message (" * wglMakeCurrent ()"));
+  GDK_GL_NOTE_FUNC_IMPL ("wglMakeCurrent");
 
   if (!wglMakeCurrent (hdc, hglrc))
     {
@@ -368,7 +368,7 @@ gdk_gl_window_impl_win32_swap_buffers (GdkGLDrawable *gldrawable)
   /* Get DC. */
   hdc = GDK_GL_WINDOW_IMPL_WIN32_HDC_GET (impl);
 
-  GDK_GL_NOTE (IMPL, g_message (" * SwapBuffers ()"));
+  GDK_GL_NOTE_FUNC_IMPL ("SwapBuffers");
 
   SwapBuffers (hdc);
 

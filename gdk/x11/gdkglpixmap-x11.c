@@ -83,7 +83,7 @@ gdk_gl_pixmap_impl_x11_class_init (GdkGLPixmapImplX11Class *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
-  GDK_GL_NOTE (FUNC, g_message (" -- gdk_gl_pixmap_impl_x11_class_init ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   parent_class = g_type_class_peek_parent (klass);
 
@@ -96,7 +96,7 @@ _gdk_gl_pixmap_destroy (GdkGLPixmap *glpixmap)
   GdkGLPixmapImplX11 *impl = GDK_GL_PIXMAP_IMPL_X11 (glpixmap);
   Display *xdisplay;
 
-  GDK_GL_NOTE (FUNC, g_message (" -- _gdk_gl_pixmap_destroy ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   if (impl->is_destroyed)
     return;
@@ -107,11 +107,11 @@ _gdk_gl_pixmap_destroy (GdkGLPixmap *glpixmap)
     {
       glXWaitGL ();
 
-      GDK_GL_NOTE (IMPL, g_message (" * glXMakeCurrent ()"));
+      GDK_GL_NOTE_FUNC_IMPL ("glXMakeCurrent");
       glXMakeCurrent (xdisplay, None, NULL);
     }
 
-  GDK_GL_NOTE (IMPL, g_message (" * glXDestroyGLXPixmap ()"));
+  GDK_GL_NOTE_FUNC_IMPL ("glXDestroyGLXPixmap");
   glXDestroyGLXPixmap (xdisplay, impl->glxpixmap);
 
   impl->glxpixmap = None;
@@ -124,7 +124,7 @@ gdk_gl_pixmap_impl_x11_finalize (GObject *object)
 {
   GdkGLPixmapImplX11 *impl = GDK_GL_PIXMAP_IMPL_X11 (object);
 
-  GDK_GL_NOTE (FUNC, g_message (" -- gdk_gl_pixmap_impl_x11_finalize ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   _gdk_gl_pixmap_destroy (GDK_GL_PIXMAP (object));
 
@@ -136,7 +136,7 @@ gdk_gl_pixmap_impl_x11_finalize (GObject *object)
 static void
 gdk_gl_pixmap_impl_x11_gl_drawable_interface_init (GdkGLDrawableClass *iface)
 {
-  GDK_GL_NOTE (FUNC, g_message (" -- gdk_gl_pixmap_impl_x11_gl_drawable_interface_init ()"));
+  GDK_GL_NOTE_FUNC_PRIVATE ();
 
   iface->create_new_context   = _gdk_x11_gl_context_new;
   iface->make_context_current =  gdk_gl_pixmap_impl_x11_make_context_current;
@@ -183,7 +183,7 @@ gdk_gl_pixmap_new (GdkGLConfig *glconfig,
 
   GdkGL_GLX_MESA_pixmap_colormap *mesa_ext;
 
-  GDK_GL_NOTE (FUNC, g_message (" - gdk_gl_pixmap_new ()"));
+  GDK_GL_NOTE_FUNC ();
 
   g_return_val_if_fail (GDK_IS_GL_CONFIG_IMPL_X11 (glconfig), NULL);
   g_return_val_if_fail (GDK_IS_PIXMAP (pixmap), NULL);
@@ -221,7 +221,7 @@ gdk_gl_pixmap_new (GdkGLConfig *glconfig,
     {
       /* If GLX_MESA_pixmap_colormap is supported. */
 
-      GDK_GL_NOTE (IMPL, g_message (" * glXCreateGLXPixmapMESA ()"));
+      GDK_GL_NOTE_FUNC_IMPL ("glXCreateGLXPixmapMESA");
 
       glxpixmap = mesa_ext->glXCreateGLXPixmapMESA (xdisplay,
                                                     xvinfo,
@@ -230,7 +230,7 @@ gdk_gl_pixmap_new (GdkGLConfig *glconfig,
     }
   else
     {
-      GDK_GL_NOTE (IMPL, g_message (" * glXCreateGLXPixmap ()"));
+      GDK_GL_NOTE_FUNC_IMPL ("glXCreateGLXPixmap");
 
       glxpixmap = glXCreateGLXPixmap (xdisplay,
                                       xvinfo,
@@ -289,7 +289,7 @@ gdk_gl_pixmap_impl_x11_make_context_current (GdkGLDrawable *draw,
     g_message (" -- Pixmap: visual id = 0x%lx",
       GDK_VISUAL_XVISUAL (gdk_drawable_get_visual (GDK_DRAWABLE (draw)))->visualid));
 
-  GDK_GL_NOTE (IMPL, g_message (" * glXMakeCurrent ()"));
+  GDK_GL_NOTE_FUNC_IMPL ("glXMakeCurrent");
 
   if (!glXMakeCurrent (GDK_GL_CONFIG_XDISPLAY (glconfig), glxpixmap, glxcontext))
     {
@@ -341,7 +341,7 @@ gdk_gl_pixmap_impl_x11_swap_buffers (GdkGLDrawable *gldrawable)
   if (glxpixmap == None)
     return;
 
-  GDK_GL_NOTE (IMPL, g_message (" * glXSwapBuffers ()"));
+  GDK_GL_NOTE_FUNC_IMPL ("glXSwapBuffers");
 
   glXSwapBuffers (xdisplay, glxpixmap);
 }

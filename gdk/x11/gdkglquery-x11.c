@@ -230,7 +230,7 @@ gdk_gl_get_proc_address (const char *proc_name)
   char *symbol_name;
   GdkGLProc proc_address;
 
-  GDK_GL_NOTE (FUNC, g_message (" - gdk_gl_get_proc_address ()"));
+  GDK_GL_NOTE_FUNC ();
 
   if (strncmp ("glu", proc_name, 3) != 0)
     {
@@ -289,7 +289,7 @@ gdk_gl_get_proc_address (const char *proc_name)
       if (glx_get_proc_address != NULL)
         {
           proc_address = glx_get_proc_address (proc_name);
-          GDK_GL_NOTE (IMPL, g_message (" * glXGetProcAddress () - %s",
+          GDK_GL_NOTE (IMPL, g_message (" ** glXGetProcAddress () - %s",
                                         proc_address ? "succeeded" : "failed"));
           if (proc_address != NULL)
             return proc_address;
@@ -360,7 +360,7 @@ gdk_gl_get_proc_address (const char *proc_name)
   GModule *module;
   GdkGLProc proc_address = NULL;
 
-  GDK_GL_NOTE (FUNC, g_message (" - gdk_gl_get_proc_address ()"));
+  GDK_GL_NOTE_FUNC ();
 
   if (strncmp ("glu", proc_name, 3) != 0)
     {
@@ -406,7 +406,7 @@ gdk_gl_get_proc_address (const char *proc_name)
       if (glx_get_proc_address != NULL)
         {
           proc_address = glx_get_proc_address (proc_name);
-          GDK_GL_NOTE (IMPL, g_message (" * glXGetProcAddress () - %s",
+          GDK_GL_NOTE (IMPL, g_message (" ** glXGetProcAddress () - %s",
                                         proc_address ? "succeeded" : "failed"));
           if (proc_address != NULL)
             return proc_address;
