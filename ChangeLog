@@ -2,6 +2,7 @@
 
 	* gdk/x11/gdkglx.h: 
 	* gdk/win32/gdkglwin32.h: Don't include gdk/gdkglprivate.h.
+	(reported by Ralf Corsepius)
 
 2003-07-29  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
