@@ -1,3 +1,8 @@
+2003-07-30  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
+
+	* gdk/x11/gdkglx.h: 
+	* gdk/win32/gdkglwin32.h: Don't include gdk/gdkglprivate.h.
+
 2003-07-29  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
 	* ==== Released 1.0.2 ====
