@@ -18,7 +18,11 @@
 
 #include <string.h>
 
+#ifdef __APPLE__
+#include <mach-o/dyld.h>
+#else  /* __APPLE__ */
 #include <gmodule.h>
+#endif /* __APPLE__ */
 
 #include "gdkglx.h"
 #include "gdkglprivate-x11.h"
@@ -208,66 +212,202 @@ gdk_x11_gl_query_glx_extension (GdkGLConfig *glconfig,
  *
  * Return value: the address of the function named by @proc_name.
  **/
+
+#ifdef __APPLE__
+
+#define _GDK_GL_LIBGL_PATH  "/usr/X11R6/lib/libGL.1.dylib"
+#define _GDK_GL_LIBGLU_PATH "/usr/X11R6/lib/libGLU.1.dylib"
+
 GdkGLProc
 gdk_gl_get_proc_address (const char *proc_name)
 {
   typedef GdkGLProc (*__glXGetProcAddressProc) (const GLubyte *);
-  static __glXGetProcAddressProc glx_get_proc_address = NULL;
-  static gboolean initialized = FALSE;
+  static __glXGetProcAddressProc glx_get_proc_address = (__glXGetProcAddressProc) -1;
+  const char *image_name;
+  static const struct mach_header *libgl_image = NULL;
+  static const struct mach_header *libglu_image = NULL;
+  NSSymbol symbol;
+  char *symbol_name;
+  GdkGLProc proc_address;
+
+  GDK_GL_NOTE (FUNC, g_message (" - gdk_gl_get_proc_address ()"));
+
+  if (strncmp ("glu", proc_name, 3) != 0)
+    {
+      /* libGL */
+
+      if (libgl_image == NULL)
+        {
+          image_name = g_getenv ("GDK_GL_LIBGL_PATH");
+          if (image_name == NULL)
+            image_name = _GDK_GL_LIBGL_PATH;
+
+          GDK_GL_NOTE (MISC, g_message (" - Add Mach-O image %s", image_name));
+
+          libgl_image = NSAddImage (image_name, NSADDIMAGE_OPTION_RETURN_ON_ERROR);
+          if (libgl_image == NULL)
+            {
+              g_warning ("Cannot add Mach-O image %s", image_name);
+              return NULL;
+            }
+        }
+
+      if (glx_get_proc_address == (__glXGetProcAddressProc) -1)
+        {
+          /*
+           * Look up glXGetProcAddress () function.
+           */
+
+          symbol = NSLookupSymbolInImage (libgl_image,
+                                          "_glXGetProcAddress",
+                                          NSLOOKUPSYMBOLINIMAGE_OPTION_BIND |
+                                          NSLOOKUPSYMBOLINIMAGE_OPTION_RETURN_ON_ERROR);
+          if (symbol == NULL)
+            {
+              symbol = NSLookupSymbolInImage (libgl_image,
+                                              "_glXGetProcAddressARB",
+                                              NSLOOKUPSYMBOLINIMAGE_OPTION_BIND |
+                                              NSLOOKUPSYMBOLINIMAGE_OPTION_RETURN_ON_ERROR);
+              if (symbol == NULL)
+                {
+                  symbol = NSLookupSymbolInImage (libgl_image,
+                                                  "_glXGetProcAddressEXT",
+                                                  NSLOOKUPSYMBOLINIMAGE_OPTION_BIND |
+                                                  NSLOOKUPSYMBOLINIMAGE_OPTION_RETURN_ON_ERROR);
+                }
+            }
+          GDK_GL_NOTE (MISC, g_message (" - glXGetProcAddress () - %s",
+                                        symbol ? "supported" : "not supported"));
+          if (symbol != NULL)
+            glx_get_proc_address = NSAddressOfSymbol (symbol);
+          else
+            glx_get_proc_address = NULL;
+        }
+
+      /* Try glXGetProcAddress () */
+
+      if (glx_get_proc_address != NULL)
+        {
+          proc_address = glx_get_proc_address (proc_name);
+          GDK_GL_NOTE (IMPL, g_message (" * glXGetProcAddress () - %s",
+                                        proc_address ? "succeeded" : "failed"));
+          if (proc_address != NULL)
+            return proc_address;
+        }
+
+      /* Try Mach-O dyld */
+
+      symbol_name = g_strconcat ("_", proc_name, NULL);
+
+      symbol = NSLookupSymbolInImage (libgl_image,
+                                      symbol_name,
+                                      NSLOOKUPSYMBOLINIMAGE_OPTION_BIND |
+                                      NSLOOKUPSYMBOLINIMAGE_OPTION_RETURN_ON_ERROR);
+      GDK_GL_NOTE (MISC, g_message (" - NSLookupSymbolInImage () - %s",
+                                    symbol ? "succeeded" : "failed"));
+
+      g_free (symbol_name);
+
+      if (symbol != NULL)
+        return NSAddressOfSymbol (symbol);
+    }
+  else
+    {
+      /* libGLU */
+
+      if (libglu_image == NULL)
+        {
+          image_name = g_getenv ("GDK_GL_LIBGLU_PATH");
+          if (image_name == NULL)
+            image_name = _GDK_GL_LIBGLU_PATH;
+
+          GDK_GL_NOTE (MISC, g_message (" - Add Mach-O image %s", image_name));
+
+          libglu_image = NSAddImage (image_name, NSADDIMAGE_OPTION_RETURN_ON_ERROR);
+          if (libglu_image == NULL)
+            {
+              g_warning ("Cannot add Mach-O image %s", image_name);
+              return NULL;
+            }
+        }
+
+      symbol_name = g_strconcat ("_", proc_name, NULL);
+
+      symbol = NSLookupSymbolInImage (libglu_image,
+                                      symbol_name,
+                                      NSLOOKUPSYMBOLINIMAGE_OPTION_BIND |
+                                      NSLOOKUPSYMBOLINIMAGE_OPTION_RETURN_ON_ERROR);
+      GDK_GL_NOTE (MISC, g_message (" - NSLookupSymbolInImage () - %s",
+                                    symbol ? "succeeded" : "failed"));
+
+      g_free (symbol_name);
+
+      if (symbol != NULL)
+        return NSAddressOfSymbol (symbol);
+    }
+
+  return NULL;
+}
+
+#else  /* __APPLE__ */
+
+GdkGLProc
+gdk_gl_get_proc_address (const char *proc_name)
+{
+  typedef GdkGLProc (*__glXGetProcAddressProc) (const GLubyte *);
+  static __glXGetProcAddressProc glx_get_proc_address = (__glXGetProcAddressProc) -1;
   gchar *file_name;
   GModule *module;
   GdkGLProc proc_address = NULL;
 
   GDK_GL_NOTE (FUNC, g_message (" - gdk_gl_get_proc_address ()"));
 
-  if (!initialized)
-    {
-      /*
-       * Look up glXGetProcAddress () function.
-       */
-
-      file_name = g_module_build_path (NULL, "GL");
-
-      GDK_GL_NOTE (MISC, g_message (" - Open %s", file_name));
-
-      module = g_module_open (file_name, G_MODULE_BIND_LAZY);
-      if (module != NULL)
-        {
-          g_module_symbol (module, "glXGetProcAddress",
-                           (gpointer) &glx_get_proc_address);
-          if (glx_get_proc_address == NULL)
-            g_module_symbol (module, "glXGetProcAddressARB",
-                             (gpointer) &glx_get_proc_address);
-          if (glx_get_proc_address == NULL)
-            g_module_symbol (module, "glXGetProcAddressEXT",
-                             (gpointer) &glx_get_proc_address);
-
-          GDK_GL_NOTE (MISC, g_message (" - glXGetProcAddress () - %s",
-                                        glx_get_proc_address ? "supported" : "not supported"));
-
-          g_module_close (module);
-        }
-      else
-        {
-          g_warning ("Cannot open %s", file_name);
-        }
-
-      g_free (file_name);
-
-      initialized = TRUE;
-    }
-
   if (strncmp ("glu", proc_name, 3) != 0)
     {
+      if (glx_get_proc_address == (__glXGetProcAddressProc) -1)
+        {
+          /*
+           * Look up glXGetProcAddress () function.
+           */
+
+          file_name = g_module_build_path (NULL, "GL");
+          GDK_GL_NOTE (MISC, g_message (" - Open %s", file_name));
+          module = g_module_open (file_name, G_MODULE_BIND_LAZY);
+          g_free (file_name);
+
+          if (module != NULL)
+            {
+              g_module_symbol (module, "glXGetProcAddress",
+                               (gpointer) &glx_get_proc_address);
+              if (glx_get_proc_address == NULL)
+                {
+                  g_module_symbol (module, "glXGetProcAddressARB",
+                                   (gpointer) &glx_get_proc_address);
+                  if (glx_get_proc_address == NULL)
+                    {
+                      g_module_symbol (module, "glXGetProcAddressEXT",
+                                       (gpointer) &glx_get_proc_address);
+                    }
+                }
+              GDK_GL_NOTE (MISC, g_message (" - glXGetProcAddress () - %s",
+                                            glx_get_proc_address ? "supported" : "not supported"));
+              g_module_close (module);
+            }
+          else
+            {
+              g_warning ("Cannot open %s", file_name);
+              glx_get_proc_address = NULL;
+              return NULL;
+            }
+        }
+
       /* Try glXGetProcAddress () */
 
       if (glx_get_proc_address != NULL)
         {
           proc_address = glx_get_proc_address (proc_name);
-
           GDK_GL_NOTE (IMPL, g_message (" * glXGetProcAddress () - %s",
                                         proc_address ? "succeeded" : "failed"));
-
           if (proc_address != NULL)
             return proc_address;
         }
@@ -276,17 +416,15 @@ gdk_gl_get_proc_address (const char *proc_name)
 
       /* libGL */
       file_name = g_module_build_path (NULL, "GL");
-
       GDK_GL_NOTE (MISC, g_message (" - Open %s", file_name));
-
       module = g_module_open (file_name, G_MODULE_BIND_LAZY);
+      g_free (file_name);
+
       if (module != NULL)
         {
           g_module_symbol (module, proc_name, (gpointer) &proc_address);
-
           GDK_GL_NOTE (MISC, g_message (" - g_module_symbol () - %s",
                                         proc_address ? "succeeded" : "failed"));
-
           g_module_close (module);
         }
       else
@@ -294,56 +432,48 @@ gdk_gl_get_proc_address (const char *proc_name)
           g_warning ("Cannot open %s", file_name);
         }
 
-      g_free (file_name);
-
       if (proc_address == NULL)
         {
           /* libGLcore */
           file_name = g_module_build_path (NULL, "GLcore");
-
           GDK_GL_NOTE (MISC, g_message (" - Open %s", file_name));
-
           module = g_module_open (file_name, G_MODULE_BIND_LAZY);
+          g_free (file_name);
+
           if (module != NULL)
             {
               g_module_symbol (module, proc_name, (gpointer) &proc_address);
-
               GDK_GL_NOTE (MISC, g_message (" - g_module_symbol () - %s",
                                             proc_address ? "succeeded" : "failed"));
-
               g_module_close (module);
             }
-
-          g_free (file_name);
         }
     }
   else
     {
       /* libGLU */
       file_name = g_module_build_path (NULL, "GLU");
-
       GDK_GL_NOTE (MISC, g_message (" - Open %s", file_name));
-
       module = g_module_open (file_name, G_MODULE_BIND_LAZY);
+      g_free (file_name);
+
       if (module != NULL)
         {
           g_module_symbol (module, proc_name, (gpointer) &proc_address);
-
           GDK_GL_NOTE (MISC, g_message (" - g_module_symbol () - %s",
                                         proc_address ? "succeeded" : "failed"));
-
           g_module_close (module);
         }
       else
         {
           g_warning ("Cannot open %s", file_name);
         }
-
-      g_free (file_name);
     }
 
   return proc_address;
 }
+
+#endif /* __APPLE__ */
 
 /*< private >*/
 void
