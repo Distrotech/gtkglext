@@ -16,6 +16,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA.
  */
 
+/*
+ * This is a generated file.  Please modify `gen-gdkglglext-h.pl'.
+ */
+
 #ifndef __GDK_GL_GLEXT_H__
 #define __GDK_GL_GLEXT_H__
 
@@ -29,12 +33,13 @@
 #include <GL/gl.h>
 
 #include <gdk/GL/glext.h>
+#include <gdk/GL/glext-extra.h>
 
 #include <gdk/gdkglquery.h>
 
 G_BEGIN_DECLS
 
-/* 
+/*
  * GL_VERSION_1_2
  */
 
@@ -136,7 +141,7 @@ GdkGLProc    gdk_gl_get_glConvolutionParameterfv (void);
 
 /* glConvolutionParameteri */
 typedef void (APIENTRY * GdkGLProc_glConvolutionParameteri) (GLenum target, GLenum pname, GLint params);
-GdkGLProc    gdk_gl_get_nglConvolutionParameteri (void);
+GdkGLProc    gdk_gl_get_glConvolutionParameteri (void);
 #define      gdk_gl_glConvolutionParameteri(proc, target, pname, params) \
   ( ((GdkGLProc_glConvolutionParameteri) (proc)) (target, pname, params) )
 
@@ -272,49 +277,49 @@ typedef struct _GdkGL_GL_VERSION_1_2 GdkGL_GL_VERSION_1_2;
 
 struct _GdkGL_GL_VERSION_1_2
 {
-  GdkGLProc_glBlendColor                glBlendColor;
-  GdkGLProc_glBlendEquation             glBlendEquation;
-  GdkGLProc_glDrawRangeElements         glDrawRangeElements;
-  GdkGLProc_glColorTable                glColorTable;
-  GdkGLProc_glColorTableParameterfv     glColorTableParameterfv;
-  GdkGLProc_glColorTableParameteriv     glColorTableParameteriv;
-  GdkGLProc_glCopyColorTable            glCopyColorTable;
-  GdkGLProc_glGetColorTable             glGetColorTable;
-  GdkGLProc_glGetColorTableParameterfv  glGetColorTableParameterfv;
-  GdkGLProc_glGetColorTableParameteriv  glGetColorTableParameteriv;
-  GdkGLProc_glColorSubTable             glColorSubTable;
-  GdkGLProc_glCopyColorSubTable         glCopyColorSubTable;
-  GdkGLProc_glConvolutionFilter1D       glConvolutionFilter1D;
-  GdkGLProc_glConvolutionFilter2D       glConvolutionFilter2D;
-  GdkGLProc_glConvolutionParameterf     glConvolutionParameterf;
-  GdkGLProc_glConvolutionParameterfv    glConvolutionParameterfv;
-  GdkGLProc_glConvolutionParameteri     glConvolutionParameteri;
-  GdkGLProc_glConvolutionParameteriv    glConvolutionParameteriv;
-  GdkGLProc_glCopyConvolutionFilter1D   glCopyConvolutionFilter1D;
-  GdkGLProc_glCopyConvolutionFilter2D   glCopyConvolutionFilter2D;
-  GdkGLProc_glGetConvolutionFilter      glGetConvolutionFilter;
+  GdkGLProc_glBlendColor glBlendColor;
+  GdkGLProc_glBlendEquation glBlendEquation;
+  GdkGLProc_glDrawRangeElements glDrawRangeElements;
+  GdkGLProc_glColorTable glColorTable;
+  GdkGLProc_glColorTableParameterfv glColorTableParameterfv;
+  GdkGLProc_glColorTableParameteriv glColorTableParameteriv;
+  GdkGLProc_glCopyColorTable glCopyColorTable;
+  GdkGLProc_glGetColorTable glGetColorTable;
+  GdkGLProc_glGetColorTableParameterfv glGetColorTableParameterfv;
+  GdkGLProc_glGetColorTableParameteriv glGetColorTableParameteriv;
+  GdkGLProc_glColorSubTable glColorSubTable;
+  GdkGLProc_glCopyColorSubTable glCopyColorSubTable;
+  GdkGLProc_glConvolutionFilter1D glConvolutionFilter1D;
+  GdkGLProc_glConvolutionFilter2D glConvolutionFilter2D;
+  GdkGLProc_glConvolutionParameterf glConvolutionParameterf;
+  GdkGLProc_glConvolutionParameterfv glConvolutionParameterfv;
+  GdkGLProc_glConvolutionParameteri glConvolutionParameteri;
+  GdkGLProc_glConvolutionParameteriv glConvolutionParameteriv;
+  GdkGLProc_glCopyConvolutionFilter1D glCopyConvolutionFilter1D;
+  GdkGLProc_glCopyConvolutionFilter2D glCopyConvolutionFilter2D;
+  GdkGLProc_glGetConvolutionFilter glGetConvolutionFilter;
   GdkGLProc_glGetConvolutionParameterfv glGetConvolutionParameterfv;
   GdkGLProc_glGetConvolutionParameteriv glGetConvolutionParameteriv;
-  GdkGLProc_glGetSeparableFilter        glGetSeparableFilter;
-  GdkGLProc_glSeparableFilter2D         glSeparableFilter2D;
-  GdkGLProc_glGetHistogram              glGetHistogram;
-  GdkGLProc_glGetHistogramParameterfv   glGetHistogramParameterfv;
-  GdkGLProc_glGetHistogramParameteriv   glGetHistogramParameteriv;
-  GdkGLProc_glGetMinmax                 glGetMinmax;
-  GdkGLProc_glGetMinmaxParameterfv      glGetMinmaxParameterfv;
-  GdkGLProc_glGetMinmaxParameteriv      glGetMinmaxParameteriv;
-  GdkGLProc_glHistogram                 glHistogram;
-  GdkGLProc_glMinmax                    glMinmax;
-  GdkGLProc_glResetHistogram            glResetHistogram;
-  GdkGLProc_glResetMinmax               glResetMinmax;
-  GdkGLProc_glTexImage3D                glTexImage3D;
-  GdkGLProc_glTexSubImage3D             glTexSubImage3D;
-  GdkGLProc_glCopyTexSubImage3D         glCopyTexSubImage3D;
+  GdkGLProc_glGetSeparableFilter glGetSeparableFilter;
+  GdkGLProc_glSeparableFilter2D glSeparableFilter2D;
+  GdkGLProc_glGetHistogram glGetHistogram;
+  GdkGLProc_glGetHistogramParameterfv glGetHistogramParameterfv;
+  GdkGLProc_glGetHistogramParameteriv glGetHistogramParameteriv;
+  GdkGLProc_glGetMinmax glGetMinmax;
+  GdkGLProc_glGetMinmaxParameterfv glGetMinmaxParameterfv;
+  GdkGLProc_glGetMinmaxParameteriv glGetMinmaxParameteriv;
+  GdkGLProc_glHistogram glHistogram;
+  GdkGLProc_glMinmax glMinmax;
+  GdkGLProc_glResetHistogram glResetHistogram;
+  GdkGLProc_glResetMinmax glResetMinmax;
+  GdkGLProc_glTexImage3D glTexImage3D;
+  GdkGLProc_glTexSubImage3D glTexSubImage3D;
+  GdkGLProc_glCopyTexSubImage3D glCopyTexSubImage3D;
 };
 
 GdkGL_GL_VERSION_1_2 *gdk_gl_get_GL_VERSION_1_2 (void);
 
-/* 
+/*
  * GL_VERSION_1_3
  */
 
@@ -589,7 +594,7 @@ GdkGLProc    gdk_gl_get_glCompressedTexSubImage1D (void);
   ( ((GdkGLProc_glCompressedTexSubImage1D) (proc)) (target, level, xoffset, width, format, imageSize, data) )
 
 /* glGetCompressedTexImage */
-typedef void (APIENTRY * GdkGLProc_glGetCompressedTexImage) (GLenum target, GLint level, void *img);
+typedef void (APIENTRY * GdkGLProc_glGetCompressedTexImage) (GLenum target, GLint level, GLvoid *img);
 GdkGLProc    gdk_gl_get_glGetCompressedTexImage (void);
 #define      gdk_gl_glGetCompressedTexImage(proc, target, level, img) \
   ( ((GdkGLProc_glGetCompressedTexImage) (proc)) (target, level, img) )
@@ -600,57 +605,57 @@ typedef struct _GdkGL_GL_VERSION_1_3 GdkGL_GL_VERSION_1_3;
 
 struct _GdkGL_GL_VERSION_1_3
 {
-  GdkGLProc_glActiveTexture           glActiveTexture;
-  GdkGLProc_glClientActiveTexture     glClientActiveTexture;
-  GdkGLProc_glMultiTexCoord1d         glMultiTexCoord1d;
-  GdkGLProc_glMultiTexCoord1dv        glMultiTexCoord1dv;
-  GdkGLProc_glMultiTexCoord1f         glMultiTexCoord1f;
-  GdkGLProc_glMultiTexCoord1fv        glMultiTexCoord1fv;
-  GdkGLProc_glMultiTexCoord1i         glMultiTexCoord1i;
-  GdkGLProc_glMultiTexCoord1iv        glMultiTexCoord1iv;
-  GdkGLProc_glMultiTexCoord1s         glMultiTexCoord1s;
-  GdkGLProc_glMultiTexCoord1sv        glMultiTexCoord1sv;
-  GdkGLProc_glMultiTexCoord2d         glMultiTexCoord2d;
-  GdkGLProc_glMultiTexCoord2dv        glMultiTexCoord2dv;
-  GdkGLProc_glMultiTexCoord2f         glMultiTexCoord2f;
-  GdkGLProc_glMultiTexCoord2fv        glMultiTexCoord2fv;
-  GdkGLProc_glMultiTexCoord2i         glMultiTexCoord2i;
-  GdkGLProc_glMultiTexCoord2iv        glMultiTexCoord2iv;
-  GdkGLProc_glMultiTexCoord2s         glMultiTexCoord2s;
-  GdkGLProc_glMultiTexCoord2sv        glMultiTexCoord2sv;
-  GdkGLProc_glMultiTexCoord3d         glMultiTexCoord3d;
-  GdkGLProc_glMultiTexCoord3dv        glMultiTexCoord3dv;
-  GdkGLProc_glMultiTexCoord3f         glMultiTexCoord3f;
-  GdkGLProc_glMultiTexCoord3fv        glMultiTexCoord3fv;
-  GdkGLProc_glMultiTexCoord3i         glMultiTexCoord3i;
-  GdkGLProc_glMultiTexCoord3iv        glMultiTexCoord3iv;
-  GdkGLProc_glMultiTexCoord3s         glMultiTexCoord3s;
-  GdkGLProc_glMultiTexCoord3sv        glMultiTexCoord3sv;
-  GdkGLProc_glMultiTexCoord4d         glMultiTexCoord4d;
-  GdkGLProc_glMultiTexCoord4dv        glMultiTexCoord4dv;
-  GdkGLProc_glMultiTexCoord4f         glMultiTexCoord4f;
-  GdkGLProc_glMultiTexCoord4fv        glMultiTexCoord4fv;
-  GdkGLProc_glMultiTexCoord4i         glMultiTexCoord4i;
-  GdkGLProc_glMultiTexCoord4iv        glMultiTexCoord4iv;
-  GdkGLProc_glMultiTexCoord4s         glMultiTexCoord4s;
-  GdkGLProc_glMultiTexCoord4sv        glMultiTexCoord4sv;
-  GdkGLProc_glLoadTransposeMatrixf    glLoadTransposeMatrixf;
-  GdkGLProc_glLoadTransposeMatrixd    glLoadTransposeMatrixd;
-  GdkGLProc_glMultTransposeMatrixf    glMultTransposeMatrixf;
-  GdkGLProc_glMultTransposeMatrixd    glMultTransposeMatrixd;
-  GdkGLProc_glSampleCoverage          glSampleCoverage;
-  GdkGLProc_glCompressedTexImage3D    glCompressedTexImage3D;
-  GdkGLProc_glCompressedTexImage2D    glCompressedTexImage2D;
-  GdkGLProc_glCompressedTexImage1D    glCompressedTexImage1D;
+  GdkGLProc_glActiveTexture glActiveTexture;
+  GdkGLProc_glClientActiveTexture glClientActiveTexture;
+  GdkGLProc_glMultiTexCoord1d glMultiTexCoord1d;
+  GdkGLProc_glMultiTexCoord1dv glMultiTexCoord1dv;
+  GdkGLProc_glMultiTexCoord1f glMultiTexCoord1f;
+  GdkGLProc_glMultiTexCoord1fv glMultiTexCoord1fv;
+  GdkGLProc_glMultiTexCoord1i glMultiTexCoord1i;
+  GdkGLProc_glMultiTexCoord1iv glMultiTexCoord1iv;
+  GdkGLProc_glMultiTexCoord1s glMultiTexCoord1s;
+  GdkGLProc_glMultiTexCoord1sv glMultiTexCoord1sv;
+  GdkGLProc_glMultiTexCoord2d glMultiTexCoord2d;
+  GdkGLProc_glMultiTexCoord2dv glMultiTexCoord2dv;
+  GdkGLProc_glMultiTexCoord2f glMultiTexCoord2f;
+  GdkGLProc_glMultiTexCoord2fv glMultiTexCoord2fv;
+  GdkGLProc_glMultiTexCoord2i glMultiTexCoord2i;
+  GdkGLProc_glMultiTexCoord2iv glMultiTexCoord2iv;
+  GdkGLProc_glMultiTexCoord2s glMultiTexCoord2s;
+  GdkGLProc_glMultiTexCoord2sv glMultiTexCoord2sv;
+  GdkGLProc_glMultiTexCoord3d glMultiTexCoord3d;
+  GdkGLProc_glMultiTexCoord3dv glMultiTexCoord3dv;
+  GdkGLProc_glMultiTexCoord3f glMultiTexCoord3f;
+  GdkGLProc_glMultiTexCoord3fv glMultiTexCoord3fv;
+  GdkGLProc_glMultiTexCoord3i glMultiTexCoord3i;
+  GdkGLProc_glMultiTexCoord3iv glMultiTexCoord3iv;
+  GdkGLProc_glMultiTexCoord3s glMultiTexCoord3s;
+  GdkGLProc_glMultiTexCoord3sv glMultiTexCoord3sv;
+  GdkGLProc_glMultiTexCoord4d glMultiTexCoord4d;
+  GdkGLProc_glMultiTexCoord4dv glMultiTexCoord4dv;
+  GdkGLProc_glMultiTexCoord4f glMultiTexCoord4f;
+  GdkGLProc_glMultiTexCoord4fv glMultiTexCoord4fv;
+  GdkGLProc_glMultiTexCoord4i glMultiTexCoord4i;
+  GdkGLProc_glMultiTexCoord4iv glMultiTexCoord4iv;
+  GdkGLProc_glMultiTexCoord4s glMultiTexCoord4s;
+  GdkGLProc_glMultiTexCoord4sv glMultiTexCoord4sv;
+  GdkGLProc_glLoadTransposeMatrixf glLoadTransposeMatrixf;
+  GdkGLProc_glLoadTransposeMatrixd glLoadTransposeMatrixd;
+  GdkGLProc_glMultTransposeMatrixf glMultTransposeMatrixf;
+  GdkGLProc_glMultTransposeMatrixd glMultTransposeMatrixd;
+  GdkGLProc_glSampleCoverage glSampleCoverage;
+  GdkGLProc_glCompressedTexImage3D glCompressedTexImage3D;
+  GdkGLProc_glCompressedTexImage2D glCompressedTexImage2D;
+  GdkGLProc_glCompressedTexImage1D glCompressedTexImage1D;
   GdkGLProc_glCompressedTexSubImage3D glCompressedTexSubImage3D;
   GdkGLProc_glCompressedTexSubImage2D glCompressedTexSubImage2D;
   GdkGLProc_glCompressedTexSubImage1D glCompressedTexSubImage1D;
-  GdkGLProc_glGetCompressedTexImage   glGetCompressedTexImage;
+  GdkGLProc_glGetCompressedTexImage glGetCompressedTexImage;
 };
 
 GdkGL_GL_VERSION_1_3 *gdk_gl_get_GL_VERSION_1_3 (void);
 
-/* 
+/*
  * GL_VERSION_1_4
  */
 
@@ -930,56 +935,56 @@ typedef struct _GdkGL_GL_VERSION_1_4 GdkGL_GL_VERSION_1_4;
 
 struct _GdkGL_GL_VERSION_1_4
 {
-  GdkGLProc_glBlendFuncSeparate     glBlendFuncSeparate;
-  GdkGLProc_glFogCoordf             glFogCoordf;
-  GdkGLProc_glFogCoordfv            glFogCoordfv;
-  GdkGLProc_glFogCoordd             glFogCoordd;
-  GdkGLProc_glFogCoorddv            glFogCoorddv;
-  GdkGLProc_glFogCoordPointer       glFogCoordPointer;
-  GdkGLProc_glMultiDrawArrays       glMultiDrawArrays;
-  GdkGLProc_glMultiDrawElements     glMultiDrawElements;
-  GdkGLProc_glPointParameterf       glPointParameterf;
-  GdkGLProc_glPointParameterfv      glPointParameterfv;
-  GdkGLProc_glPointParameteri       glPointParameteri;
-  GdkGLProc_glPointParameteriv      glPointParameteriv;
-  GdkGLProc_glSecondaryColor3b      glSecondaryColor3b;
-  GdkGLProc_glSecondaryColor3bv     glSecondaryColor3bv;
-  GdkGLProc_glSecondaryColor3d      glSecondaryColor3d;
-  GdkGLProc_glSecondaryColor3dv     glSecondaryColor3dv;
-  GdkGLProc_glSecondaryColor3f      glSecondaryColor3f;
-  GdkGLProc_glSecondaryColor3fv     glSecondaryColor3fv;
-  GdkGLProc_glSecondaryColor3i      glSecondaryColor3i;
-  GdkGLProc_glSecondaryColor3iv     glSecondaryColor3iv;
-  GdkGLProc_glSecondaryColor3s      glSecondaryColor3s;
-  GdkGLProc_glSecondaryColor3sv     glSecondaryColor3sv;
-  GdkGLProc_glSecondaryColor3ub     glSecondaryColor3ub;
-  GdkGLProc_glSecondaryColor3ubv    glSecondaryColor3ubv;
-  GdkGLProc_glSecondaryColor3ui     glSecondaryColor3ui;
-  GdkGLProc_glSecondaryColor3uiv    glSecondaryColor3uiv;
-  GdkGLProc_glSecondaryColor3us     glSecondaryColor3us;
-  GdkGLProc_glSecondaryColor3usv    glSecondaryColor3usv;
+  GdkGLProc_glBlendFuncSeparate glBlendFuncSeparate;
+  GdkGLProc_glFogCoordf glFogCoordf;
+  GdkGLProc_glFogCoordfv glFogCoordfv;
+  GdkGLProc_glFogCoordd glFogCoordd;
+  GdkGLProc_glFogCoorddv glFogCoorddv;
+  GdkGLProc_glFogCoordPointer glFogCoordPointer;
+  GdkGLProc_glMultiDrawArrays glMultiDrawArrays;
+  GdkGLProc_glMultiDrawElements glMultiDrawElements;
+  GdkGLProc_glPointParameterf glPointParameterf;
+  GdkGLProc_glPointParameterfv glPointParameterfv;
+  GdkGLProc_glPointParameteri glPointParameteri;
+  GdkGLProc_glPointParameteriv glPointParameteriv;
+  GdkGLProc_glSecondaryColor3b glSecondaryColor3b;
+  GdkGLProc_glSecondaryColor3bv glSecondaryColor3bv;
+  GdkGLProc_glSecondaryColor3d glSecondaryColor3d;
+  GdkGLProc_glSecondaryColor3dv glSecondaryColor3dv;
+  GdkGLProc_glSecondaryColor3f glSecondaryColor3f;
+  GdkGLProc_glSecondaryColor3fv glSecondaryColor3fv;
+  GdkGLProc_glSecondaryColor3i glSecondaryColor3i;
+  GdkGLProc_glSecondaryColor3iv glSecondaryColor3iv;
+  GdkGLProc_glSecondaryColor3s glSecondaryColor3s;
+  GdkGLProc_glSecondaryColor3sv glSecondaryColor3sv;
+  GdkGLProc_glSecondaryColor3ub glSecondaryColor3ub;
+  GdkGLProc_glSecondaryColor3ubv glSecondaryColor3ubv;
+  GdkGLProc_glSecondaryColor3ui glSecondaryColor3ui;
+  GdkGLProc_glSecondaryColor3uiv glSecondaryColor3uiv;
+  GdkGLProc_glSecondaryColor3us glSecondaryColor3us;
+  GdkGLProc_glSecondaryColor3usv glSecondaryColor3usv;
   GdkGLProc_glSecondaryColorPointer glSecondaryColorPointer;
-  GdkGLProc_glWindowPos2d           glWindowPos2d;
-  GdkGLProc_glWindowPos2dv          glWindowPos2dv;
-  GdkGLProc_glWindowPos2f           glWindowPos2f;
-  GdkGLProc_glWindowPos2fv          glWindowPos2fv;
-  GdkGLProc_glWindowPos2i           glWindowPos2i;
-  GdkGLProc_glWindowPos2iv          glWindowPos2iv;
-  GdkGLProc_glWindowPos2s           glWindowPos2s;
-  GdkGLProc_glWindowPos2sv          glWindowPos2sv;
-  GdkGLProc_glWindowPos3d           glWindowPos3d;
-  GdkGLProc_glWindowPos3dv          glWindowPos3dv;
-  GdkGLProc_glWindowPos3f           glWindowPos3f;
-  GdkGLProc_glWindowPos3fv          glWindowPos3fv;
-  GdkGLProc_glWindowPos3i           glWindowPos3i;
-  GdkGLProc_glWindowPos3iv          glWindowPos3iv;
-  GdkGLProc_glWindowPos3s           glWindowPos3s;
-  GdkGLProc_glWindowPos3sv          glWindowPos3sv;
+  GdkGLProc_glWindowPos2d glWindowPos2d;
+  GdkGLProc_glWindowPos2dv glWindowPos2dv;
+  GdkGLProc_glWindowPos2f glWindowPos2f;
+  GdkGLProc_glWindowPos2fv glWindowPos2fv;
+  GdkGLProc_glWindowPos2i glWindowPos2i;
+  GdkGLProc_glWindowPos2iv glWindowPos2iv;
+  GdkGLProc_glWindowPos2s glWindowPos2s;
+  GdkGLProc_glWindowPos2sv glWindowPos2sv;
+  GdkGLProc_glWindowPos3d glWindowPos3d;
+  GdkGLProc_glWindowPos3dv glWindowPos3dv;
+  GdkGLProc_glWindowPos3f glWindowPos3f;
+  GdkGLProc_glWindowPos3fv glWindowPos3fv;
+  GdkGLProc_glWindowPos3i glWindowPos3i;
+  GdkGLProc_glWindowPos3iv glWindowPos3iv;
+  GdkGLProc_glWindowPos3s glWindowPos3s;
+  GdkGLProc_glWindowPos3sv glWindowPos3sv;
 };
 
 GdkGL_GL_VERSION_1_4 *gdk_gl_get_GL_VERSION_1_4 (void);
 
-/* 
+/*
  * GL_ARB_multitexture
  */
 
@@ -1193,45 +1198,45 @@ typedef struct _GdkGL_GL_ARB_multitexture GdkGL_GL_ARB_multitexture;
 
 struct _GdkGL_GL_ARB_multitexture
 {
-  GdkGLProc_glActiveTextureARB       glActiveTextureARB;
+  GdkGLProc_glActiveTextureARB glActiveTextureARB;
   GdkGLProc_glClientActiveTextureARB glClientActiveTextureARB;
-  GdkGLProc_glMultiTexCoord1dARB     glMultiTexCoord1dARB;
-  GdkGLProc_glMultiTexCoord1dvARB    glMultiTexCoord1dvARB;
-  GdkGLProc_glMultiTexCoord1fARB     glMultiTexCoord1fARB;
-  GdkGLProc_glMultiTexCoord1fvARB    glMultiTexCoord1fvARB;
-  GdkGLProc_glMultiTexCoord1iARB     glMultiTexCoord1iARB;
-  GdkGLProc_glMultiTexCoord1ivARB    glMultiTexCoord1ivARB;
-  GdkGLProc_glMultiTexCoord1sARB     glMultiTexCoord1sARB;
-  GdkGLProc_glMultiTexCoord1svARB    glMultiTexCoord1svARB;
-  GdkGLProc_glMultiTexCoord2dARB     glMultiTexCoord2dARB;
-  GdkGLProc_glMultiTexCoord2dvARB    glMultiTexCoord2dvARB;
-  GdkGLProc_glMultiTexCoord2fARB     glMultiTexCoord2fARB;
-  GdkGLProc_glMultiTexCoord2fvARB    glMultiTexCoord2fvARB;
-  GdkGLProc_glMultiTexCoord2iARB     glMultiTexCoord2iARB;
-  GdkGLProc_glMultiTexCoord2ivARB    glMultiTexCoord2ivARB;
-  GdkGLProc_glMultiTexCoord2sARB     glMultiTexCoord2sARB;
-  GdkGLProc_glMultiTexCoord2svARB    glMultiTexCoord2svARB;
-  GdkGLProc_glMultiTexCoord3dARB     glMultiTexCoord3dARB;
-  GdkGLProc_glMultiTexCoord3dvARB    glMultiTexCoord3dvARB;
-  GdkGLProc_glMultiTexCoord3fARB     glMultiTexCoord3fARB;
-  GdkGLProc_glMultiTexCoord3fvARB    glMultiTexCoord3fvARB;
-  GdkGLProc_glMultiTexCoord3iARB     glMultiTexCoord3iARB;
-  GdkGLProc_glMultiTexCoord3ivARB    glMultiTexCoord3ivARB;
-  GdkGLProc_glMultiTexCoord3sARB     glMultiTexCoord3sARB;
-  GdkGLProc_glMultiTexCoord3svARB    glMultiTexCoord3svARB;
-  GdkGLProc_glMultiTexCoord4dARB     glMultiTexCoord4dARB;
-  GdkGLProc_glMultiTexCoord4dvARB    glMultiTexCoord4dvARB;
-  GdkGLProc_glMultiTexCoord4fARB     glMultiTexCoord4fARB;
-  GdkGLProc_glMultiTexCoord4fvARB    glMultiTexCoord4fvARB;
-  GdkGLProc_glMultiTexCoord4iARB     glMultiTexCoord4iARB;
-  GdkGLProc_glMultiTexCoord4ivARB    glMultiTexCoord4ivARB;
-  GdkGLProc_glMultiTexCoord4sARB     glMultiTexCoord4sARB;
-  GdkGLProc_glMultiTexCoord4svARB    glMultiTexCoord4svARB;
+  GdkGLProc_glMultiTexCoord1dARB glMultiTexCoord1dARB;
+  GdkGLProc_glMultiTexCoord1dvARB glMultiTexCoord1dvARB;
+  GdkGLProc_glMultiTexCoord1fARB glMultiTexCoord1fARB;
+  GdkGLProc_glMultiTexCoord1fvARB glMultiTexCoord1fvARB;
+  GdkGLProc_glMultiTexCoord1iARB glMultiTexCoord1iARB;
+  GdkGLProc_glMultiTexCoord1ivARB glMultiTexCoord1ivARB;
+  GdkGLProc_glMultiTexCoord1sARB glMultiTexCoord1sARB;
+  GdkGLProc_glMultiTexCoord1svARB glMultiTexCoord1svARB;
+  GdkGLProc_glMultiTexCoord2dARB glMultiTexCoord2dARB;
+  GdkGLProc_glMultiTexCoord2dvARB glMultiTexCoord2dvARB;
+  GdkGLProc_glMultiTexCoord2fARB glMultiTexCoord2fARB;
+  GdkGLProc_glMultiTexCoord2fvARB glMultiTexCoord2fvARB;
+  GdkGLProc_glMultiTexCoord2iARB glMultiTexCoord2iARB;
+  GdkGLProc_glMultiTexCoord2ivARB glMultiTexCoord2ivARB;
+  GdkGLProc_glMultiTexCoord2sARB glMultiTexCoord2sARB;
+  GdkGLProc_glMultiTexCoord2svARB glMultiTexCoord2svARB;
+  GdkGLProc_glMultiTexCoord3dARB glMultiTexCoord3dARB;
+  GdkGLProc_glMultiTexCoord3dvARB glMultiTexCoord3dvARB;
+  GdkGLProc_glMultiTexCoord3fARB glMultiTexCoord3fARB;
+  GdkGLProc_glMultiTexCoord3fvARB glMultiTexCoord3fvARB;
+  GdkGLProc_glMultiTexCoord3iARB glMultiTexCoord3iARB;
+  GdkGLProc_glMultiTexCoord3ivARB glMultiTexCoord3ivARB;
+  GdkGLProc_glMultiTexCoord3sARB glMultiTexCoord3sARB;
+  GdkGLProc_glMultiTexCoord3svARB glMultiTexCoord3svARB;
+  GdkGLProc_glMultiTexCoord4dARB glMultiTexCoord4dARB;
+  GdkGLProc_glMultiTexCoord4dvARB glMultiTexCoord4dvARB;
+  GdkGLProc_glMultiTexCoord4fARB glMultiTexCoord4fARB;
+  GdkGLProc_glMultiTexCoord4fvARB glMultiTexCoord4fvARB;
+  GdkGLProc_glMultiTexCoord4iARB glMultiTexCoord4iARB;
+  GdkGLProc_glMultiTexCoord4ivARB glMultiTexCoord4ivARB;
+  GdkGLProc_glMultiTexCoord4sARB glMultiTexCoord4sARB;
+  GdkGLProc_glMultiTexCoord4svARB glMultiTexCoord4svARB;
 };
 
 GdkGL_GL_ARB_multitexture *gdk_gl_get_GL_ARB_multitexture (void);
 
-/* 
+/*
  * GL_ARB_transpose_matrix
  */
 
@@ -1273,7 +1278,7 @@ struct _GdkGL_GL_ARB_transpose_matrix
 
 GdkGL_GL_ARB_transpose_matrix *gdk_gl_get_GL_ARB_transpose_matrix (void);
 
-/* 
+/*
  * GL_ARB_multisample
  */
 
@@ -1294,7 +1299,7 @@ struct _GdkGL_GL_ARB_multisample
 
 GdkGL_GL_ARB_multisample *gdk_gl_get_GL_ARB_multisample (void);
 
-/* 
+/*
  * GL_ARB_texture_compression
  */
 
@@ -1335,7 +1340,7 @@ GdkGLProc    gdk_gl_get_glCompressedTexSubImage1DARB (void);
   ( ((GdkGLProc_glCompressedTexSubImage1DARB) (proc)) (target, level, xoffset, width, format, imageSize, data) )
 
 /* glGetCompressedTexImageARB */
-typedef void (APIENTRY * GdkGLProc_glGetCompressedTexImageARB) (GLenum target, GLint level, void *img);
+typedef void (APIENTRY * GdkGLProc_glGetCompressedTexImageARB) (GLenum target, GLint level, GLvoid *img);
 GdkGLProc    gdk_gl_get_glGetCompressedTexImageARB (void);
 #define      gdk_gl_glGetCompressedTexImageARB(proc, target, level, img) \
   ( ((GdkGLProc_glGetCompressedTexImageARB) (proc)) (target, level, img) )
@@ -1346,18 +1351,18 @@ typedef struct _GdkGL_GL_ARB_texture_compression GdkGL_GL_ARB_texture_compressio
 
 struct _GdkGL_GL_ARB_texture_compression
 {
-  GdkGLProc_glCompressedTexImage3DARB    glCompressedTexImage3DARB;
-  GdkGLProc_glCompressedTexImage2DARB    glCompressedTexImage2DARB;
-  GdkGLProc_glCompressedTexImage1DARB    glCompressedTexImage1DARB;
+  GdkGLProc_glCompressedTexImage3DARB glCompressedTexImage3DARB;
+  GdkGLProc_glCompressedTexImage2DARB glCompressedTexImage2DARB;
+  GdkGLProc_glCompressedTexImage1DARB glCompressedTexImage1DARB;
   GdkGLProc_glCompressedTexSubImage3DARB glCompressedTexSubImage3DARB;
   GdkGLProc_glCompressedTexSubImage2DARB glCompressedTexSubImage2DARB;
   GdkGLProc_glCompressedTexSubImage1DARB glCompressedTexSubImage1DARB;
-  GdkGLProc_glGetCompressedTexImageARB   glGetCompressedTexImageARB;
+  GdkGLProc_glGetCompressedTexImageARB glGetCompressedTexImageARB;
 };
 
 GdkGL_GL_ARB_texture_compression *gdk_gl_get_GL_ARB_texture_compression (void);
 
-/* 
+/*
  * GL_ARB_point_parameters
  */
 
@@ -1379,13 +1384,13 @@ typedef struct _GdkGL_GL_ARB_point_parameters GdkGL_GL_ARB_point_parameters;
 
 struct _GdkGL_GL_ARB_point_parameters
 {
-  GdkGLProc_glPointParameterfARB  glPointParameterfARB;
+  GdkGLProc_glPointParameterfARB glPointParameterfARB;
   GdkGLProc_glPointParameterfvARB glPointParameterfvARB;
 };
 
 GdkGL_GL_ARB_point_parameters *gdk_gl_get_GL_ARB_point_parameters (void);
 
-/* 
+/*
  * GL_ARB_vertex_blend
  */
 
@@ -1455,21 +1460,21 @@ typedef struct _GdkGL_GL_ARB_vertex_blend GdkGL_GL_ARB_vertex_blend;
 
 struct _GdkGL_GL_ARB_vertex_blend
 {
-  GdkGLProc_glWeightbvARB      glWeightbvARB;
-  GdkGLProc_glWeightsvARB      glWeightsvARB;
-  GdkGLProc_glWeightivARB      glWeightivARB;
-  GdkGLProc_glWeightfvARB      glWeightfvARB;
-  GdkGLProc_glWeightdvARB      glWeightdvARB;
-  GdkGLProc_glWeightubvARB     glWeightubvARB;
-  GdkGLProc_glWeightusvARB     glWeightusvARB;
-  GdkGLProc_glWeightuivARB     glWeightuivARB;
+  GdkGLProc_glWeightbvARB glWeightbvARB;
+  GdkGLProc_glWeightsvARB glWeightsvARB;
+  GdkGLProc_glWeightivARB glWeightivARB;
+  GdkGLProc_glWeightfvARB glWeightfvARB;
+  GdkGLProc_glWeightdvARB glWeightdvARB;
+  GdkGLProc_glWeightubvARB glWeightubvARB;
+  GdkGLProc_glWeightusvARB glWeightusvARB;
+  GdkGLProc_glWeightuivARB glWeightuivARB;
   GdkGLProc_glWeightPointerARB glWeightPointerARB;
-  GdkGLProc_glVertexBlendARB   glVertexBlendARB;
+  GdkGLProc_glVertexBlendARB glVertexBlendARB;
 };
 
 GdkGL_GL_ARB_vertex_blend *gdk_gl_get_GL_ARB_vertex_blend (void);
 
-/* 
+/*
  * GL_ARB_matrix_palette
  */
 
@@ -1510,15 +1515,15 @@ typedef struct _GdkGL_GL_ARB_matrix_palette GdkGL_GL_ARB_matrix_palette;
 struct _GdkGL_GL_ARB_matrix_palette
 {
   GdkGLProc_glCurrentPaletteMatrixARB glCurrentPaletteMatrixARB;
-  GdkGLProc_glMatrixIndexubvARB       glMatrixIndexubvARB;
-  GdkGLProc_glMatrixIndexusvARB       glMatrixIndexusvARB;
-  GdkGLProc_glMatrixIndexuivARB       glMatrixIndexuivARB;
-  GdkGLProc_glMatrixIndexPointerARB   glMatrixIndexPointerARB;
+  GdkGLProc_glMatrixIndexubvARB glMatrixIndexubvARB;
+  GdkGLProc_glMatrixIndexusvARB glMatrixIndexusvARB;
+  GdkGLProc_glMatrixIndexuivARB glMatrixIndexuivARB;
+  GdkGLProc_glMatrixIndexPointerARB glMatrixIndexPointerARB;
 };
 
 GdkGL_GL_ARB_matrix_palette *gdk_gl_get_GL_ARB_matrix_palette (void);
 
-/* 
+/*
  * GL_ARB_window_pos
  */
 
@@ -1624,27 +1629,27 @@ typedef struct _GdkGL_GL_ARB_window_pos GdkGL_GL_ARB_window_pos;
 
 struct _GdkGL_GL_ARB_window_pos
 {
-  GdkGLProc_glWindowPos2dARB  glWindowPos2dARB;
+  GdkGLProc_glWindowPos2dARB glWindowPos2dARB;
   GdkGLProc_glWindowPos2dvARB glWindowPos2dvARB;
-  GdkGLProc_glWindowPos2fARB  glWindowPos2fARB;
+  GdkGLProc_glWindowPos2fARB glWindowPos2fARB;
   GdkGLProc_glWindowPos2fvARB glWindowPos2fvARB;
-  GdkGLProc_glWindowPos2iARB  glWindowPos2iARB;
+  GdkGLProc_glWindowPos2iARB glWindowPos2iARB;
   GdkGLProc_glWindowPos2ivARB glWindowPos2ivARB;
-  GdkGLProc_glWindowPos2sARB  glWindowPos2sARB;
+  GdkGLProc_glWindowPos2sARB glWindowPos2sARB;
   GdkGLProc_glWindowPos2svARB glWindowPos2svARB;
-  GdkGLProc_glWindowPos3dARB  glWindowPos3dARB;
+  GdkGLProc_glWindowPos3dARB glWindowPos3dARB;
   GdkGLProc_glWindowPos3dvARB glWindowPos3dvARB;
-  GdkGLProc_glWindowPos3fARB  glWindowPos3fARB;
+  GdkGLProc_glWindowPos3fARB glWindowPos3fARB;
   GdkGLProc_glWindowPos3fvARB glWindowPos3fvARB;
-  GdkGLProc_glWindowPos3iARB  glWindowPos3iARB;
+  GdkGLProc_glWindowPos3iARB glWindowPos3iARB;
   GdkGLProc_glWindowPos3ivARB glWindowPos3ivARB;
-  GdkGLProc_glWindowPos3sARB  glWindowPos3sARB;
+  GdkGLProc_glWindowPos3sARB glWindowPos3sARB;
   GdkGLProc_glWindowPos3svARB glWindowPos3svARB;
 };
 
 GdkGL_GL_ARB_window_pos *gdk_gl_get_GL_ARB_window_pos (void);
 
-/* 
+/*
  * GL_ARB_vertex_program
  */
 
@@ -2026,73 +2031,164 @@ typedef struct _GdkGL_GL_ARB_vertex_program GdkGL_GL_ARB_vertex_program;
 
 struct _GdkGL_GL_ARB_vertex_program
 {
-  GdkGLProc_glVertexAttrib1dARB             glVertexAttrib1dARB;
-  GdkGLProc_glVertexAttrib1dvARB            glVertexAttrib1dvARB;
-  GdkGLProc_glVertexAttrib1fARB             glVertexAttrib1fARB;
-  GdkGLProc_glVertexAttrib1fvARB            glVertexAttrib1fvARB;
-  GdkGLProc_glVertexAttrib1sARB             glVertexAttrib1sARB;
-  GdkGLProc_glVertexAttrib1svARB            glVertexAttrib1svARB;
-  GdkGLProc_glVertexAttrib2dARB             glVertexAttrib2dARB;
-  GdkGLProc_glVertexAttrib2dvARB            glVertexAttrib2dvARB;
-  GdkGLProc_glVertexAttrib2fARB             glVertexAttrib2fARB;
-  GdkGLProc_glVertexAttrib2fvARB            glVertexAttrib2fvARB;
-  GdkGLProc_glVertexAttrib2sARB             glVertexAttrib2sARB;
-  GdkGLProc_glVertexAttrib2svARB            glVertexAttrib2svARB;
-  GdkGLProc_glVertexAttrib3dARB             glVertexAttrib3dARB;
-  GdkGLProc_glVertexAttrib3dvARB            glVertexAttrib3dvARB;
-  GdkGLProc_glVertexAttrib3fARB             glVertexAttrib3fARB;
-  GdkGLProc_glVertexAttrib3fvARB            glVertexAttrib3fvARB;
-  GdkGLProc_glVertexAttrib3sARB             glVertexAttrib3sARB;
-  GdkGLProc_glVertexAttrib3svARB            glVertexAttrib3svARB;
-  GdkGLProc_glVertexAttrib4NbvARB           glVertexAttrib4NbvARB;
-  GdkGLProc_glVertexAttrib4NivARB           glVertexAttrib4NivARB;
-  GdkGLProc_glVertexAttrib4NsvARB           glVertexAttrib4NsvARB;
-  GdkGLProc_glVertexAttrib4NubARB           glVertexAttrib4NubARB;
-  GdkGLProc_glVertexAttrib4NubvARB          glVertexAttrib4NubvARB;
-  GdkGLProc_glVertexAttrib4NuivARB          glVertexAttrib4NuivARB;
-  GdkGLProc_glVertexAttrib4NusvARB          glVertexAttrib4NusvARB;
-  GdkGLProc_glVertexAttrib4bvARB            glVertexAttrib4bvARB;
-  GdkGLProc_glVertexAttrib4dARB             glVertexAttrib4dARB;
-  GdkGLProc_glVertexAttrib4dvARB            glVertexAttrib4dvARB;
-  GdkGLProc_glVertexAttrib4fARB             glVertexAttrib4fARB;
-  GdkGLProc_glVertexAttrib4fvARB            glVertexAttrib4fvARB;
-  GdkGLProc_glVertexAttrib4ivARB            glVertexAttrib4ivARB;
-  GdkGLProc_glVertexAttrib4sARB             glVertexAttrib4sARB;
-  GdkGLProc_glVertexAttrib4svARB            glVertexAttrib4svARB;
-  GdkGLProc_glVertexAttrib4ubvARB           glVertexAttrib4ubvARB;
-  GdkGLProc_glVertexAttrib4uivARB           glVertexAttrib4uivARB;
-  GdkGLProc_glVertexAttrib4usvARB           glVertexAttrib4usvARB;
-  GdkGLProc_glVertexAttribPointerARB        glVertexAttribPointerARB;
-  GdkGLProc_glEnableVertexAttribArrayARB    glEnableVertexAttribArrayARB;
-  GdkGLProc_glDisableVertexAttribArrayARB   glDisableVertexAttribArrayARB;
-  GdkGLProc_glProgramStringARB              glProgramStringARB;
-  GdkGLProc_glBindProgramARB                glBindProgramARB;
-  GdkGLProc_glDeleteProgramsARB             glDeleteProgramsARB;
-  GdkGLProc_glGenProgramsARB                glGenProgramsARB;
-  GdkGLProc_glProgramEnvParameter4dARB      glProgramEnvParameter4dARB;
-  GdkGLProc_glProgramEnvParameter4dvARB     glProgramEnvParameter4dvARB;
-  GdkGLProc_glProgramEnvParameter4fARB      glProgramEnvParameter4fARB;
-  GdkGLProc_glProgramEnvParameter4fvARB     glProgramEnvParameter4fvARB;
-  GdkGLProc_glProgramLocalParameter4dARB    glProgramLocalParameter4dARB;
-  GdkGLProc_glProgramLocalParameter4dvARB   glProgramLocalParameter4dvARB;
-  GdkGLProc_glProgramLocalParameter4fARB    glProgramLocalParameter4fARB;
-  GdkGLProc_glProgramLocalParameter4fvARB   glProgramLocalParameter4fvARB;
-  GdkGLProc_glGetProgramEnvParameterdvARB   glGetProgramEnvParameterdvARB;
-  GdkGLProc_glGetProgramEnvParameterfvARB   glGetProgramEnvParameterfvARB;
+  GdkGLProc_glVertexAttrib1dARB glVertexAttrib1dARB;
+  GdkGLProc_glVertexAttrib1dvARB glVertexAttrib1dvARB;
+  GdkGLProc_glVertexAttrib1fARB glVertexAttrib1fARB;
+  GdkGLProc_glVertexAttrib1fvARB glVertexAttrib1fvARB;
+  GdkGLProc_glVertexAttrib1sARB glVertexAttrib1sARB;
+  GdkGLProc_glVertexAttrib1svARB glVertexAttrib1svARB;
+  GdkGLProc_glVertexAttrib2dARB glVertexAttrib2dARB;
+  GdkGLProc_glVertexAttrib2dvARB glVertexAttrib2dvARB;
+  GdkGLProc_glVertexAttrib2fARB glVertexAttrib2fARB;
+  GdkGLProc_glVertexAttrib2fvARB glVertexAttrib2fvARB;
+  GdkGLProc_glVertexAttrib2sARB glVertexAttrib2sARB;
+  GdkGLProc_glVertexAttrib2svARB glVertexAttrib2svARB;
+  GdkGLProc_glVertexAttrib3dARB glVertexAttrib3dARB;
+  GdkGLProc_glVertexAttrib3dvARB glVertexAttrib3dvARB;
+  GdkGLProc_glVertexAttrib3fARB glVertexAttrib3fARB;
+  GdkGLProc_glVertexAttrib3fvARB glVertexAttrib3fvARB;
+  GdkGLProc_glVertexAttrib3sARB glVertexAttrib3sARB;
+  GdkGLProc_glVertexAttrib3svARB glVertexAttrib3svARB;
+  GdkGLProc_glVertexAttrib4NbvARB glVertexAttrib4NbvARB;
+  GdkGLProc_glVertexAttrib4NivARB glVertexAttrib4NivARB;
+  GdkGLProc_glVertexAttrib4NsvARB glVertexAttrib4NsvARB;
+  GdkGLProc_glVertexAttrib4NubARB glVertexAttrib4NubARB;
+  GdkGLProc_glVertexAttrib4NubvARB glVertexAttrib4NubvARB;
+  GdkGLProc_glVertexAttrib4NuivARB glVertexAttrib4NuivARB;
+  GdkGLProc_glVertexAttrib4NusvARB glVertexAttrib4NusvARB;
+  GdkGLProc_glVertexAttrib4bvARB glVertexAttrib4bvARB;
+  GdkGLProc_glVertexAttrib4dARB glVertexAttrib4dARB;
+  GdkGLProc_glVertexAttrib4dvARB glVertexAttrib4dvARB;
+  GdkGLProc_glVertexAttrib4fARB glVertexAttrib4fARB;
+  GdkGLProc_glVertexAttrib4fvARB glVertexAttrib4fvARB;
+  GdkGLProc_glVertexAttrib4ivARB glVertexAttrib4ivARB;
+  GdkGLProc_glVertexAttrib4sARB glVertexAttrib4sARB;
+  GdkGLProc_glVertexAttrib4svARB glVertexAttrib4svARB;
+  GdkGLProc_glVertexAttrib4ubvARB glVertexAttrib4ubvARB;
+  GdkGLProc_glVertexAttrib4uivARB glVertexAttrib4uivARB;
+  GdkGLProc_glVertexAttrib4usvARB glVertexAttrib4usvARB;
+  GdkGLProc_glVertexAttribPointerARB glVertexAttribPointerARB;
+  GdkGLProc_glEnableVertexAttribArrayARB glEnableVertexAttribArrayARB;
+  GdkGLProc_glDisableVertexAttribArrayARB glDisableVertexAttribArrayARB;
+  GdkGLProc_glProgramStringARB glProgramStringARB;
+  GdkGLProc_glBindProgramARB glBindProgramARB;
+  GdkGLProc_glDeleteProgramsARB glDeleteProgramsARB;
+  GdkGLProc_glGenProgramsARB glGenProgramsARB;
+  GdkGLProc_glProgramEnvParameter4dARB glProgramEnvParameter4dARB;
+  GdkGLProc_glProgramEnvParameter4dvARB glProgramEnvParameter4dvARB;
+  GdkGLProc_glProgramEnvParameter4fARB glProgramEnvParameter4fARB;
+  GdkGLProc_glProgramEnvParameter4fvARB glProgramEnvParameter4fvARB;
+  GdkGLProc_glProgramLocalParameter4dARB glProgramLocalParameter4dARB;
+  GdkGLProc_glProgramLocalParameter4dvARB glProgramLocalParameter4dvARB;
+  GdkGLProc_glProgramLocalParameter4fARB glProgramLocalParameter4fARB;
+  GdkGLProc_glProgramLocalParameter4fvARB glProgramLocalParameter4fvARB;
+  GdkGLProc_glGetProgramEnvParameterdvARB glGetProgramEnvParameterdvARB;
+  GdkGLProc_glGetProgramEnvParameterfvARB glGetProgramEnvParameterfvARB;
   GdkGLProc_glGetProgramLocalParameterdvARB glGetProgramLocalParameterdvARB;
   GdkGLProc_glGetProgramLocalParameterfvARB glGetProgramLocalParameterfvARB;
-  GdkGLProc_glGetProgramivARB               glGetProgramivARB;
-  GdkGLProc_glGetProgramStringARB           glGetProgramStringARB;
-  GdkGLProc_glGetVertexAttribdvARB          glGetVertexAttribdvARB;
-  GdkGLProc_glGetVertexAttribfvARB          glGetVertexAttribfvARB;
-  GdkGLProc_glGetVertexAttribivARB          glGetVertexAttribivARB;
-  GdkGLProc_glGetVertexAttribPointervARB    glGetVertexAttribPointervARB;
-  GdkGLProc_glIsProgramARB                  glIsProgramARB;
+  GdkGLProc_glGetProgramivARB glGetProgramivARB;
+  GdkGLProc_glGetProgramStringARB glGetProgramStringARB;
+  GdkGLProc_glGetVertexAttribdvARB glGetVertexAttribdvARB;
+  GdkGLProc_glGetVertexAttribfvARB glGetVertexAttribfvARB;
+  GdkGLProc_glGetVertexAttribivARB glGetVertexAttribivARB;
+  GdkGLProc_glGetVertexAttribPointervARB glGetVertexAttribPointervARB;
+  GdkGLProc_glIsProgramARB glIsProgramARB;
 };
 
 GdkGL_GL_ARB_vertex_program *gdk_gl_get_GL_ARB_vertex_program (void);
 
-/* 
+/*
+ * GL_ARB_vertex_buffer_object
+ */
+
+/* glBindBufferARB */
+typedef void (APIENTRY * GdkGLProc_glBindBufferARB) (GLenum target, GLuint buffer);
+GdkGLProc    gdk_gl_get_glBindBufferARB (void);
+#define      gdk_gl_glBindBufferARB(proc, target, buffer) \
+  ( ((GdkGLProc_glBindBufferARB) (proc)) (target, buffer) )
+
+/* glDeleteBuffersARB */
+typedef void (APIENTRY * GdkGLProc_glDeleteBuffersARB) (GLsizei n, const GLuint *buffers);
+GdkGLProc    gdk_gl_get_glDeleteBuffersARB (void);
+#define      gdk_gl_glDeleteBuffersARB(proc, n, buffers) \
+  ( ((GdkGLProc_glDeleteBuffersARB) (proc)) (n, buffers) )
+
+/* glGenBuffersARB */
+typedef void (APIENTRY * GdkGLProc_glGenBuffersARB) (GLsizei n, GLuint *buffers);
+GdkGLProc    gdk_gl_get_glGenBuffersARB (void);
+#define      gdk_gl_glGenBuffersARB(proc, n, buffers) \
+  ( ((GdkGLProc_glGenBuffersARB) (proc)) (n, buffers) )
+
+/* glIsBufferARB */
+typedef GLboolean (APIENTRY * GdkGLProc_glIsBufferARB) (GLuint buffer);
+GdkGLProc    gdk_gl_get_glIsBufferARB (void);
+#define      gdk_gl_glIsBufferARB(proc, buffer) \
+  ( ((GdkGLProc_glIsBufferARB) (proc)) (buffer) )
+
+/* glBufferDataARB */
+typedef void (APIENTRY * GdkGLProc_glBufferDataARB) (GLenum target, GLsizeiptrARB size, const GLvoid *data, GLenum usage);
+GdkGLProc    gdk_gl_get_glBufferDataARB (void);
+#define      gdk_gl_glBufferDataARB(proc, target, size, data, usage) \
+  ( ((GdkGLProc_glBufferDataARB) (proc)) (target, size, data, usage) )
+
+/* glBufferSubDataARB */
+typedef void (APIENTRY * GdkGLProc_glBufferSubDataARB) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, const GLvoid *data);
+GdkGLProc    gdk_gl_get_glBufferSubDataARB (void);
+#define      gdk_gl_glBufferSubDataARB(proc, target, offset, size, data) \
+  ( ((GdkGLProc_glBufferSubDataARB) (proc)) (target, offset, size, data) )
+
+/* glGetBufferSubDataARB */
+typedef void (APIENTRY * GdkGLProc_glGetBufferSubDataARB) (GLenum target, GLintptrARB offset, GLsizeiptrARB size, GLvoid *data);
+GdkGLProc    gdk_gl_get_glGetBufferSubDataARB (void);
+#define      gdk_gl_glGetBufferSubDataARB(proc, target, offset, size, data) \
+  ( ((GdkGLProc_glGetBufferSubDataARB) (proc)) (target, offset, size, data) )
+
+/* glMapBufferARB */
+typedef GLvoid* (APIENTRY * GdkGLProc_glMapBufferARB) (GLenum target, GLenum access);
+GdkGLProc    gdk_gl_get_glMapBufferARB (void);
+#define      gdk_gl_glMapBufferARB(proc, target, access) \
+  ( ((GdkGLProc_glMapBufferARB) (proc)) (target, access) )
+
+/* glUnmapBufferARB */
+typedef GLboolean (APIENTRY * GdkGLProc_glUnmapBufferARB) (GLenum target);
+GdkGLProc    gdk_gl_get_glUnmapBufferARB (void);
+#define      gdk_gl_glUnmapBufferARB(proc, target) \
+  ( ((GdkGLProc_glUnmapBufferARB) (proc)) (target) )
+
+/* glGetBufferParameterivARB */
+typedef void (APIENTRY * GdkGLProc_glGetBufferParameterivARB) (GLenum target, GLenum pname, GLint *params);
+GdkGLProc    gdk_gl_get_glGetBufferParameterivARB (void);
+#define      gdk_gl_glGetBufferParameterivARB(proc, target, pname, params) \
+  ( ((GdkGLProc_glGetBufferParameterivARB) (proc)) (target, pname, params) )
+
+/* glGetBufferPointervARB */
+typedef void (APIENTRY * GdkGLProc_glGetBufferPointervARB) (GLenum target, GLenum pname, GLvoid* *params);
+GdkGLProc    gdk_gl_get_glGetBufferPointervARB (void);
+#define      gdk_gl_glGetBufferPointervARB(proc, target, pname, params) \
+  ( ((GdkGLProc_glGetBufferPointervARB) (proc)) (target, pname, params) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_ARB_vertex_buffer_object GdkGL_GL_ARB_vertex_buffer_object;
+
+struct _GdkGL_GL_ARB_vertex_buffer_object
+{
+  GdkGLProc_glBindBufferARB glBindBufferARB;
+  GdkGLProc_glDeleteBuffersARB glDeleteBuffersARB;
+  GdkGLProc_glGenBuffersARB glGenBuffersARB;
+  GdkGLProc_glIsBufferARB glIsBufferARB;
+  GdkGLProc_glBufferDataARB glBufferDataARB;
+  GdkGLProc_glBufferSubDataARB glBufferSubDataARB;
+  GdkGLProc_glGetBufferSubDataARB glGetBufferSubDataARB;
+  GdkGLProc_glMapBufferARB glMapBufferARB;
+  GdkGLProc_glUnmapBufferARB glUnmapBufferARB;
+  GdkGLProc_glGetBufferParameterivARB glGetBufferParameterivARB;
+  GdkGLProc_glGetBufferPointervARB glGetBufferPointervARB;
+};
+
+GdkGL_GL_ARB_vertex_buffer_object *gdk_gl_get_GL_ARB_vertex_buffer_object (void);
+
+/*
  * GL_EXT_blend_color
  */
 
@@ -2113,7 +2209,7 @@ struct _GdkGL_GL_EXT_blend_color
 
 GdkGL_GL_EXT_blend_color *gdk_gl_get_GL_EXT_blend_color (void);
 
-/* 
+/*
  * GL_EXT_polygon_offset
  */
 
@@ -2134,7 +2230,7 @@ struct _GdkGL_GL_EXT_polygon_offset
 
 GdkGL_GL_EXT_polygon_offset *gdk_gl_get_GL_EXT_polygon_offset (void);
 
-/* 
+/*
  * GL_EXT_texture3D
  */
 
@@ -2156,13 +2252,13 @@ typedef struct _GdkGL_GL_EXT_texture3D GdkGL_GL_EXT_texture3D;
 
 struct _GdkGL_GL_EXT_texture3D
 {
-  GdkGLProc_glTexImage3DEXT    glTexImage3DEXT;
+  GdkGLProc_glTexImage3DEXT glTexImage3DEXT;
   GdkGLProc_glTexSubImage3DEXT glTexSubImage3DEXT;
 };
 
 GdkGL_GL_EXT_texture3D *gdk_gl_get_GL_EXT_texture3D (void);
 
-/* 
+/*
  * GL_SGIS_texture_filter4
  */
 
@@ -2185,12 +2281,12 @@ typedef struct _GdkGL_GL_SGIS_texture_filter4 GdkGL_GL_SGIS_texture_filter4;
 struct _GdkGL_GL_SGIS_texture_filter4
 {
   GdkGLProc_glGetTexFilterFuncSGIS glGetTexFilterFuncSGIS;
-  GdkGLProc_glTexFilterFuncSGIS    glTexFilterFuncSGIS;
+  GdkGLProc_glTexFilterFuncSGIS glTexFilterFuncSGIS;
 };
 
 GdkGL_GL_SGIS_texture_filter4 *gdk_gl_get_GL_SGIS_texture_filter4 (void);
 
-/* 
+/*
  * GL_EXT_subtexture
  */
 
@@ -2218,7 +2314,7 @@ struct _GdkGL_GL_EXT_subtexture
 
 GdkGL_GL_EXT_subtexture *gdk_gl_get_GL_EXT_subtexture (void);
 
-/* 
+/*
  * GL_EXT_copy_texture
  */
 
@@ -2258,8 +2354,8 @@ typedef struct _GdkGL_GL_EXT_copy_texture GdkGL_GL_EXT_copy_texture;
 
 struct _GdkGL_GL_EXT_copy_texture
 {
-  GdkGLProc_glCopyTexImage1DEXT    glCopyTexImage1DEXT;
-  GdkGLProc_glCopyTexImage2DEXT    glCopyTexImage2DEXT;
+  GdkGLProc_glCopyTexImage1DEXT glCopyTexImage1DEXT;
+  GdkGLProc_glCopyTexImage2DEXT glCopyTexImage2DEXT;
   GdkGLProc_glCopyTexSubImage1DEXT glCopyTexSubImage1DEXT;
   GdkGLProc_glCopyTexSubImage2DEXT glCopyTexSubImage2DEXT;
   GdkGLProc_glCopyTexSubImage3DEXT glCopyTexSubImage3DEXT;
@@ -2267,7 +2363,7 @@ struct _GdkGL_GL_EXT_copy_texture
 
 GdkGL_GL_EXT_copy_texture *gdk_gl_get_GL_EXT_copy_texture (void);
 
-/* 
+/*
  * GL_EXT_histogram
  */
 
@@ -2337,21 +2433,21 @@ typedef struct _GdkGL_GL_EXT_histogram GdkGL_GL_EXT_histogram;
 
 struct _GdkGL_GL_EXT_histogram
 {
-  GdkGLProc_glGetHistogramEXT            glGetHistogramEXT;
+  GdkGLProc_glGetHistogramEXT glGetHistogramEXT;
   GdkGLProc_glGetHistogramParameterfvEXT glGetHistogramParameterfvEXT;
   GdkGLProc_glGetHistogramParameterivEXT glGetHistogramParameterivEXT;
-  GdkGLProc_glGetMinmaxEXT               glGetMinmaxEXT;
-  GdkGLProc_glGetMinmaxParameterfvEXT    glGetMinmaxParameterfvEXT;
-  GdkGLProc_glGetMinmaxParameterivEXT    glGetMinmaxParameterivEXT;
-  GdkGLProc_glHistogramEXT               glHistogramEXT;
-  GdkGLProc_glMinmaxEXT                  glMinmaxEXT;
-  GdkGLProc_glResetHistogramEXT          glResetHistogramEXT;
-  GdkGLProc_glResetMinmaxEXT             glResetMinmaxEXT;
+  GdkGLProc_glGetMinmaxEXT glGetMinmaxEXT;
+  GdkGLProc_glGetMinmaxParameterfvEXT glGetMinmaxParameterfvEXT;
+  GdkGLProc_glGetMinmaxParameterivEXT glGetMinmaxParameterivEXT;
+  GdkGLProc_glHistogramEXT glHistogramEXT;
+  GdkGLProc_glMinmaxEXT glMinmaxEXT;
+  GdkGLProc_glResetHistogramEXT glResetHistogramEXT;
+  GdkGLProc_glResetMinmaxEXT glResetMinmaxEXT;
 };
 
 GdkGL_GL_EXT_histogram *gdk_gl_get_GL_EXT_histogram (void);
 
-/* 
+/*
  * GL_EXT_convolution
  */
 
@@ -2439,24 +2535,24 @@ typedef struct _GdkGL_GL_EXT_convolution GdkGL_GL_EXT_convolution;
 
 struct _GdkGL_GL_EXT_convolution
 {
-  GdkGLProc_glConvolutionFilter1DEXT       glConvolutionFilter1DEXT;
-  GdkGLProc_glConvolutionFilter2DEXT       glConvolutionFilter2DEXT;
-  GdkGLProc_glConvolutionParameterfEXT     glConvolutionParameterfEXT;
-  GdkGLProc_glConvolutionParameterfvEXT    glConvolutionParameterfvEXT;
-  GdkGLProc_glConvolutionParameteriEXT     glConvolutionParameteriEXT;
-  GdkGLProc_glConvolutionParameterivEXT    glConvolutionParameterivEXT;
-  GdkGLProc_glCopyConvolutionFilter1DEXT   glCopyConvolutionFilter1DEXT;
-  GdkGLProc_glCopyConvolutionFilter2DEXT   glCopyConvolutionFilter2DEXT;
-  GdkGLProc_glGetConvolutionFilterEXT      glGetConvolutionFilterEXT;
+  GdkGLProc_glConvolutionFilter1DEXT glConvolutionFilter1DEXT;
+  GdkGLProc_glConvolutionFilter2DEXT glConvolutionFilter2DEXT;
+  GdkGLProc_glConvolutionParameterfEXT glConvolutionParameterfEXT;
+  GdkGLProc_glConvolutionParameterfvEXT glConvolutionParameterfvEXT;
+  GdkGLProc_glConvolutionParameteriEXT glConvolutionParameteriEXT;
+  GdkGLProc_glConvolutionParameterivEXT glConvolutionParameterivEXT;
+  GdkGLProc_glCopyConvolutionFilter1DEXT glCopyConvolutionFilter1DEXT;
+  GdkGLProc_glCopyConvolutionFilter2DEXT glCopyConvolutionFilter2DEXT;
+  GdkGLProc_glGetConvolutionFilterEXT glGetConvolutionFilterEXT;
   GdkGLProc_glGetConvolutionParameterfvEXT glGetConvolutionParameterfvEXT;
   GdkGLProc_glGetConvolutionParameterivEXT glGetConvolutionParameterivEXT;
-  GdkGLProc_glGetSeparableFilterEXT        glGetSeparableFilterEXT;
-  GdkGLProc_glSeparableFilter2DEXT         glSeparableFilter2DEXT;
+  GdkGLProc_glGetSeparableFilterEXT glGetSeparableFilterEXT;
+  GdkGLProc_glSeparableFilter2DEXT glSeparableFilter2DEXT;
 };
 
 GdkGL_GL_EXT_convolution *gdk_gl_get_GL_EXT_convolution (void);
 
-/* 
+/*
  * GL_SGI_color_table
  */
 
@@ -2508,18 +2604,18 @@ typedef struct _GdkGL_GL_SGI_color_table GdkGL_GL_SGI_color_table;
 
 struct _GdkGL_GL_SGI_color_table
 {
-  GdkGLProc_glColorTableSGI               glColorTableSGI;
-  GdkGLProc_glColorTableParameterfvSGI    glColorTableParameterfvSGI;
-  GdkGLProc_glColorTableParameterivSGI    glColorTableParameterivSGI;
-  GdkGLProc_glCopyColorTableSGI           glCopyColorTableSGI;
-  GdkGLProc_glGetColorTableSGI            glGetColorTableSGI;
+  GdkGLProc_glColorTableSGI glColorTableSGI;
+  GdkGLProc_glColorTableParameterfvSGI glColorTableParameterfvSGI;
+  GdkGLProc_glColorTableParameterivSGI glColorTableParameterivSGI;
+  GdkGLProc_glCopyColorTableSGI glCopyColorTableSGI;
+  GdkGLProc_glGetColorTableSGI glGetColorTableSGI;
   GdkGLProc_glGetColorTableParameterfvSGI glGetColorTableParameterfvSGI;
   GdkGLProc_glGetColorTableParameterivSGI glGetColorTableParameterivSGI;
 };
 
 GdkGL_GL_SGI_color_table *gdk_gl_get_GL_SGI_color_table (void);
 
-/* 
+/*
  * GL_SGIX_pixel_texture
  */
 
@@ -2540,7 +2636,7 @@ struct _GdkGL_GL_SGIX_pixel_texture
 
 GdkGL_GL_SGIX_pixel_texture *gdk_gl_get_GL_SGIX_pixel_texture (void);
 
-/* 
+/*
  * GL_SGIS_pixel_texture
  */
 
@@ -2586,17 +2682,17 @@ typedef struct _GdkGL_GL_SGIS_pixel_texture GdkGL_GL_SGIS_pixel_texture;
 
 struct _GdkGL_GL_SGIS_pixel_texture
 {
-  GdkGLProc_glPixelTexGenParameteriSGIS     glPixelTexGenParameteriSGIS;
-  GdkGLProc_glPixelTexGenParameterivSGIS    glPixelTexGenParameterivSGIS;
-  GdkGLProc_glPixelTexGenParameterfSGIS     glPixelTexGenParameterfSGIS;
-  GdkGLProc_glPixelTexGenParameterfvSGIS    glPixelTexGenParameterfvSGIS;
+  GdkGLProc_glPixelTexGenParameteriSGIS glPixelTexGenParameteriSGIS;
+  GdkGLProc_glPixelTexGenParameterivSGIS glPixelTexGenParameterivSGIS;
+  GdkGLProc_glPixelTexGenParameterfSGIS glPixelTexGenParameterfSGIS;
+  GdkGLProc_glPixelTexGenParameterfvSGIS glPixelTexGenParameterfvSGIS;
   GdkGLProc_glGetPixelTexGenParameterivSGIS glGetPixelTexGenParameterivSGIS;
   GdkGLProc_glGetPixelTexGenParameterfvSGIS glGetPixelTexGenParameterfvSGIS;
 };
 
 GdkGL_GL_SGIS_pixel_texture *gdk_gl_get_GL_SGIS_pixel_texture (void);
 
-/* 
+/*
  * GL_SGIS_texture4D
  */
 
@@ -2618,13 +2714,13 @@ typedef struct _GdkGL_GL_SGIS_texture4D GdkGL_GL_SGIS_texture4D;
 
 struct _GdkGL_GL_SGIS_texture4D
 {
-  GdkGLProc_glTexImage4DSGIS    glTexImage4DSGIS;
+  GdkGLProc_glTexImage4DSGIS glTexImage4DSGIS;
   GdkGLProc_glTexSubImage4DSGIS glTexSubImage4DSGIS;
 };
 
 GdkGL_GL_SGIS_texture4D *gdk_gl_get_GL_SGIS_texture4D (void);
 
-/* 
+/*
  * GL_EXT_texture_object
  */
 
@@ -2671,16 +2767,16 @@ typedef struct _GdkGL_GL_EXT_texture_object GdkGL_GL_EXT_texture_object;
 struct _GdkGL_GL_EXT_texture_object
 {
   GdkGLProc_glAreTexturesResidentEXT glAreTexturesResidentEXT;
-  GdkGLProc_glBindTextureEXT         glBindTextureEXT;
-  GdkGLProc_glDeleteTexturesEXT      glDeleteTexturesEXT;
-  GdkGLProc_glGenTexturesEXT         glGenTexturesEXT;
-  GdkGLProc_glIsTextureEXT           glIsTextureEXT;
-  GdkGLProc_glPrioritizeTexturesEXT  glPrioritizeTexturesEXT;
+  GdkGLProc_glBindTextureEXT glBindTextureEXT;
+  GdkGLProc_glDeleteTexturesEXT glDeleteTexturesEXT;
+  GdkGLProc_glGenTexturesEXT glGenTexturesEXT;
+  GdkGLProc_glIsTextureEXT glIsTextureEXT;
+  GdkGLProc_glPrioritizeTexturesEXT glPrioritizeTexturesEXT;
 };
 
 GdkGL_GL_EXT_texture_object *gdk_gl_get_GL_EXT_texture_object (void);
 
-/* 
+/*
  * GL_SGIS_detail_texture
  */
 
@@ -2702,13 +2798,13 @@ typedef struct _GdkGL_GL_SGIS_detail_texture GdkGL_GL_SGIS_detail_texture;
 
 struct _GdkGL_GL_SGIS_detail_texture
 {
-  GdkGLProc_glDetailTexFuncSGIS    glDetailTexFuncSGIS;
+  GdkGLProc_glDetailTexFuncSGIS glDetailTexFuncSGIS;
   GdkGLProc_glGetDetailTexFuncSGIS glGetDetailTexFuncSGIS;
 };
 
 GdkGL_GL_SGIS_detail_texture *gdk_gl_get_GL_SGIS_detail_texture (void);
 
-/* 
+/*
  * GL_SGIS_sharpen_texture
  */
 
@@ -2730,13 +2826,13 @@ typedef struct _GdkGL_GL_SGIS_sharpen_texture GdkGL_GL_SGIS_sharpen_texture;
 
 struct _GdkGL_GL_SGIS_sharpen_texture
 {
-  GdkGLProc_glSharpenTexFuncSGIS    glSharpenTexFuncSGIS;
+  GdkGLProc_glSharpenTexFuncSGIS glSharpenTexFuncSGIS;
   GdkGLProc_glGetSharpenTexFuncSGIS glGetSharpenTexFuncSGIS;
 };
 
 GdkGL_GL_SGIS_sharpen_texture *gdk_gl_get_GL_SGIS_sharpen_texture (void);
 
-/* 
+/*
  * GL_SGIS_multisample
  */
 
@@ -2758,13 +2854,13 @@ typedef struct _GdkGL_GL_SGIS_multisample GdkGL_GL_SGIS_multisample;
 
 struct _GdkGL_GL_SGIS_multisample
 {
-  GdkGLProc_glSampleMaskSGIS    glSampleMaskSGIS;
+  GdkGLProc_glSampleMaskSGIS glSampleMaskSGIS;
   GdkGLProc_glSamplePatternSGIS glSamplePatternSGIS;
 };
 
 GdkGL_GL_SGIS_multisample *gdk_gl_get_GL_SGIS_multisample (void);
 
-/* 
+/*
  * GL_EXT_vertex_array
  */
 
@@ -2828,20 +2924,20 @@ typedef struct _GdkGL_GL_EXT_vertex_array GdkGL_GL_EXT_vertex_array;
 
 struct _GdkGL_GL_EXT_vertex_array
 {
-  GdkGLProc_glArrayElementEXT    glArrayElementEXT;
-  GdkGLProc_glColorPointerEXT    glColorPointerEXT;
-  GdkGLProc_glDrawArraysEXT      glDrawArraysEXT;
+  GdkGLProc_glArrayElementEXT glArrayElementEXT;
+  GdkGLProc_glColorPointerEXT glColorPointerEXT;
+  GdkGLProc_glDrawArraysEXT glDrawArraysEXT;
   GdkGLProc_glEdgeFlagPointerEXT glEdgeFlagPointerEXT;
-  GdkGLProc_glGetPointervEXT     glGetPointervEXT;
-  GdkGLProc_glIndexPointerEXT    glIndexPointerEXT;
-  GdkGLProc_glNormalPointerEXT   glNormalPointerEXT;
+  GdkGLProc_glGetPointervEXT glGetPointervEXT;
+  GdkGLProc_glIndexPointerEXT glIndexPointerEXT;
+  GdkGLProc_glNormalPointerEXT glNormalPointerEXT;
   GdkGLProc_glTexCoordPointerEXT glTexCoordPointerEXT;
-  GdkGLProc_glVertexPointerEXT   glVertexPointerEXT;
+  GdkGLProc_glVertexPointerEXT glVertexPointerEXT;
 };
 
 GdkGL_GL_EXT_vertex_array *gdk_gl_get_GL_EXT_vertex_array (void);
 
-/* 
+/*
  * GL_EXT_blend_minmax
  */
 
@@ -2862,7 +2958,7 @@ struct _GdkGL_GL_EXT_blend_minmax
 
 GdkGL_GL_EXT_blend_minmax *gdk_gl_get_GL_EXT_blend_minmax (void);
 
-/* 
+/*
  * GL_SGIX_sprite
  */
 
@@ -2896,15 +2992,15 @@ typedef struct _GdkGL_GL_SGIX_sprite GdkGL_GL_SGIX_sprite;
 
 struct _GdkGL_GL_SGIX_sprite
 {
-  GdkGLProc_glSpriteParameterfSGIX  glSpriteParameterfSGIX;
+  GdkGLProc_glSpriteParameterfSGIX glSpriteParameterfSGIX;
   GdkGLProc_glSpriteParameterfvSGIX glSpriteParameterfvSGIX;
-  GdkGLProc_glSpriteParameteriSGIX  glSpriteParameteriSGIX;
+  GdkGLProc_glSpriteParameteriSGIX glSpriteParameteriSGIX;
   GdkGLProc_glSpriteParameterivSGIX glSpriteParameterivSGIX;
 };
 
 GdkGL_GL_SGIX_sprite *gdk_gl_get_GL_SGIX_sprite (void);
 
-/* 
+/*
  * GL_EXT_point_parameters
  */
 
@@ -2926,13 +3022,13 @@ typedef struct _GdkGL_GL_EXT_point_parameters GdkGL_GL_EXT_point_parameters;
 
 struct _GdkGL_GL_EXT_point_parameters
 {
-  GdkGLProc_glPointParameterfEXT  glPointParameterfEXT;
+  GdkGLProc_glPointParameterfEXT glPointParameterfEXT;
   GdkGLProc_glPointParameterfvEXT glPointParameterfvEXT;
 };
 
 GdkGL_GL_EXT_point_parameters *gdk_gl_get_GL_EXT_point_parameters (void);
 
-/* 
+/*
  * GL_SGIS_point_parameters
  */
 
@@ -2954,13 +3050,13 @@ typedef struct _GdkGL_GL_SGIS_point_parameters GdkGL_GL_SGIS_point_parameters;
 
 struct _GdkGL_GL_SGIS_point_parameters
 {
-  GdkGLProc_glPointParameterfSGIS  glPointParameterfSGIS;
+  GdkGLProc_glPointParameterfSGIS glPointParameterfSGIS;
   GdkGLProc_glPointParameterfvSGIS glPointParameterfvSGIS;
 };
 
 GdkGL_GL_SGIS_point_parameters *gdk_gl_get_GL_SGIS_point_parameters (void);
 
-/* 
+/*
  * GL_SGIX_instruments
  */
 
@@ -3006,17 +3102,17 @@ typedef struct _GdkGL_GL_SGIX_instruments GdkGL_GL_SGIX_instruments;
 
 struct _GdkGL_GL_SGIX_instruments
 {
-  GdkGLProc_glGetInstrumentsSGIX    glGetInstrumentsSGIX;
+  GdkGLProc_glGetInstrumentsSGIX glGetInstrumentsSGIX;
   GdkGLProc_glInstrumentsBufferSGIX glInstrumentsBufferSGIX;
-  GdkGLProc_glPollInstrumentsSGIX   glPollInstrumentsSGIX;
-  GdkGLProc_glReadInstrumentsSGIX   glReadInstrumentsSGIX;
-  GdkGLProc_glStartInstrumentsSGIX  glStartInstrumentsSGIX;
-  GdkGLProc_glStopInstrumentsSGIX   glStopInstrumentsSGIX;
+  GdkGLProc_glPollInstrumentsSGIX glPollInstrumentsSGIX;
+  GdkGLProc_glReadInstrumentsSGIX glReadInstrumentsSGIX;
+  GdkGLProc_glStartInstrumentsSGIX glStartInstrumentsSGIX;
+  GdkGLProc_glStopInstrumentsSGIX glStopInstrumentsSGIX;
 };
 
 GdkGL_GL_SGIX_instruments *gdk_gl_get_GL_SGIX_instruments (void);
 
-/* 
+/*
  * GL_SGIX_framezoom
  */
 
@@ -3037,7 +3133,7 @@ struct _GdkGL_GL_SGIX_framezoom
 
 GdkGL_GL_SGIX_framezoom *gdk_gl_get_GL_SGIX_framezoom (void);
 
-/* 
+/*
  * GL_SGIX_tag_sample_buffer
  */
 
@@ -3058,7 +3154,7 @@ struct _GdkGL_GL_SGIX_tag_sample_buffer
 
 GdkGL_GL_SGIX_tag_sample_buffer *gdk_gl_get_GL_SGIX_tag_sample_buffer (void);
 
-/* 
+/*
  * GL_SGIX_polynomial_ffd
  */
 
@@ -3092,15 +3188,15 @@ typedef struct _GdkGL_GL_SGIX_polynomial_ffd GdkGL_GL_SGIX_polynomial_ffd;
 
 struct _GdkGL_GL_SGIX_polynomial_ffd
 {
-  GdkGLProc_glDeformationMap3dSGIX           glDeformationMap3dSGIX;
-  GdkGLProc_glDeformationMap3fSGIX           glDeformationMap3fSGIX;
-  GdkGLProc_glDeformSGIX                     glDeformSGIX;
+  GdkGLProc_glDeformationMap3dSGIX glDeformationMap3dSGIX;
+  GdkGLProc_glDeformationMap3fSGIX glDeformationMap3fSGIX;
+  GdkGLProc_glDeformSGIX glDeformSGIX;
   GdkGLProc_glLoadIdentityDeformationMapSGIX glLoadIdentityDeformationMapSGIX;
 };
 
 GdkGL_GL_SGIX_polynomial_ffd *gdk_gl_get_GL_SGIX_polynomial_ffd (void);
 
-/* 
+/*
  * GL_SGIX_reference_plane
  */
 
@@ -3121,7 +3217,7 @@ struct _GdkGL_GL_SGIX_reference_plane
 
 GdkGL_GL_SGIX_reference_plane *gdk_gl_get_GL_SGIX_reference_plane (void);
 
-/* 
+/*
  * GL_SGIX_flush_raster
  */
 
@@ -3142,7 +3238,7 @@ struct _GdkGL_GL_SGIX_flush_raster
 
 GdkGL_GL_SGIX_flush_raster *gdk_gl_get_GL_SGIX_flush_raster (void);
 
-/* 
+/*
  * GL_SGIS_fog_function
  */
 
@@ -3164,13 +3260,13 @@ typedef struct _GdkGL_GL_SGIS_fog_function GdkGL_GL_SGIS_fog_function;
 
 struct _GdkGL_GL_SGIS_fog_function
 {
-  GdkGLProc_glFogFuncSGIS    glFogFuncSGIS;
+  GdkGLProc_glFogFuncSGIS glFogFuncSGIS;
   GdkGLProc_glGetFogFuncSGIS glGetFogFuncSGIS;
 };
 
 GdkGL_GL_SGIS_fog_function *gdk_gl_get_GL_SGIS_fog_function (void);
 
-/* 
+/*
  * GL_HP_image_transform
  */
 
@@ -3216,17 +3312,17 @@ typedef struct _GdkGL_GL_HP_image_transform GdkGL_GL_HP_image_transform;
 
 struct _GdkGL_GL_HP_image_transform
 {
-  GdkGLProc_glImageTransformParameteriHP     glImageTransformParameteriHP;
-  GdkGLProc_glImageTransformParameterfHP     glImageTransformParameterfHP;
-  GdkGLProc_glImageTransformParameterivHP    glImageTransformParameterivHP;
-  GdkGLProc_glImageTransformParameterfvHP    glImageTransformParameterfvHP;
+  GdkGLProc_glImageTransformParameteriHP glImageTransformParameteriHP;
+  GdkGLProc_glImageTransformParameterfHP glImageTransformParameterfHP;
+  GdkGLProc_glImageTransformParameterivHP glImageTransformParameterivHP;
+  GdkGLProc_glImageTransformParameterfvHP glImageTransformParameterfvHP;
   GdkGLProc_glGetImageTransformParameterivHP glGetImageTransformParameterivHP;
   GdkGLProc_glGetImageTransformParameterfvHP glGetImageTransformParameterfvHP;
 };
 
 GdkGL_GL_HP_image_transform *gdk_gl_get_GL_HP_image_transform (void);
 
-/* 
+/*
  * GL_EXT_color_subtable
  */
 
@@ -3248,13 +3344,13 @@ typedef struct _GdkGL_GL_EXT_color_subtable GdkGL_GL_EXT_color_subtable;
 
 struct _GdkGL_GL_EXT_color_subtable
 {
-  GdkGLProc_glColorSubTableEXT     glColorSubTableEXT;
+  GdkGLProc_glColorSubTableEXT glColorSubTableEXT;
   GdkGLProc_glCopyColorSubTableEXT glCopyColorSubTableEXT;
 };
 
 GdkGL_GL_EXT_color_subtable *gdk_gl_get_GL_EXT_color_subtable (void);
 
-/* 
+/*
  * GL_PGI_misc_hints
  */
 
@@ -3275,7 +3371,7 @@ struct _GdkGL_GL_PGI_misc_hints
 
 GdkGL_GL_PGI_misc_hints *gdk_gl_get_GL_PGI_misc_hints (void);
 
-/* 
+/*
  * GL_EXT_paletted_texture
  */
 
@@ -3309,15 +3405,15 @@ typedef struct _GdkGL_GL_EXT_paletted_texture GdkGL_GL_EXT_paletted_texture;
 
 struct _GdkGL_GL_EXT_paletted_texture
 {
-  GdkGLProc_glColorTableEXT               glColorTableEXT;
-  GdkGLProc_glGetColorTableEXT            glGetColorTableEXT;
+  GdkGLProc_glColorTableEXT glColorTableEXT;
+  GdkGLProc_glGetColorTableEXT glGetColorTableEXT;
   GdkGLProc_glGetColorTableParameterivEXT glGetColorTableParameterivEXT;
   GdkGLProc_glGetColorTableParameterfvEXT glGetColorTableParameterfvEXT;
 };
 
 GdkGL_GL_EXT_paletted_texture *gdk_gl_get_GL_EXT_paletted_texture (void);
 
-/* 
+/*
  * GL_SGIX_list_priority
  */
 
@@ -3365,15 +3461,15 @@ struct _GdkGL_GL_SGIX_list_priority
 {
   GdkGLProc_glGetListParameterfvSGIX glGetListParameterfvSGIX;
   GdkGLProc_glGetListParameterivSGIX glGetListParameterivSGIX;
-  GdkGLProc_glListParameterfSGIX     glListParameterfSGIX;
-  GdkGLProc_glListParameterfvSGIX    glListParameterfvSGIX;
-  GdkGLProc_glListParameteriSGIX     glListParameteriSGIX;
-  GdkGLProc_glListParameterivSGIX    glListParameterivSGIX;
+  GdkGLProc_glListParameterfSGIX glListParameterfSGIX;
+  GdkGLProc_glListParameterfvSGIX glListParameterfvSGIX;
+  GdkGLProc_glListParameteriSGIX glListParameteriSGIX;
+  GdkGLProc_glListParameterivSGIX glListParameterivSGIX;
 };
 
 GdkGL_GL_SGIX_list_priority *gdk_gl_get_GL_SGIX_list_priority (void);
 
-/* 
+/*
  * GL_EXT_index_material
  */
 
@@ -3394,7 +3490,7 @@ struct _GdkGL_GL_EXT_index_material
 
 GdkGL_GL_EXT_index_material *gdk_gl_get_GL_EXT_index_material (void);
 
-/* 
+/*
  * GL_EXT_index_func
  */
 
@@ -3415,7 +3511,7 @@ struct _GdkGL_GL_EXT_index_func
 
 GdkGL_GL_EXT_index_func *gdk_gl_get_GL_EXT_index_func (void);
 
-/* 
+/*
  * GL_EXT_compiled_vertex_array
  */
 
@@ -3437,13 +3533,13 @@ typedef struct _GdkGL_GL_EXT_compiled_vertex_array GdkGL_GL_EXT_compiled_vertex_
 
 struct _GdkGL_GL_EXT_compiled_vertex_array
 {
-  GdkGLProc_glLockArraysEXT   glLockArraysEXT;
+  GdkGLProc_glLockArraysEXT glLockArraysEXT;
   GdkGLProc_glUnlockArraysEXT glUnlockArraysEXT;
 };
 
 GdkGL_GL_EXT_compiled_vertex_array *gdk_gl_get_GL_EXT_compiled_vertex_array (void);
 
-/* 
+/*
  * GL_EXT_cull_vertex
  */
 
@@ -3471,7 +3567,7 @@ struct _GdkGL_GL_EXT_cull_vertex
 
 GdkGL_GL_EXT_cull_vertex *gdk_gl_get_GL_EXT_cull_vertex (void);
 
-/* 
+/*
  * GL_SGIX_fragment_lighting
  */
 
@@ -3590,28 +3686,28 @@ typedef struct _GdkGL_GL_SGIX_fragment_lighting GdkGL_GL_SGIX_fragment_lighting;
 struct _GdkGL_GL_SGIX_fragment_lighting
 {
   GdkGLProc_glFragmentColorMaterialSGIX glFragmentColorMaterialSGIX;
-  GdkGLProc_glFragmentLightfSGIX        glFragmentLightfSGIX;
-  GdkGLProc_glFragmentLightfvSGIX       glFragmentLightfvSGIX;
-  GdkGLProc_glFragmentLightiSGIX        glFragmentLightiSGIX;
-  GdkGLProc_glFragmentLightivSGIX       glFragmentLightivSGIX;
-  GdkGLProc_glFragmentLightModelfSGIX   glFragmentLightModelfSGIX;
-  GdkGLProc_glFragmentLightModelfvSGIX  glFragmentLightModelfvSGIX;
-  GdkGLProc_glFragmentLightModeliSGIX   glFragmentLightModeliSGIX;
-  GdkGLProc_glFragmentLightModelivSGIX  glFragmentLightModelivSGIX;
-  GdkGLProc_glFragmentMaterialfSGIX     glFragmentMaterialfSGIX;
-  GdkGLProc_glFragmentMaterialfvSGIX    glFragmentMaterialfvSGIX;
-  GdkGLProc_glFragmentMaterialiSGIX     glFragmentMaterialiSGIX;
-  GdkGLProc_glFragmentMaterialivSGIX    glFragmentMaterialivSGIX;
-  GdkGLProc_glGetFragmentLightfvSGIX    glGetFragmentLightfvSGIX;
-  GdkGLProc_glGetFragmentLightivSGIX    glGetFragmentLightivSGIX;
+  GdkGLProc_glFragmentLightfSGIX glFragmentLightfSGIX;
+  GdkGLProc_glFragmentLightfvSGIX glFragmentLightfvSGIX;
+  GdkGLProc_glFragmentLightiSGIX glFragmentLightiSGIX;
+  GdkGLProc_glFragmentLightivSGIX glFragmentLightivSGIX;
+  GdkGLProc_glFragmentLightModelfSGIX glFragmentLightModelfSGIX;
+  GdkGLProc_glFragmentLightModelfvSGIX glFragmentLightModelfvSGIX;
+  GdkGLProc_glFragmentLightModeliSGIX glFragmentLightModeliSGIX;
+  GdkGLProc_glFragmentLightModelivSGIX glFragmentLightModelivSGIX;
+  GdkGLProc_glFragmentMaterialfSGIX glFragmentMaterialfSGIX;
+  GdkGLProc_glFragmentMaterialfvSGIX glFragmentMaterialfvSGIX;
+  GdkGLProc_glFragmentMaterialiSGIX glFragmentMaterialiSGIX;
+  GdkGLProc_glFragmentMaterialivSGIX glFragmentMaterialivSGIX;
+  GdkGLProc_glGetFragmentLightfvSGIX glGetFragmentLightfvSGIX;
+  GdkGLProc_glGetFragmentLightivSGIX glGetFragmentLightivSGIX;
   GdkGLProc_glGetFragmentMaterialfvSGIX glGetFragmentMaterialfvSGIX;
   GdkGLProc_glGetFragmentMaterialivSGIX glGetFragmentMaterialivSGIX;
-  GdkGLProc_glLightEnviSGIX             glLightEnviSGIX;
+  GdkGLProc_glLightEnviSGIX glLightEnviSGIX;
 };
 
 GdkGL_GL_SGIX_fragment_lighting *gdk_gl_get_GL_SGIX_fragment_lighting (void);
 
-/* 
+/*
  * GL_EXT_draw_range_elements
  */
 
@@ -3632,7 +3728,7 @@ struct _GdkGL_GL_EXT_draw_range_elements
 
 GdkGL_GL_EXT_draw_range_elements *gdk_gl_get_GL_EXT_draw_range_elements (void);
 
-/* 
+/*
  * GL_EXT_light_texture
  */
 
@@ -3660,14 +3756,14 @@ typedef struct _GdkGL_GL_EXT_light_texture GdkGL_GL_EXT_light_texture;
 
 struct _GdkGL_GL_EXT_light_texture
 {
-  GdkGLProc_glApplyTextureEXT    glApplyTextureEXT;
-  GdkGLProc_glTextureLightEXT    glTextureLightEXT;
+  GdkGLProc_glApplyTextureEXT glApplyTextureEXT;
+  GdkGLProc_glTextureLightEXT glTextureLightEXT;
   GdkGLProc_glTextureMaterialEXT glTextureMaterialEXT;
 };
 
 GdkGL_GL_EXT_light_texture *gdk_gl_get_GL_EXT_light_texture (void);
 
-/* 
+/*
  * GL_SGIX_async
  */
 
@@ -3713,17 +3809,17 @@ typedef struct _GdkGL_GL_SGIX_async GdkGL_GL_SGIX_async;
 
 struct _GdkGL_GL_SGIX_async
 {
-  GdkGLProc_glAsyncMarkerSGIX        glAsyncMarkerSGIX;
-  GdkGLProc_glFinishAsyncSGIX        glFinishAsyncSGIX;
-  GdkGLProc_glPollAsyncSGIX          glPollAsyncSGIX;
-  GdkGLProc_glGenAsyncMarkersSGIX    glGenAsyncMarkersSGIX;
+  GdkGLProc_glAsyncMarkerSGIX glAsyncMarkerSGIX;
+  GdkGLProc_glFinishAsyncSGIX glFinishAsyncSGIX;
+  GdkGLProc_glPollAsyncSGIX glPollAsyncSGIX;
+  GdkGLProc_glGenAsyncMarkersSGIX glGenAsyncMarkersSGIX;
   GdkGLProc_glDeleteAsyncMarkersSGIX glDeleteAsyncMarkersSGIX;
-  GdkGLProc_glIsAsyncMarkerSGIX      glIsAsyncMarkerSGIX;
+  GdkGLProc_glIsAsyncMarkerSGIX glIsAsyncMarkerSGIX;
 };
 
 GdkGL_GL_SGIX_async *gdk_gl_get_GL_SGIX_async (void);
 
-/* 
+/*
  * GL_INTEL_parallel_arrays
  */
 
@@ -3757,15 +3853,15 @@ typedef struct _GdkGL_GL_INTEL_parallel_arrays GdkGL_GL_INTEL_parallel_arrays;
 
 struct _GdkGL_GL_INTEL_parallel_arrays
 {
-  GdkGLProc_glVertexPointervINTEL   glVertexPointervINTEL;
-  GdkGLProc_glNormalPointervINTEL   glNormalPointervINTEL;
-  GdkGLProc_glColorPointervINTEL    glColorPointervINTEL;
+  GdkGLProc_glVertexPointervINTEL glVertexPointervINTEL;
+  GdkGLProc_glNormalPointervINTEL glNormalPointervINTEL;
+  GdkGLProc_glColorPointervINTEL glColorPointervINTEL;
   GdkGLProc_glTexCoordPointervINTEL glTexCoordPointervINTEL;
 };
 
 GdkGL_GL_INTEL_parallel_arrays *gdk_gl_get_GL_INTEL_parallel_arrays (void);
 
-/* 
+/*
  * GL_EXT_pixel_transform
  */
 
@@ -3799,15 +3895,15 @@ typedef struct _GdkGL_GL_EXT_pixel_transform GdkGL_GL_EXT_pixel_transform;
 
 struct _GdkGL_GL_EXT_pixel_transform
 {
-  GdkGLProc_glPixelTransformParameteriEXT  glPixelTransformParameteriEXT;
-  GdkGLProc_glPixelTransformParameterfEXT  glPixelTransformParameterfEXT;
+  GdkGLProc_glPixelTransformParameteriEXT glPixelTransformParameteriEXT;
+  GdkGLProc_glPixelTransformParameterfEXT glPixelTransformParameterfEXT;
   GdkGLProc_glPixelTransformParameterivEXT glPixelTransformParameterivEXT;
   GdkGLProc_glPixelTransformParameterfvEXT glPixelTransformParameterfvEXT;
 };
 
 GdkGL_GL_EXT_pixel_transform *gdk_gl_get_GL_EXT_pixel_transform (void);
 
-/* 
+/*
  * GL_EXT_secondary_color
  */
 
@@ -3919,28 +4015,28 @@ typedef struct _GdkGL_GL_EXT_secondary_color GdkGL_GL_EXT_secondary_color;
 
 struct _GdkGL_GL_EXT_secondary_color
 {
-  GdkGLProc_glSecondaryColor3bEXT      glSecondaryColor3bEXT;
-  GdkGLProc_glSecondaryColor3bvEXT     glSecondaryColor3bvEXT;
-  GdkGLProc_glSecondaryColor3dEXT      glSecondaryColor3dEXT;
-  GdkGLProc_glSecondaryColor3dvEXT     glSecondaryColor3dvEXT;
-  GdkGLProc_glSecondaryColor3fEXT      glSecondaryColor3fEXT;
-  GdkGLProc_glSecondaryColor3fvEXT     glSecondaryColor3fvEXT;
-  GdkGLProc_glSecondaryColor3iEXT      glSecondaryColor3iEXT;
-  GdkGLProc_glSecondaryColor3ivEXT     glSecondaryColor3ivEXT;
-  GdkGLProc_glSecondaryColor3sEXT      glSecondaryColor3sEXT;
-  GdkGLProc_glSecondaryColor3svEXT     glSecondaryColor3svEXT;
-  GdkGLProc_glSecondaryColor3ubEXT     glSecondaryColor3ubEXT;
-  GdkGLProc_glSecondaryColor3ubvEXT    glSecondaryColor3ubvEXT;
-  GdkGLProc_glSecondaryColor3uiEXT     glSecondaryColor3uiEXT;
-  GdkGLProc_glSecondaryColor3uivEXT    glSecondaryColor3uivEXT;
-  GdkGLProc_glSecondaryColor3usEXT     glSecondaryColor3usEXT;
-  GdkGLProc_glSecondaryColor3usvEXT    glSecondaryColor3usvEXT;
+  GdkGLProc_glSecondaryColor3bEXT glSecondaryColor3bEXT;
+  GdkGLProc_glSecondaryColor3bvEXT glSecondaryColor3bvEXT;
+  GdkGLProc_glSecondaryColor3dEXT glSecondaryColor3dEXT;
+  GdkGLProc_glSecondaryColor3dvEXT glSecondaryColor3dvEXT;
+  GdkGLProc_glSecondaryColor3fEXT glSecondaryColor3fEXT;
+  GdkGLProc_glSecondaryColor3fvEXT glSecondaryColor3fvEXT;
+  GdkGLProc_glSecondaryColor3iEXT glSecondaryColor3iEXT;
+  GdkGLProc_glSecondaryColor3ivEXT glSecondaryColor3ivEXT;
+  GdkGLProc_glSecondaryColor3sEXT glSecondaryColor3sEXT;
+  GdkGLProc_glSecondaryColor3svEXT glSecondaryColor3svEXT;
+  GdkGLProc_glSecondaryColor3ubEXT glSecondaryColor3ubEXT;
+  GdkGLProc_glSecondaryColor3ubvEXT glSecondaryColor3ubvEXT;
+  GdkGLProc_glSecondaryColor3uiEXT glSecondaryColor3uiEXT;
+  GdkGLProc_glSecondaryColor3uivEXT glSecondaryColor3uivEXT;
+  GdkGLProc_glSecondaryColor3usEXT glSecondaryColor3usEXT;
+  GdkGLProc_glSecondaryColor3usvEXT glSecondaryColor3usvEXT;
   GdkGLProc_glSecondaryColorPointerEXT glSecondaryColorPointerEXT;
 };
 
 GdkGL_GL_EXT_secondary_color *gdk_gl_get_GL_EXT_secondary_color (void);
 
-/* 
+/*
  * GL_EXT_texture_perturb_normal
  */
 
@@ -3961,7 +4057,7 @@ struct _GdkGL_GL_EXT_texture_perturb_normal
 
 GdkGL_GL_EXT_texture_perturb_normal *gdk_gl_get_GL_EXT_texture_perturb_normal (void);
 
-/* 
+/*
  * GL_EXT_multi_draw_arrays
  */
 
@@ -3983,13 +4079,13 @@ typedef struct _GdkGL_GL_EXT_multi_draw_arrays GdkGL_GL_EXT_multi_draw_arrays;
 
 struct _GdkGL_GL_EXT_multi_draw_arrays
 {
-  GdkGLProc_glMultiDrawArraysEXT   glMultiDrawArraysEXT;
+  GdkGLProc_glMultiDrawArraysEXT glMultiDrawArraysEXT;
   GdkGLProc_glMultiDrawElementsEXT glMultiDrawElementsEXT;
 };
 
 GdkGL_GL_EXT_multi_draw_arrays *gdk_gl_get_GL_EXT_multi_draw_arrays (void);
 
-/* 
+/*
  * GL_EXT_fog_coord
  */
 
@@ -4029,16 +4125,16 @@ typedef struct _GdkGL_GL_EXT_fog_coord GdkGL_GL_EXT_fog_coord;
 
 struct _GdkGL_GL_EXT_fog_coord
 {
-  GdkGLProc_glFogCoordfEXT       glFogCoordfEXT;
-  GdkGLProc_glFogCoordfvEXT      glFogCoordfvEXT;
-  GdkGLProc_glFogCoorddEXT       glFogCoorddEXT;
-  GdkGLProc_glFogCoorddvEXT      glFogCoorddvEXT;
+  GdkGLProc_glFogCoordfEXT glFogCoordfEXT;
+  GdkGLProc_glFogCoordfvEXT glFogCoordfvEXT;
+  GdkGLProc_glFogCoorddEXT glFogCoorddEXT;
+  GdkGLProc_glFogCoorddvEXT glFogCoorddvEXT;
   GdkGLProc_glFogCoordPointerEXT glFogCoordPointerEXT;
 };
 
 GdkGL_GL_EXT_fog_coord *gdk_gl_get_GL_EXT_fog_coord (void);
 
-/* 
+/*
  * GL_EXT_coordinate_frame
  */
 
@@ -4180,33 +4276,33 @@ typedef struct _GdkGL_GL_EXT_coordinate_frame GdkGL_GL_EXT_coordinate_frame;
 
 struct _GdkGL_GL_EXT_coordinate_frame
 {
-  GdkGLProc_glTangent3bEXT       glTangent3bEXT;
-  GdkGLProc_glTangent3bvEXT      glTangent3bvEXT;
-  GdkGLProc_glTangent3dEXT       glTangent3dEXT;
-  GdkGLProc_glTangent3dvEXT      glTangent3dvEXT;
-  GdkGLProc_glTangent3fEXT       glTangent3fEXT;
-  GdkGLProc_glTangent3fvEXT      glTangent3fvEXT;
-  GdkGLProc_glTangent3iEXT       glTangent3iEXT;
-  GdkGLProc_glTangent3ivEXT      glTangent3ivEXT;
-  GdkGLProc_glTangent3sEXT       glTangent3sEXT;
-  GdkGLProc_glTangent3svEXT      glTangent3svEXT;
-  GdkGLProc_glBinormal3bEXT      glBinormal3bEXT;
-  GdkGLProc_glBinormal3bvEXT     glBinormal3bvEXT;
-  GdkGLProc_glBinormal3dEXT      glBinormal3dEXT;
-  GdkGLProc_glBinormal3dvEXT     glBinormal3dvEXT;
-  GdkGLProc_glBinormal3fEXT      glBinormal3fEXT;
-  GdkGLProc_glBinormal3fvEXT     glBinormal3fvEXT;
-  GdkGLProc_glBinormal3iEXT      glBinormal3iEXT;
-  GdkGLProc_glBinormal3ivEXT     glBinormal3ivEXT;
-  GdkGLProc_glBinormal3sEXT      glBinormal3sEXT;
-  GdkGLProc_glBinormal3svEXT     glBinormal3svEXT;
-  GdkGLProc_glTangentPointerEXT  glTangentPointerEXT;
+  GdkGLProc_glTangent3bEXT glTangent3bEXT;
+  GdkGLProc_glTangent3bvEXT glTangent3bvEXT;
+  GdkGLProc_glTangent3dEXT glTangent3dEXT;
+  GdkGLProc_glTangent3dvEXT glTangent3dvEXT;
+  GdkGLProc_glTangent3fEXT glTangent3fEXT;
+  GdkGLProc_glTangent3fvEXT glTangent3fvEXT;
+  GdkGLProc_glTangent3iEXT glTangent3iEXT;
+  GdkGLProc_glTangent3ivEXT glTangent3ivEXT;
+  GdkGLProc_glTangent3sEXT glTangent3sEXT;
+  GdkGLProc_glTangent3svEXT glTangent3svEXT;
+  GdkGLProc_glBinormal3bEXT glBinormal3bEXT;
+  GdkGLProc_glBinormal3bvEXT glBinormal3bvEXT;
+  GdkGLProc_glBinormal3dEXT glBinormal3dEXT;
+  GdkGLProc_glBinormal3dvEXT glBinormal3dvEXT;
+  GdkGLProc_glBinormal3fEXT glBinormal3fEXT;
+  GdkGLProc_glBinormal3fvEXT glBinormal3fvEXT;
+  GdkGLProc_glBinormal3iEXT glBinormal3iEXT;
+  GdkGLProc_glBinormal3ivEXT glBinormal3ivEXT;
+  GdkGLProc_glBinormal3sEXT glBinormal3sEXT;
+  GdkGLProc_glBinormal3svEXT glBinormal3svEXT;
+  GdkGLProc_glTangentPointerEXT glTangentPointerEXT;
   GdkGLProc_glBinormalPointerEXT glBinormalPointerEXT;
 };
 
 GdkGL_GL_EXT_coordinate_frame *gdk_gl_get_GL_EXT_coordinate_frame (void);
 
-/* 
+/*
  * GL_SUNX_constant_data
  */
 
@@ -4227,7 +4323,7 @@ struct _GdkGL_GL_SUNX_constant_data
 
 GdkGL_GL_SUNX_constant_data *gdk_gl_get_GL_SUNX_constant_data (void);
 
-/* 
+/*
  * GL_SUN_global_alpha
  */
 
@@ -4285,11 +4381,11 @@ typedef struct _GdkGL_GL_SUN_global_alpha GdkGL_GL_SUN_global_alpha;
 
 struct _GdkGL_GL_SUN_global_alpha
 {
-  GdkGLProc_glGlobalAlphaFactorbSUN  glGlobalAlphaFactorbSUN;
-  GdkGLProc_glGlobalAlphaFactorsSUN  glGlobalAlphaFactorsSUN;
-  GdkGLProc_glGlobalAlphaFactoriSUN  glGlobalAlphaFactoriSUN;
-  GdkGLProc_glGlobalAlphaFactorfSUN  glGlobalAlphaFactorfSUN;
-  GdkGLProc_glGlobalAlphaFactordSUN  glGlobalAlphaFactordSUN;
+  GdkGLProc_glGlobalAlphaFactorbSUN glGlobalAlphaFactorbSUN;
+  GdkGLProc_glGlobalAlphaFactorsSUN glGlobalAlphaFactorsSUN;
+  GdkGLProc_glGlobalAlphaFactoriSUN glGlobalAlphaFactoriSUN;
+  GdkGLProc_glGlobalAlphaFactorfSUN glGlobalAlphaFactorfSUN;
+  GdkGLProc_glGlobalAlphaFactordSUN glGlobalAlphaFactordSUN;
   GdkGLProc_glGlobalAlphaFactorubSUN glGlobalAlphaFactorubSUN;
   GdkGLProc_glGlobalAlphaFactorusSUN glGlobalAlphaFactorusSUN;
   GdkGLProc_glGlobalAlphaFactoruiSUN glGlobalAlphaFactoruiSUN;
@@ -4297,7 +4393,7 @@ struct _GdkGL_GL_SUN_global_alpha
 
 GdkGL_GL_SUN_global_alpha *gdk_gl_get_GL_SUN_global_alpha (void);
 
-/* 
+/*
  * GL_SUN_triangle_list
  */
 
@@ -4349,18 +4445,18 @@ typedef struct _GdkGL_GL_SUN_triangle_list GdkGL_GL_SUN_triangle_list;
 
 struct _GdkGL_GL_SUN_triangle_list
 {
-  GdkGLProc_glReplacementCodeuiSUN      glReplacementCodeuiSUN;
-  GdkGLProc_glReplacementCodeusSUN      glReplacementCodeusSUN;
-  GdkGLProc_glReplacementCodeubSUN      glReplacementCodeubSUN;
-  GdkGLProc_glReplacementCodeuivSUN     glReplacementCodeuivSUN;
-  GdkGLProc_glReplacementCodeusvSUN     glReplacementCodeusvSUN;
-  GdkGLProc_glReplacementCodeubvSUN     glReplacementCodeubvSUN;
+  GdkGLProc_glReplacementCodeuiSUN glReplacementCodeuiSUN;
+  GdkGLProc_glReplacementCodeusSUN glReplacementCodeusSUN;
+  GdkGLProc_glReplacementCodeubSUN glReplacementCodeubSUN;
+  GdkGLProc_glReplacementCodeuivSUN glReplacementCodeuivSUN;
+  GdkGLProc_glReplacementCodeusvSUN glReplacementCodeusvSUN;
+  GdkGLProc_glReplacementCodeubvSUN glReplacementCodeubvSUN;
   GdkGLProc_glReplacementCodePointerSUN glReplacementCodePointerSUN;
 };
 
 GdkGL_GL_SUN_triangle_list *gdk_gl_get_GL_SUN_triangle_list (void);
 
-/* 
+/*
  * GL_SUN_vertex
  */
 
@@ -4610,51 +4706,51 @@ typedef struct _GdkGL_GL_SUN_vertex GdkGL_GL_SUN_vertex;
 
 struct _GdkGL_GL_SUN_vertex
 {
-  GdkGLProc_glColor4ubVertex2fSUN                                    glColor4ubVertex2fSUN;
-  GdkGLProc_glColor4ubVertex2fvSUN                                   glColor4ubVertex2fvSUN;
-  GdkGLProc_glColor4ubVertex3fSUN                                    glColor4ubVertex3fSUN;
-  GdkGLProc_glColor4ubVertex3fvSUN                                   glColor4ubVertex3fvSUN;
-  GdkGLProc_glColor3fVertex3fSUN                                     glColor3fVertex3fSUN;
-  GdkGLProc_glColor3fVertex3fvSUN                                    glColor3fVertex3fvSUN;
-  GdkGLProc_glNormal3fVertex3fSUN                                    glNormal3fVertex3fSUN;
-  GdkGLProc_glNormal3fVertex3fvSUN                                   glNormal3fVertex3fvSUN;
-  GdkGLProc_glColor4fNormal3fVertex3fSUN                             glColor4fNormal3fVertex3fSUN;
-  GdkGLProc_glColor4fNormal3fVertex3fvSUN                            glColor4fNormal3fVertex3fvSUN;
-  GdkGLProc_glTexCoord2fVertex3fSUN                                  glTexCoord2fVertex3fSUN;
-  GdkGLProc_glTexCoord2fVertex3fvSUN                                 glTexCoord2fVertex3fvSUN;
-  GdkGLProc_glTexCoord4fVertex4fSUN                                  glTexCoord4fVertex4fSUN;
-  GdkGLProc_glTexCoord4fVertex4fvSUN                                 glTexCoord4fVertex4fvSUN;
-  GdkGLProc_glTexCoord2fColor4ubVertex3fSUN                          glTexCoord2fColor4ubVertex3fSUN;
-  GdkGLProc_glTexCoord2fColor4ubVertex3fvSUN                         glTexCoord2fColor4ubVertex3fvSUN;
-  GdkGLProc_glTexCoord2fColor3fVertex3fSUN                           glTexCoord2fColor3fVertex3fSUN;
-  GdkGLProc_glTexCoord2fColor3fVertex3fvSUN                          glTexCoord2fColor3fVertex3fvSUN;
-  GdkGLProc_glTexCoord2fNormal3fVertex3fSUN                          glTexCoord2fNormal3fVertex3fSUN;
-  GdkGLProc_glTexCoord2fNormal3fVertex3fvSUN                         glTexCoord2fNormal3fVertex3fvSUN;
-  GdkGLProc_glTexCoord2fColor4fNormal3fVertex3fSUN                   glTexCoord2fColor4fNormal3fVertex3fSUN;
-  GdkGLProc_glTexCoord2fColor4fNormal3fVertex3fvSUN                  glTexCoord2fColor4fNormal3fVertex3fvSUN;
-  GdkGLProc_glTexCoord4fColor4fNormal3fVertex4fSUN                   glTexCoord4fColor4fNormal3fVertex4fSUN;
-  GdkGLProc_glTexCoord4fColor4fNormal3fVertex4fvSUN                  glTexCoord4fColor4fNormal3fVertex4fvSUN;
-  GdkGLProc_glReplacementCodeuiVertex3fSUN                           glReplacementCodeuiVertex3fSUN;
-  GdkGLProc_glReplacementCodeuiVertex3fvSUN                          glReplacementCodeuiVertex3fvSUN;
-  GdkGLProc_glReplacementCodeuiColor4ubVertex3fSUN                   glReplacementCodeuiColor4ubVertex3fSUN;
-  GdkGLProc_glReplacementCodeuiColor4ubVertex3fvSUN                  glReplacementCodeuiColor4ubVertex3fvSUN;
-  GdkGLProc_glReplacementCodeuiColor3fVertex3fSUN                    glReplacementCodeuiColor3fVertex3fSUN;
-  GdkGLProc_glReplacementCodeuiColor3fVertex3fvSUN                   glReplacementCodeuiColor3fVertex3fvSUN;
-  GdkGLProc_glReplacementCodeuiNormal3fVertex3fSUN                   glReplacementCodeuiNormal3fVertex3fSUN;
-  GdkGLProc_glReplacementCodeuiNormal3fVertex3fvSUN                  glReplacementCodeuiNormal3fVertex3fvSUN;
-  GdkGLProc_glReplacementCodeuiColor4fNormal3fVertex3fSUN            glReplacementCodeuiColor4fNormal3fVertex3fSUN;
-  GdkGLProc_glReplacementCodeuiColor4fNormal3fVertex3fvSUN           glReplacementCodeuiColor4fNormal3fVertex3fvSUN;
-  GdkGLProc_glReplacementCodeuiTexCoord2fVertex3fSUN                 glReplacementCodeuiTexCoord2fVertex3fSUN;
-  GdkGLProc_glReplacementCodeuiTexCoord2fVertex3fvSUN                glReplacementCodeuiTexCoord2fVertex3fvSUN;
-  GdkGLProc_glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN         glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN;
-  GdkGLProc_glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN        glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN;
-  GdkGLProc_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN  glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN;
+  GdkGLProc_glColor4ubVertex2fSUN glColor4ubVertex2fSUN;
+  GdkGLProc_glColor4ubVertex2fvSUN glColor4ubVertex2fvSUN;
+  GdkGLProc_glColor4ubVertex3fSUN glColor4ubVertex3fSUN;
+  GdkGLProc_glColor4ubVertex3fvSUN glColor4ubVertex3fvSUN;
+  GdkGLProc_glColor3fVertex3fSUN glColor3fVertex3fSUN;
+  GdkGLProc_glColor3fVertex3fvSUN glColor3fVertex3fvSUN;
+  GdkGLProc_glNormal3fVertex3fSUN glNormal3fVertex3fSUN;
+  GdkGLProc_glNormal3fVertex3fvSUN glNormal3fVertex3fvSUN;
+  GdkGLProc_glColor4fNormal3fVertex3fSUN glColor4fNormal3fVertex3fSUN;
+  GdkGLProc_glColor4fNormal3fVertex3fvSUN glColor4fNormal3fVertex3fvSUN;
+  GdkGLProc_glTexCoord2fVertex3fSUN glTexCoord2fVertex3fSUN;
+  GdkGLProc_glTexCoord2fVertex3fvSUN glTexCoord2fVertex3fvSUN;
+  GdkGLProc_glTexCoord4fVertex4fSUN glTexCoord4fVertex4fSUN;
+  GdkGLProc_glTexCoord4fVertex4fvSUN glTexCoord4fVertex4fvSUN;
+  GdkGLProc_glTexCoord2fColor4ubVertex3fSUN glTexCoord2fColor4ubVertex3fSUN;
+  GdkGLProc_glTexCoord2fColor4ubVertex3fvSUN glTexCoord2fColor4ubVertex3fvSUN;
+  GdkGLProc_glTexCoord2fColor3fVertex3fSUN glTexCoord2fColor3fVertex3fSUN;
+  GdkGLProc_glTexCoord2fColor3fVertex3fvSUN glTexCoord2fColor3fVertex3fvSUN;
+  GdkGLProc_glTexCoord2fNormal3fVertex3fSUN glTexCoord2fNormal3fVertex3fSUN;
+  GdkGLProc_glTexCoord2fNormal3fVertex3fvSUN glTexCoord2fNormal3fVertex3fvSUN;
+  GdkGLProc_glTexCoord2fColor4fNormal3fVertex3fSUN glTexCoord2fColor4fNormal3fVertex3fSUN;
+  GdkGLProc_glTexCoord2fColor4fNormal3fVertex3fvSUN glTexCoord2fColor4fNormal3fVertex3fvSUN;
+  GdkGLProc_glTexCoord4fColor4fNormal3fVertex4fSUN glTexCoord4fColor4fNormal3fVertex4fSUN;
+  GdkGLProc_glTexCoord4fColor4fNormal3fVertex4fvSUN glTexCoord4fColor4fNormal3fVertex4fvSUN;
+  GdkGLProc_glReplacementCodeuiVertex3fSUN glReplacementCodeuiVertex3fSUN;
+  GdkGLProc_glReplacementCodeuiVertex3fvSUN glReplacementCodeuiVertex3fvSUN;
+  GdkGLProc_glReplacementCodeuiColor4ubVertex3fSUN glReplacementCodeuiColor4ubVertex3fSUN;
+  GdkGLProc_glReplacementCodeuiColor4ubVertex3fvSUN glReplacementCodeuiColor4ubVertex3fvSUN;
+  GdkGLProc_glReplacementCodeuiColor3fVertex3fSUN glReplacementCodeuiColor3fVertex3fSUN;
+  GdkGLProc_glReplacementCodeuiColor3fVertex3fvSUN glReplacementCodeuiColor3fVertex3fvSUN;
+  GdkGLProc_glReplacementCodeuiNormal3fVertex3fSUN glReplacementCodeuiNormal3fVertex3fSUN;
+  GdkGLProc_glReplacementCodeuiNormal3fVertex3fvSUN glReplacementCodeuiNormal3fVertex3fvSUN;
+  GdkGLProc_glReplacementCodeuiColor4fNormal3fVertex3fSUN glReplacementCodeuiColor4fNormal3fVertex3fSUN;
+  GdkGLProc_glReplacementCodeuiColor4fNormal3fVertex3fvSUN glReplacementCodeuiColor4fNormal3fVertex3fvSUN;
+  GdkGLProc_glReplacementCodeuiTexCoord2fVertex3fSUN glReplacementCodeuiTexCoord2fVertex3fSUN;
+  GdkGLProc_glReplacementCodeuiTexCoord2fVertex3fvSUN glReplacementCodeuiTexCoord2fVertex3fvSUN;
+  GdkGLProc_glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN;
+  GdkGLProc_glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN;
+  GdkGLProc_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN;
   GdkGLProc_glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN;
 };
 
 GdkGL_GL_SUN_vertex *gdk_gl_get_GL_SUN_vertex (void);
 
-/* 
+/*
  * GL_EXT_blend_func_separate
  */
 
@@ -4675,7 +4771,7 @@ struct _GdkGL_GL_EXT_blend_func_separate
 
 GdkGL_GL_EXT_blend_func_separate *gdk_gl_get_GL_EXT_blend_func_separate (void);
 
-/* 
+/*
  * GL_INGR_blend_func_separate
  */
 
@@ -4696,7 +4792,7 @@ struct _GdkGL_GL_INGR_blend_func_separate
 
 GdkGL_GL_INGR_blend_func_separate *gdk_gl_get_GL_INGR_blend_func_separate (void);
 
-/* 
+/*
  * GL_EXT_vertex_weighting
  */
 
@@ -4724,14 +4820,14 @@ typedef struct _GdkGL_GL_EXT_vertex_weighting GdkGL_GL_EXT_vertex_weighting;
 
 struct _GdkGL_GL_EXT_vertex_weighting
 {
-  GdkGLProc_glVertexWeightfEXT       glVertexWeightfEXT;
-  GdkGLProc_glVertexWeightfvEXT      glVertexWeightfvEXT;
+  GdkGLProc_glVertexWeightfEXT glVertexWeightfEXT;
+  GdkGLProc_glVertexWeightfvEXT glVertexWeightfvEXT;
   GdkGLProc_glVertexWeightPointerEXT glVertexWeightPointerEXT;
 };
 
 GdkGL_GL_EXT_vertex_weighting *gdk_gl_get_GL_EXT_vertex_weighting (void);
 
-/* 
+/*
  * GL_NV_vertex_array_range
  */
 
@@ -4754,12 +4850,12 @@ typedef struct _GdkGL_GL_NV_vertex_array_range GdkGL_GL_NV_vertex_array_range;
 struct _GdkGL_GL_NV_vertex_array_range
 {
   GdkGLProc_glFlushVertexArrayRangeNV glFlushVertexArrayRangeNV;
-  GdkGLProc_glVertexArrayRangeNV      glVertexArrayRangeNV;
+  GdkGLProc_glVertexArrayRangeNV glVertexArrayRangeNV;
 };
 
 GdkGL_GL_NV_vertex_array_range *gdk_gl_get_GL_NV_vertex_array_range (void);
 
-/* 
+/*
  * GL_NV_register_combiners
  */
 
@@ -4847,24 +4943,24 @@ typedef struct _GdkGL_GL_NV_register_combiners GdkGL_GL_NV_register_combiners;
 
 struct _GdkGL_GL_NV_register_combiners
 {
-  GdkGLProc_glCombinerParameterfvNV              glCombinerParameterfvNV;
-  GdkGLProc_glCombinerParameterfNV               glCombinerParameterfNV;
-  GdkGLProc_glCombinerParameterivNV              glCombinerParameterivNV;
-  GdkGLProc_glCombinerParameteriNV               glCombinerParameteriNV;
-  GdkGLProc_glCombinerInputNV                    glCombinerInputNV;
-  GdkGLProc_glCombinerOutputNV                   glCombinerOutputNV;
-  GdkGLProc_glFinalCombinerInputNV               glFinalCombinerInputNV;
-  GdkGLProc_glGetCombinerInputParameterfvNV      glGetCombinerInputParameterfvNV;
-  GdkGLProc_glGetCombinerInputParameterivNV      glGetCombinerInputParameterivNV;
-  GdkGLProc_glGetCombinerOutputParameterfvNV     glGetCombinerOutputParameterfvNV;
-  GdkGLProc_glGetCombinerOutputParameterivNV     glGetCombinerOutputParameterivNV;
+  GdkGLProc_glCombinerParameterfvNV glCombinerParameterfvNV;
+  GdkGLProc_glCombinerParameterfNV glCombinerParameterfNV;
+  GdkGLProc_glCombinerParameterivNV glCombinerParameterivNV;
+  GdkGLProc_glCombinerParameteriNV glCombinerParameteriNV;
+  GdkGLProc_glCombinerInputNV glCombinerInputNV;
+  GdkGLProc_glCombinerOutputNV glCombinerOutputNV;
+  GdkGLProc_glFinalCombinerInputNV glFinalCombinerInputNV;
+  GdkGLProc_glGetCombinerInputParameterfvNV glGetCombinerInputParameterfvNV;
+  GdkGLProc_glGetCombinerInputParameterivNV glGetCombinerInputParameterivNV;
+  GdkGLProc_glGetCombinerOutputParameterfvNV glGetCombinerOutputParameterfvNV;
+  GdkGLProc_glGetCombinerOutputParameterivNV glGetCombinerOutputParameterivNV;
   GdkGLProc_glGetFinalCombinerInputParameterfvNV glGetFinalCombinerInputParameterfvNV;
   GdkGLProc_glGetFinalCombinerInputParameterivNV glGetFinalCombinerInputParameterivNV;
 };
 
 GdkGL_GL_NV_register_combiners *gdk_gl_get_GL_NV_register_combiners (void);
 
-/* 
+/*
  * GL_MESA_resize_buffers
  */
 
@@ -4885,7 +4981,7 @@ struct _GdkGL_GL_MESA_resize_buffers
 
 GdkGL_GL_MESA_resize_buffers *gdk_gl_get_GL_MESA_resize_buffers (void);
 
-/* 
+/*
  * GL_MESA_window_pos
  */
 
@@ -5039,35 +5135,35 @@ typedef struct _GdkGL_GL_MESA_window_pos GdkGL_GL_MESA_window_pos;
 
 struct _GdkGL_GL_MESA_window_pos
 {
-  GdkGLProc_glWindowPos2dMESA  glWindowPos2dMESA;
+  GdkGLProc_glWindowPos2dMESA glWindowPos2dMESA;
   GdkGLProc_glWindowPos2dvMESA glWindowPos2dvMESA;
-  GdkGLProc_glWindowPos2fMESA  glWindowPos2fMESA;
+  GdkGLProc_glWindowPos2fMESA glWindowPos2fMESA;
   GdkGLProc_glWindowPos2fvMESA glWindowPos2fvMESA;
-  GdkGLProc_glWindowPos2iMESA  glWindowPos2iMESA;
+  GdkGLProc_glWindowPos2iMESA glWindowPos2iMESA;
   GdkGLProc_glWindowPos2ivMESA glWindowPos2ivMESA;
-  GdkGLProc_glWindowPos2sMESA  glWindowPos2sMESA;
+  GdkGLProc_glWindowPos2sMESA glWindowPos2sMESA;
   GdkGLProc_glWindowPos2svMESA glWindowPos2svMESA;
-  GdkGLProc_glWindowPos3dMESA  glWindowPos3dMESA;
+  GdkGLProc_glWindowPos3dMESA glWindowPos3dMESA;
   GdkGLProc_glWindowPos3dvMESA glWindowPos3dvMESA;
-  GdkGLProc_glWindowPos3fMESA  glWindowPos3fMESA;
+  GdkGLProc_glWindowPos3fMESA glWindowPos3fMESA;
   GdkGLProc_glWindowPos3fvMESA glWindowPos3fvMESA;
-  GdkGLProc_glWindowPos3iMESA  glWindowPos3iMESA;
+  GdkGLProc_glWindowPos3iMESA glWindowPos3iMESA;
   GdkGLProc_glWindowPos3ivMESA glWindowPos3ivMESA;
-  GdkGLProc_glWindowPos3sMESA  glWindowPos3sMESA;
+  GdkGLProc_glWindowPos3sMESA glWindowPos3sMESA;
   GdkGLProc_glWindowPos3svMESA glWindowPos3svMESA;
-  GdkGLProc_glWindowPos4dMESA  glWindowPos4dMESA;
+  GdkGLProc_glWindowPos4dMESA glWindowPos4dMESA;
   GdkGLProc_glWindowPos4dvMESA glWindowPos4dvMESA;
-  GdkGLProc_glWindowPos4fMESA  glWindowPos4fMESA;
+  GdkGLProc_glWindowPos4fMESA glWindowPos4fMESA;
   GdkGLProc_glWindowPos4fvMESA glWindowPos4fvMESA;
-  GdkGLProc_glWindowPos4iMESA  glWindowPos4iMESA;
+  GdkGLProc_glWindowPos4iMESA glWindowPos4iMESA;
   GdkGLProc_glWindowPos4ivMESA glWindowPos4ivMESA;
-  GdkGLProc_glWindowPos4sMESA  glWindowPos4sMESA;
+  GdkGLProc_glWindowPos4sMESA glWindowPos4sMESA;
   GdkGLProc_glWindowPos4svMESA glWindowPos4svMESA;
 };
 
 GdkGL_GL_MESA_window_pos *gdk_gl_get_GL_MESA_window_pos (void);
 
-/* 
+/*
  * GL_IBM_multimode_draw_arrays
  */
 
@@ -5089,13 +5185,13 @@ typedef struct _GdkGL_GL_IBM_multimode_draw_arrays GdkGL_GL_IBM_multimode_draw_a
 
 struct _GdkGL_GL_IBM_multimode_draw_arrays
 {
-  GdkGLProc_glMultiModeDrawArraysIBM   glMultiModeDrawArraysIBM;
+  GdkGLProc_glMultiModeDrawArraysIBM glMultiModeDrawArraysIBM;
   GdkGLProc_glMultiModeDrawElementsIBM glMultiModeDrawElementsIBM;
 };
 
 GdkGL_GL_IBM_multimode_draw_arrays *gdk_gl_get_GL_IBM_multimode_draw_arrays (void);
 
-/* 
+/*
  * GL_IBM_vertex_array_lists
  */
 
@@ -5153,19 +5249,19 @@ typedef struct _GdkGL_GL_IBM_vertex_array_lists GdkGL_GL_IBM_vertex_array_lists;
 
 struct _GdkGL_GL_IBM_vertex_array_lists
 {
-  GdkGLProc_glColorPointerListIBM          glColorPointerListIBM;
+  GdkGLProc_glColorPointerListIBM glColorPointerListIBM;
   GdkGLProc_glSecondaryColorPointerListIBM glSecondaryColorPointerListIBM;
-  GdkGLProc_glEdgeFlagPointerListIBM       glEdgeFlagPointerListIBM;
-  GdkGLProc_glFogCoordPointerListIBM       glFogCoordPointerListIBM;
-  GdkGLProc_glIndexPointerListIBM          glIndexPointerListIBM;
-  GdkGLProc_glNormalPointerListIBM         glNormalPointerListIBM;
-  GdkGLProc_glTexCoordPointerListIBM       glTexCoordPointerListIBM;
-  GdkGLProc_glVertexPointerListIBM         glVertexPointerListIBM;
+  GdkGLProc_glEdgeFlagPointerListIBM glEdgeFlagPointerListIBM;
+  GdkGLProc_glFogCoordPointerListIBM glFogCoordPointerListIBM;
+  GdkGLProc_glIndexPointerListIBM glIndexPointerListIBM;
+  GdkGLProc_glNormalPointerListIBM glNormalPointerListIBM;
+  GdkGLProc_glTexCoordPointerListIBM glTexCoordPointerListIBM;
+  GdkGLProc_glVertexPointerListIBM glVertexPointerListIBM;
 };
 
 GdkGL_GL_IBM_vertex_array_lists *gdk_gl_get_GL_IBM_vertex_array_lists (void);
 
-/* 
+/*
  * GL_3DFX_tbuffer
  */
 
@@ -5186,7 +5282,7 @@ struct _GdkGL_GL_3DFX_tbuffer
 
 GdkGL_GL_3DFX_tbuffer *gdk_gl_get_GL_3DFX_tbuffer (void);
 
-/* 
+/*
  * GL_EXT_multisample
  */
 
@@ -5208,13 +5304,13 @@ typedef struct _GdkGL_GL_EXT_multisample GdkGL_GL_EXT_multisample;
 
 struct _GdkGL_GL_EXT_multisample
 {
-  GdkGLProc_glSampleMaskEXT    glSampleMaskEXT;
+  GdkGLProc_glSampleMaskEXT glSampleMaskEXT;
   GdkGLProc_glSamplePatternEXT glSamplePatternEXT;
 };
 
 GdkGL_GL_EXT_multisample *gdk_gl_get_GL_EXT_multisample (void);
 
-/* 
+/*
  * GL_SGIS_texture_color_mask
  */
 
@@ -5235,7 +5331,7 @@ struct _GdkGL_GL_SGIS_texture_color_mask
 
 GdkGL_GL_SGIS_texture_color_mask *gdk_gl_get_GL_SGIS_texture_color_mask (void);
 
-/* 
+/*
  * GL_SGIX_igloo_interface
  */
 
@@ -5256,7 +5352,7 @@ struct _GdkGL_GL_SGIX_igloo_interface
 
 GdkGL_GL_SGIX_igloo_interface *gdk_gl_get_GL_SGIX_igloo_interface (void);
 
-/* 
+/*
  * GL_NV_fence
  */
 
@@ -5309,17 +5405,17 @@ typedef struct _GdkGL_GL_NV_fence GdkGL_GL_NV_fence;
 struct _GdkGL_GL_NV_fence
 {
   GdkGLProc_glDeleteFencesNV glDeleteFencesNV;
-  GdkGLProc_glGenFencesNV    glGenFencesNV;
-  GdkGLProc_glIsFenceNV      glIsFenceNV;
-  GdkGLProc_glTestFenceNV    glTestFenceNV;
-  GdkGLProc_glGetFenceivNV   glGetFenceivNV;
-  GdkGLProc_glFinishFenceNV  glFinishFenceNV;
-  GdkGLProc_glSetFenceNV     glSetFenceNV;
+  GdkGLProc_glGenFencesNV glGenFencesNV;
+  GdkGLProc_glIsFenceNV glIsFenceNV;
+  GdkGLProc_glTestFenceNV glTestFenceNV;
+  GdkGLProc_glGetFenceivNV glGetFenceivNV;
+  GdkGLProc_glFinishFenceNV glFinishFenceNV;
+  GdkGLProc_glSetFenceNV glSetFenceNV;
 };
 
 GdkGL_GL_NV_fence *gdk_gl_get_GL_NV_fence (void);
 
-/* 
+/*
  * GL_NV_evaluators
  */
 
@@ -5383,20 +5479,20 @@ typedef struct _GdkGL_GL_NV_evaluators GdkGL_GL_NV_evaluators;
 
 struct _GdkGL_GL_NV_evaluators
 {
-  GdkGLProc_glMapControlPointsNV        glMapControlPointsNV;
-  GdkGLProc_glMapParameterivNV          glMapParameterivNV;
-  GdkGLProc_glMapParameterfvNV          glMapParameterfvNV;
-  GdkGLProc_glGetMapControlPointsNV     glGetMapControlPointsNV;
-  GdkGLProc_glGetMapParameterivNV       glGetMapParameterivNV;
-  GdkGLProc_glGetMapParameterfvNV       glGetMapParameterfvNV;
+  GdkGLProc_glMapControlPointsNV glMapControlPointsNV;
+  GdkGLProc_glMapParameterivNV glMapParameterivNV;
+  GdkGLProc_glMapParameterfvNV glMapParameterfvNV;
+  GdkGLProc_glGetMapControlPointsNV glGetMapControlPointsNV;
+  GdkGLProc_glGetMapParameterivNV glGetMapParameterivNV;
+  GdkGLProc_glGetMapParameterfvNV glGetMapParameterfvNV;
   GdkGLProc_glGetMapAttribParameterivNV glGetMapAttribParameterivNV;
   GdkGLProc_glGetMapAttribParameterfvNV glGetMapAttribParameterfvNV;
-  GdkGLProc_glEvalMapsNV                glEvalMapsNV;
+  GdkGLProc_glEvalMapsNV glEvalMapsNV;
 };
 
 GdkGL_GL_NV_evaluators *gdk_gl_get_GL_NV_evaluators (void);
 
-/* 
+/*
  * GL_NV_register_combiners2
  */
 
@@ -5418,13 +5514,13 @@ typedef struct _GdkGL_GL_NV_register_combiners2 GdkGL_GL_NV_register_combiners2;
 
 struct _GdkGL_GL_NV_register_combiners2
 {
-  GdkGLProc_glCombinerStageParameterfvNV    glCombinerStageParameterfvNV;
+  GdkGLProc_glCombinerStageParameterfvNV glCombinerStageParameterfvNV;
   GdkGLProc_glGetCombinerStageParameterfvNV glGetCombinerStageParameterfvNV;
 };
 
 GdkGL_GL_NV_register_combiners2 *gdk_gl_get_GL_NV_register_combiners2 (void);
 
-/* 
+/*
  * GL_NV_vertex_program
  */
 
@@ -5818,75 +5914,75 @@ typedef struct _GdkGL_GL_NV_vertex_program GdkGL_GL_NV_vertex_program;
 
 struct _GdkGL_GL_NV_vertex_program
 {
-  GdkGLProc_glAreProgramsResidentNV     glAreProgramsResidentNV;
-  GdkGLProc_glBindProgramNV             glBindProgramNV;
-  GdkGLProc_glDeleteProgramsNV          glDeleteProgramsNV;
-  GdkGLProc_glExecuteProgramNV          glExecuteProgramNV;
-  GdkGLProc_glGenProgramsNV             glGenProgramsNV;
-  GdkGLProc_glGetProgramParameterdvNV   glGetProgramParameterdvNV;
-  GdkGLProc_glGetProgramParameterfvNV   glGetProgramParameterfvNV;
-  GdkGLProc_glGetProgramivNV            glGetProgramivNV;
-  GdkGLProc_glGetProgramStringNV        glGetProgramStringNV;
-  GdkGLProc_glGetTrackMatrixivNV        glGetTrackMatrixivNV;
-  GdkGLProc_glGetVertexAttribdvNV       glGetVertexAttribdvNV;
-  GdkGLProc_glGetVertexAttribfvNV       glGetVertexAttribfvNV;
-  GdkGLProc_glGetVertexAttribivNV       glGetVertexAttribivNV;
+  GdkGLProc_glAreProgramsResidentNV glAreProgramsResidentNV;
+  GdkGLProc_glBindProgramNV glBindProgramNV;
+  GdkGLProc_glDeleteProgramsNV glDeleteProgramsNV;
+  GdkGLProc_glExecuteProgramNV glExecuteProgramNV;
+  GdkGLProc_glGenProgramsNV glGenProgramsNV;
+  GdkGLProc_glGetProgramParameterdvNV glGetProgramParameterdvNV;
+  GdkGLProc_glGetProgramParameterfvNV glGetProgramParameterfvNV;
+  GdkGLProc_glGetProgramivNV glGetProgramivNV;
+  GdkGLProc_glGetProgramStringNV glGetProgramStringNV;
+  GdkGLProc_glGetTrackMatrixivNV glGetTrackMatrixivNV;
+  GdkGLProc_glGetVertexAttribdvNV glGetVertexAttribdvNV;
+  GdkGLProc_glGetVertexAttribfvNV glGetVertexAttribfvNV;
+  GdkGLProc_glGetVertexAttribivNV glGetVertexAttribivNV;
   GdkGLProc_glGetVertexAttribPointervNV glGetVertexAttribPointervNV;
-  GdkGLProc_glIsProgramNV               glIsProgramNV;
-  GdkGLProc_glLoadProgramNV             glLoadProgramNV;
-  GdkGLProc_glProgramParameter4dNV      glProgramParameter4dNV;
-  GdkGLProc_glProgramParameter4dvNV     glProgramParameter4dvNV;
-  GdkGLProc_glProgramParameter4fNV      glProgramParameter4fNV;
-  GdkGLProc_glProgramParameter4fvNV     glProgramParameter4fvNV;
-  GdkGLProc_glProgramParameters4dvNV    glProgramParameters4dvNV;
-  GdkGLProc_glProgramParameters4fvNV    glProgramParameters4fvNV;
+  GdkGLProc_glIsProgramNV glIsProgramNV;
+  GdkGLProc_glLoadProgramNV glLoadProgramNV;
+  GdkGLProc_glProgramParameter4dNV glProgramParameter4dNV;
+  GdkGLProc_glProgramParameter4dvNV glProgramParameter4dvNV;
+  GdkGLProc_glProgramParameter4fNV glProgramParameter4fNV;
+  GdkGLProc_glProgramParameter4fvNV glProgramParameter4fvNV;
+  GdkGLProc_glProgramParameters4dvNV glProgramParameters4dvNV;
+  GdkGLProc_glProgramParameters4fvNV glProgramParameters4fvNV;
   GdkGLProc_glRequestResidentProgramsNV glRequestResidentProgramsNV;
-  GdkGLProc_glTrackMatrixNV             glTrackMatrixNV;
-  GdkGLProc_glVertexAttribPointerNV     glVertexAttribPointerNV;
-  GdkGLProc_glVertexAttrib1dNV          glVertexAttrib1dNV;
-  GdkGLProc_glVertexAttrib1dvNV         glVertexAttrib1dvNV;
-  GdkGLProc_glVertexAttrib1fNV          glVertexAttrib1fNV;
-  GdkGLProc_glVertexAttrib1fvNV         glVertexAttrib1fvNV;
-  GdkGLProc_glVertexAttrib1sNV          glVertexAttrib1sNV;
-  GdkGLProc_glVertexAttrib1svNV         glVertexAttrib1svNV;
-  GdkGLProc_glVertexAttrib2dNV          glVertexAttrib2dNV;
-  GdkGLProc_glVertexAttrib2dvNV         glVertexAttrib2dvNV;
-  GdkGLProc_glVertexAttrib2fNV          glVertexAttrib2fNV;
-  GdkGLProc_glVertexAttrib2fvNV         glVertexAttrib2fvNV;
-  GdkGLProc_glVertexAttrib2sNV          glVertexAttrib2sNV;
-  GdkGLProc_glVertexAttrib2svNV         glVertexAttrib2svNV;
-  GdkGLProc_glVertexAttrib3dNV          glVertexAttrib3dNV;
-  GdkGLProc_glVertexAttrib3dvNV         glVertexAttrib3dvNV;
-  GdkGLProc_glVertexAttrib3fNV          glVertexAttrib3fNV;
-  GdkGLProc_glVertexAttrib3fvNV         glVertexAttrib3fvNV;
-  GdkGLProc_glVertexAttrib3sNV          glVertexAttrib3sNV;
-  GdkGLProc_glVertexAttrib3svNV         glVertexAttrib3svNV;
-  GdkGLProc_glVertexAttrib4dNV          glVertexAttrib4dNV;
-  GdkGLProc_glVertexAttrib4dvNV         glVertexAttrib4dvNV;
-  GdkGLProc_glVertexAttrib4fNV          glVertexAttrib4fNV;
-  GdkGLProc_glVertexAttrib4fvNV         glVertexAttrib4fvNV;
-  GdkGLProc_glVertexAttrib4sNV          glVertexAttrib4sNV;
-  GdkGLProc_glVertexAttrib4svNV         glVertexAttrib4svNV;
-  GdkGLProc_glVertexAttrib4ubNV         glVertexAttrib4ubNV;
-  GdkGLProc_glVertexAttrib4ubvNV        glVertexAttrib4ubvNV;
-  GdkGLProc_glVertexAttribs1dvNV        glVertexAttribs1dvNV;
-  GdkGLProc_glVertexAttribs1fvNV        glVertexAttribs1fvNV;
-  GdkGLProc_glVertexAttribs1svNV        glVertexAttribs1svNV;
-  GdkGLProc_glVertexAttribs2dvNV        glVertexAttribs2dvNV;
-  GdkGLProc_glVertexAttribs2fvNV        glVertexAttribs2fvNV;
-  GdkGLProc_glVertexAttribs2svNV        glVertexAttribs2svNV;
-  GdkGLProc_glVertexAttribs3dvNV        glVertexAttribs3dvNV;
-  GdkGLProc_glVertexAttribs3fvNV        glVertexAttribs3fvNV;
-  GdkGLProc_glVertexAttribs3svNV        glVertexAttribs3svNV;
-  GdkGLProc_glVertexAttribs4dvNV        glVertexAttribs4dvNV;
-  GdkGLProc_glVertexAttribs4fvNV        glVertexAttribs4fvNV;
-  GdkGLProc_glVertexAttribs4svNV        glVertexAttribs4svNV;
-  GdkGLProc_glVertexAttribs4ubvNV       glVertexAttribs4ubvNV;
+  GdkGLProc_glTrackMatrixNV glTrackMatrixNV;
+  GdkGLProc_glVertexAttribPointerNV glVertexAttribPointerNV;
+  GdkGLProc_glVertexAttrib1dNV glVertexAttrib1dNV;
+  GdkGLProc_glVertexAttrib1dvNV glVertexAttrib1dvNV;
+  GdkGLProc_glVertexAttrib1fNV glVertexAttrib1fNV;
+  GdkGLProc_glVertexAttrib1fvNV glVertexAttrib1fvNV;
+  GdkGLProc_glVertexAttrib1sNV glVertexAttrib1sNV;
+  GdkGLProc_glVertexAttrib1svNV glVertexAttrib1svNV;
+  GdkGLProc_glVertexAttrib2dNV glVertexAttrib2dNV;
+  GdkGLProc_glVertexAttrib2dvNV glVertexAttrib2dvNV;
+  GdkGLProc_glVertexAttrib2fNV glVertexAttrib2fNV;
+  GdkGLProc_glVertexAttrib2fvNV glVertexAttrib2fvNV;
+  GdkGLProc_glVertexAttrib2sNV glVertexAttrib2sNV;
+  GdkGLProc_glVertexAttrib2svNV glVertexAttrib2svNV;
+  GdkGLProc_glVertexAttrib3dNV glVertexAttrib3dNV;
+  GdkGLProc_glVertexAttrib3dvNV glVertexAttrib3dvNV;
+  GdkGLProc_glVertexAttrib3fNV glVertexAttrib3fNV;
+  GdkGLProc_glVertexAttrib3fvNV glVertexAttrib3fvNV;
+  GdkGLProc_glVertexAttrib3sNV glVertexAttrib3sNV;
+  GdkGLProc_glVertexAttrib3svNV glVertexAttrib3svNV;
+  GdkGLProc_glVertexAttrib4dNV glVertexAttrib4dNV;
+  GdkGLProc_glVertexAttrib4dvNV glVertexAttrib4dvNV;
+  GdkGLProc_glVertexAttrib4fNV glVertexAttrib4fNV;
+  GdkGLProc_glVertexAttrib4fvNV glVertexAttrib4fvNV;
+  GdkGLProc_glVertexAttrib4sNV glVertexAttrib4sNV;
+  GdkGLProc_glVertexAttrib4svNV glVertexAttrib4svNV;
+  GdkGLProc_glVertexAttrib4ubNV glVertexAttrib4ubNV;
+  GdkGLProc_glVertexAttrib4ubvNV glVertexAttrib4ubvNV;
+  GdkGLProc_glVertexAttribs1dvNV glVertexAttribs1dvNV;
+  GdkGLProc_glVertexAttribs1fvNV glVertexAttribs1fvNV;
+  GdkGLProc_glVertexAttribs1svNV glVertexAttribs1svNV;
+  GdkGLProc_glVertexAttribs2dvNV glVertexAttribs2dvNV;
+  GdkGLProc_glVertexAttribs2fvNV glVertexAttribs2fvNV;
+  GdkGLProc_glVertexAttribs2svNV glVertexAttribs2svNV;
+  GdkGLProc_glVertexAttribs3dvNV glVertexAttribs3dvNV;
+  GdkGLProc_glVertexAttribs3fvNV glVertexAttribs3fvNV;
+  GdkGLProc_glVertexAttribs3svNV glVertexAttribs3svNV;
+  GdkGLProc_glVertexAttribs4dvNV glVertexAttribs4dvNV;
+  GdkGLProc_glVertexAttribs4fvNV glVertexAttribs4fvNV;
+  GdkGLProc_glVertexAttribs4svNV glVertexAttribs4svNV;
+  GdkGLProc_glVertexAttribs4ubvNV glVertexAttribs4ubvNV;
 };
 
 GdkGL_GL_NV_vertex_program *gdk_gl_get_GL_NV_vertex_program (void);
 
-/* 
+/*
  * GL_ATI_envmap_bumpmap
  */
 
@@ -5920,15 +6016,15 @@ typedef struct _GdkGL_GL_ATI_envmap_bumpmap GdkGL_GL_ATI_envmap_bumpmap;
 
 struct _GdkGL_GL_ATI_envmap_bumpmap
 {
-  GdkGLProc_glTexBumpParameterivATI    glTexBumpParameterivATI;
-  GdkGLProc_glTexBumpParameterfvATI    glTexBumpParameterfvATI;
+  GdkGLProc_glTexBumpParameterivATI glTexBumpParameterivATI;
+  GdkGLProc_glTexBumpParameterfvATI glTexBumpParameterfvATI;
   GdkGLProc_glGetTexBumpParameterivATI glGetTexBumpParameterivATI;
   GdkGLProc_glGetTexBumpParameterfvATI glGetTexBumpParameterfvATI;
 };
 
 GdkGL_GL_ATI_envmap_bumpmap *gdk_gl_get_GL_ATI_envmap_bumpmap (void);
 
-/* 
+/*
  * GL_ATI_fragment_shader
  */
 
@@ -6022,25 +6118,25 @@ typedef struct _GdkGL_GL_ATI_fragment_shader GdkGL_GL_ATI_fragment_shader;
 
 struct _GdkGL_GL_ATI_fragment_shader
 {
-  GdkGLProc_glGenFragmentShadersATI        glGenFragmentShadersATI;
-  GdkGLProc_glBindFragmentShaderATI        glBindFragmentShaderATI;
-  GdkGLProc_glDeleteFragmentShaderATI      glDeleteFragmentShaderATI;
-  GdkGLProc_glBeginFragmentShaderATI       glBeginFragmentShaderATI;
-  GdkGLProc_glEndFragmentShaderATI         glEndFragmentShaderATI;
-  GdkGLProc_glPassTexCoordATI              glPassTexCoordATI;
-  GdkGLProc_glSampleMapATI                 glSampleMapATI;
-  GdkGLProc_glColorFragmentOp1ATI          glColorFragmentOp1ATI;
-  GdkGLProc_glColorFragmentOp2ATI          glColorFragmentOp2ATI;
-  GdkGLProc_glColorFragmentOp3ATI          glColorFragmentOp3ATI;
-  GdkGLProc_glAlphaFragmentOp1ATI          glAlphaFragmentOp1ATI;
-  GdkGLProc_glAlphaFragmentOp2ATI          glAlphaFragmentOp2ATI;
-  GdkGLProc_glAlphaFragmentOp3ATI          glAlphaFragmentOp3ATI;
+  GdkGLProc_glGenFragmentShadersATI glGenFragmentShadersATI;
+  GdkGLProc_glBindFragmentShaderATI glBindFragmentShaderATI;
+  GdkGLProc_glDeleteFragmentShaderATI glDeleteFragmentShaderATI;
+  GdkGLProc_glBeginFragmentShaderATI glBeginFragmentShaderATI;
+  GdkGLProc_glEndFragmentShaderATI glEndFragmentShaderATI;
+  GdkGLProc_glPassTexCoordATI glPassTexCoordATI;
+  GdkGLProc_glSampleMapATI glSampleMapATI;
+  GdkGLProc_glColorFragmentOp1ATI glColorFragmentOp1ATI;
+  GdkGLProc_glColorFragmentOp2ATI glColorFragmentOp2ATI;
+  GdkGLProc_glColorFragmentOp3ATI glColorFragmentOp3ATI;
+  GdkGLProc_glAlphaFragmentOp1ATI glAlphaFragmentOp1ATI;
+  GdkGLProc_glAlphaFragmentOp2ATI glAlphaFragmentOp2ATI;
+  GdkGLProc_glAlphaFragmentOp3ATI glAlphaFragmentOp3ATI;
   GdkGLProc_glSetFragmentShaderConstantATI glSetFragmentShaderConstantATI;
 };
 
 GdkGL_GL_ATI_fragment_shader *gdk_gl_get_GL_ATI_fragment_shader (void);
 
-/* 
+/*
  * GL_ATI_pn_triangles
  */
 
@@ -6068,7 +6164,7 @@ struct _GdkGL_GL_ATI_pn_triangles
 
 GdkGL_GL_ATI_pn_triangles *gdk_gl_get_GL_ATI_pn_triangles (void);
 
-/* 
+/*
  * GL_ATI_vertex_array_object
  */
 
@@ -6102,11 +6198,11 @@ GdkGLProc    gdk_gl_get_glGetObjectBufferivATI (void);
 #define      gdk_gl_glGetObjectBufferivATI(proc, buffer, pname, params) \
   ( ((GdkGLProc_glGetObjectBufferivATI) (proc)) (buffer, pname, params) )
 
-/* glDeleteObjectBufferATI */
-typedef void (APIENTRY * GdkGLProc_glDeleteObjectBufferATI) (GLuint buffer);
-GdkGLProc    gdk_gl_get_glDeleteObjectBufferATI (void);
-#define      gdk_gl_glDeleteObjectBufferATI(proc, buffer) \
-  ( ((GdkGLProc_glDeleteObjectBufferATI) (proc)) (buffer) )
+/* glFreeObjectBufferATI */
+typedef void (APIENTRY * GdkGLProc_glFreeObjectBufferATI) (GLuint buffer);
+GdkGLProc    gdk_gl_get_glFreeObjectBufferATI (void);
+#define      gdk_gl_glFreeObjectBufferATI(proc, buffer) \
+  ( ((GdkGLProc_glFreeObjectBufferATI) (proc)) (buffer) )
 
 /* glArrayObjectATI */
 typedef void (APIENTRY * GdkGLProc_glArrayObjectATI) (GLenum array, GLint size, GLenum type, GLsizei stride, GLuint buffer, GLuint offset);
@@ -6150,23 +6246,23 @@ typedef struct _GdkGL_GL_ATI_vertex_array_object GdkGL_GL_ATI_vertex_array_objec
 
 struct _GdkGL_GL_ATI_vertex_array_object
 {
-  GdkGLProc_glNewObjectBufferATI         glNewObjectBufferATI;
-  GdkGLProc_glIsObjectBufferATI          glIsObjectBufferATI;
-  GdkGLProc_glUpdateObjectBufferATI      glUpdateObjectBufferATI;
-  GdkGLProc_glGetObjectBufferfvATI       glGetObjectBufferfvATI;
-  GdkGLProc_glGetObjectBufferivATI       glGetObjectBufferivATI;
-  GdkGLProc_glDeleteObjectBufferATI      glDeleteObjectBufferATI;
-  GdkGLProc_glArrayObjectATI             glArrayObjectATI;
-  GdkGLProc_glGetArrayObjectfvATI        glGetArrayObjectfvATI;
-  GdkGLProc_glGetArrayObjectivATI        glGetArrayObjectivATI;
-  GdkGLProc_glVariantArrayObjectATI      glVariantArrayObjectATI;
+  GdkGLProc_glNewObjectBufferATI glNewObjectBufferATI;
+  GdkGLProc_glIsObjectBufferATI glIsObjectBufferATI;
+  GdkGLProc_glUpdateObjectBufferATI glUpdateObjectBufferATI;
+  GdkGLProc_glGetObjectBufferfvATI glGetObjectBufferfvATI;
+  GdkGLProc_glGetObjectBufferivATI glGetObjectBufferivATI;
+  GdkGLProc_glFreeObjectBufferATI glFreeObjectBufferATI;
+  GdkGLProc_glArrayObjectATI glArrayObjectATI;
+  GdkGLProc_glGetArrayObjectfvATI glGetArrayObjectfvATI;
+  GdkGLProc_glGetArrayObjectivATI glGetArrayObjectivATI;
+  GdkGLProc_glVariantArrayObjectATI glVariantArrayObjectATI;
   GdkGLProc_glGetVariantArrayObjectfvATI glGetVariantArrayObjectfvATI;
   GdkGLProc_glGetVariantArrayObjectivATI glGetVariantArrayObjectivATI;
 };
 
 GdkGL_GL_ATI_vertex_array_object *gdk_gl_get_GL_ATI_vertex_array_object (void);
 
-/* 
+/*
  * GL_EXT_vertex_shader
  */
 
@@ -6249,13 +6345,13 @@ GdkGLProc    gdk_gl_get_glGenSymbolsEXT (void);
   ( ((GdkGLProc_glGenSymbolsEXT) (proc)) (datatype, storagetype, range, components) )
 
 /* glSetInvariantEXT */
-typedef void (APIENTRY * GdkGLProc_glSetInvariantEXT) (GLuint id, GLenum type, const void *addr);
+typedef void (APIENTRY * GdkGLProc_glSetInvariantEXT) (GLuint id, GLenum type, const GLvoid *addr);
 GdkGLProc    gdk_gl_get_glSetInvariantEXT (void);
 #define      gdk_gl_glSetInvariantEXT(proc, id, type, addr) \
   ( ((GdkGLProc_glSetInvariantEXT) (proc)) (id, type, addr) )
 
 /* glSetLocalConstantEXT */
-typedef void (APIENTRY * GdkGLProc_glSetLocalConstantEXT) (GLuint id, GLenum type, const void *addr);
+typedef void (APIENTRY * GdkGLProc_glSetLocalConstantEXT) (GLuint id, GLenum type, const GLvoid *addr);
 GdkGLProc    gdk_gl_get_glSetLocalConstantEXT (void);
 #define      gdk_gl_glSetLocalConstantEXT(proc, id, type, addr) \
   ( ((GdkGLProc_glSetLocalConstantEXT) (proc)) (id, type, addr) )
@@ -6309,7 +6405,7 @@ GdkGLProc    gdk_gl_get_glVariantuivEXT (void);
   ( ((GdkGLProc_glVariantuivEXT) (proc)) (id, addr) )
 
 /* glVariantPointerEXT */
-typedef void (APIENTRY * GdkGLProc_glVariantPointerEXT) (GLuint id, GLenum type, GLuint stride, const void *addr);
+typedef void (APIENTRY * GdkGLProc_glVariantPointerEXT) (GLuint id, GLenum type, GLuint stride, const GLvoid *addr);
 GdkGLProc    gdk_gl_get_glVariantPointerEXT (void);
 #define      gdk_gl_glVariantPointerEXT(proc, id, type, stride, addr) \
   ( ((GdkGLProc_glVariantPointerEXT) (proc)) (id, type, stride, addr) )
@@ -6428,53 +6524,53 @@ typedef struct _GdkGL_GL_EXT_vertex_shader GdkGL_GL_EXT_vertex_shader;
 
 struct _GdkGL_GL_EXT_vertex_shader
 {
-  GdkGLProc_glBeginVertexShaderEXT         glBeginVertexShaderEXT;
-  GdkGLProc_glEndVertexShaderEXT           glEndVertexShaderEXT;
-  GdkGLProc_glBindVertexShaderEXT          glBindVertexShaderEXT;
-  GdkGLProc_glGenVertexShadersEXT          glGenVertexShadersEXT;
-  GdkGLProc_glDeleteVertexShaderEXT        glDeleteVertexShaderEXT;
-  GdkGLProc_glShaderOp1EXT                 glShaderOp1EXT;
-  GdkGLProc_glShaderOp2EXT                 glShaderOp2EXT;
-  GdkGLProc_glShaderOp3EXT                 glShaderOp3EXT;
-  GdkGLProc_glSwizzleEXT                   glSwizzleEXT;
-  GdkGLProc_glWriteMaskEXT                 glWriteMaskEXT;
-  GdkGLProc_glInsertComponentEXT           glInsertComponentEXT;
-  GdkGLProc_glExtractComponentEXT          glExtractComponentEXT;
-  GdkGLProc_glGenSymbolsEXT                glGenSymbolsEXT;
-  GdkGLProc_glSetInvariantEXT              glSetInvariantEXT;
-  GdkGLProc_glSetLocalConstantEXT          glSetLocalConstantEXT;
-  GdkGLProc_glVariantbvEXT                 glVariantbvEXT;
-  GdkGLProc_glVariantsvEXT                 glVariantsvEXT;
-  GdkGLProc_glVariantivEXT                 glVariantivEXT;
-  GdkGLProc_glVariantfvEXT                 glVariantfvEXT;
-  GdkGLProc_glVariantdvEXT                 glVariantdvEXT;
-  GdkGLProc_glVariantubvEXT                glVariantubvEXT;
-  GdkGLProc_glVariantusvEXT                glVariantusvEXT;
-  GdkGLProc_glVariantuivEXT                glVariantuivEXT;
-  GdkGLProc_glVariantPointerEXT            glVariantPointerEXT;
-  GdkGLProc_glEnableVariantClientStateEXT  glEnableVariantClientStateEXT;
+  GdkGLProc_glBeginVertexShaderEXT glBeginVertexShaderEXT;
+  GdkGLProc_glEndVertexShaderEXT glEndVertexShaderEXT;
+  GdkGLProc_glBindVertexShaderEXT glBindVertexShaderEXT;
+  GdkGLProc_glGenVertexShadersEXT glGenVertexShadersEXT;
+  GdkGLProc_glDeleteVertexShaderEXT glDeleteVertexShaderEXT;
+  GdkGLProc_glShaderOp1EXT glShaderOp1EXT;
+  GdkGLProc_glShaderOp2EXT glShaderOp2EXT;
+  GdkGLProc_glShaderOp3EXT glShaderOp3EXT;
+  GdkGLProc_glSwizzleEXT glSwizzleEXT;
+  GdkGLProc_glWriteMaskEXT glWriteMaskEXT;
+  GdkGLProc_glInsertComponentEXT glInsertComponentEXT;
+  GdkGLProc_glExtractComponentEXT glExtractComponentEXT;
+  GdkGLProc_glGenSymbolsEXT glGenSymbolsEXT;
+  GdkGLProc_glSetInvariantEXT glSetInvariantEXT;
+  GdkGLProc_glSetLocalConstantEXT glSetLocalConstantEXT;
+  GdkGLProc_glVariantbvEXT glVariantbvEXT;
+  GdkGLProc_glVariantsvEXT glVariantsvEXT;
+  GdkGLProc_glVariantivEXT glVariantivEXT;
+  GdkGLProc_glVariantfvEXT glVariantfvEXT;
+  GdkGLProc_glVariantdvEXT glVariantdvEXT;
+  GdkGLProc_glVariantubvEXT glVariantubvEXT;
+  GdkGLProc_glVariantusvEXT glVariantusvEXT;
+  GdkGLProc_glVariantuivEXT glVariantuivEXT;
+  GdkGLProc_glVariantPointerEXT glVariantPointerEXT;
+  GdkGLProc_glEnableVariantClientStateEXT glEnableVariantClientStateEXT;
   GdkGLProc_glDisableVariantClientStateEXT glDisableVariantClientStateEXT;
-  GdkGLProc_glBindLightParameterEXT        glBindLightParameterEXT;
-  GdkGLProc_glBindMaterialParameterEXT     glBindMaterialParameterEXT;
-  GdkGLProc_glBindTexGenParameterEXT       glBindTexGenParameterEXT;
-  GdkGLProc_glBindTextureUnitParameterEXT  glBindTextureUnitParameterEXT;
-  GdkGLProc_glBindParameterEXT             glBindParameterEXT;
-  GdkGLProc_glIsVariantEnabledEXT          glIsVariantEnabledEXT;
-  GdkGLProc_glGetVariantBooleanvEXT        glGetVariantBooleanvEXT;
-  GdkGLProc_glGetVariantIntegervEXT        glGetVariantIntegervEXT;
-  GdkGLProc_glGetVariantFloatvEXT          glGetVariantFloatvEXT;
-  GdkGLProc_glGetVariantPointervEXT        glGetVariantPointervEXT;
-  GdkGLProc_glGetInvariantBooleanvEXT      glGetInvariantBooleanvEXT;
-  GdkGLProc_glGetInvariantIntegervEXT      glGetInvariantIntegervEXT;
-  GdkGLProc_glGetInvariantFloatvEXT        glGetInvariantFloatvEXT;
-  GdkGLProc_glGetLocalConstantBooleanvEXT  glGetLocalConstantBooleanvEXT;
-  GdkGLProc_glGetLocalConstantIntegervEXT  glGetLocalConstantIntegervEXT;
-  GdkGLProc_glGetLocalConstantFloatvEXT    glGetLocalConstantFloatvEXT;
+  GdkGLProc_glBindLightParameterEXT glBindLightParameterEXT;
+  GdkGLProc_glBindMaterialParameterEXT glBindMaterialParameterEXT;
+  GdkGLProc_glBindTexGenParameterEXT glBindTexGenParameterEXT;
+  GdkGLProc_glBindTextureUnitParameterEXT glBindTextureUnitParameterEXT;
+  GdkGLProc_glBindParameterEXT glBindParameterEXT;
+  GdkGLProc_glIsVariantEnabledEXT glIsVariantEnabledEXT;
+  GdkGLProc_glGetVariantBooleanvEXT glGetVariantBooleanvEXT;
+  GdkGLProc_glGetVariantIntegervEXT glGetVariantIntegervEXT;
+  GdkGLProc_glGetVariantFloatvEXT glGetVariantFloatvEXT;
+  GdkGLProc_glGetVariantPointervEXT glGetVariantPointervEXT;
+  GdkGLProc_glGetInvariantBooleanvEXT glGetInvariantBooleanvEXT;
+  GdkGLProc_glGetInvariantIntegervEXT glGetInvariantIntegervEXT;
+  GdkGLProc_glGetInvariantFloatvEXT glGetInvariantFloatvEXT;
+  GdkGLProc_glGetLocalConstantBooleanvEXT glGetLocalConstantBooleanvEXT;
+  GdkGLProc_glGetLocalConstantIntegervEXT glGetLocalConstantIntegervEXT;
+  GdkGLProc_glGetLocalConstantFloatvEXT glGetLocalConstantFloatvEXT;
 };
 
 GdkGL_GL_EXT_vertex_shader *gdk_gl_get_GL_EXT_vertex_shader (void);
 
-/* 
+/*
  * GL_ATI_vertex_streams
  */
 
@@ -6754,56 +6850,56 @@ typedef struct _GdkGL_GL_ATI_vertex_streams GdkGL_GL_ATI_vertex_streams;
 
 struct _GdkGL_GL_ATI_vertex_streams
 {
-  GdkGLProc_glVertexStream1sATI           glVertexStream1sATI;
-  GdkGLProc_glVertexStream1svATI          glVertexStream1svATI;
-  GdkGLProc_glVertexStream1iATI           glVertexStream1iATI;
-  GdkGLProc_glVertexStream1ivATI          glVertexStream1ivATI;
-  GdkGLProc_glVertexStream1fATI           glVertexStream1fATI;
-  GdkGLProc_glVertexStream1fvATI          glVertexStream1fvATI;
-  GdkGLProc_glVertexStream1dATI           glVertexStream1dATI;
-  GdkGLProc_glVertexStream1dvATI          glVertexStream1dvATI;
-  GdkGLProc_glVertexStream2sATI           glVertexStream2sATI;
-  GdkGLProc_glVertexStream2svATI          glVertexStream2svATI;
-  GdkGLProc_glVertexStream2iATI           glVertexStream2iATI;
-  GdkGLProc_glVertexStream2ivATI          glVertexStream2ivATI;
-  GdkGLProc_glVertexStream2fATI           glVertexStream2fATI;
-  GdkGLProc_glVertexStream2fvATI          glVertexStream2fvATI;
-  GdkGLProc_glVertexStream2dATI           glVertexStream2dATI;
-  GdkGLProc_glVertexStream2dvATI          glVertexStream2dvATI;
-  GdkGLProc_glVertexStream3sATI           glVertexStream3sATI;
-  GdkGLProc_glVertexStream3svATI          glVertexStream3svATI;
-  GdkGLProc_glVertexStream3iATI           glVertexStream3iATI;
-  GdkGLProc_glVertexStream3ivATI          glVertexStream3ivATI;
-  GdkGLProc_glVertexStream3fATI           glVertexStream3fATI;
-  GdkGLProc_glVertexStream3fvATI          glVertexStream3fvATI;
-  GdkGLProc_glVertexStream3dATI           glVertexStream3dATI;
-  GdkGLProc_glVertexStream3dvATI          glVertexStream3dvATI;
-  GdkGLProc_glVertexStream4sATI           glVertexStream4sATI;
-  GdkGLProc_glVertexStream4svATI          glVertexStream4svATI;
-  GdkGLProc_glVertexStream4iATI           glVertexStream4iATI;
-  GdkGLProc_glVertexStream4ivATI          glVertexStream4ivATI;
-  GdkGLProc_glVertexStream4fATI           glVertexStream4fATI;
-  GdkGLProc_glVertexStream4fvATI          glVertexStream4fvATI;
-  GdkGLProc_glVertexStream4dATI           glVertexStream4dATI;
-  GdkGLProc_glVertexStream4dvATI          glVertexStream4dvATI;
-  GdkGLProc_glNormalStream3bATI           glNormalStream3bATI;
-  GdkGLProc_glNormalStream3bvATI          glNormalStream3bvATI;
-  GdkGLProc_glNormalStream3sATI           glNormalStream3sATI;
-  GdkGLProc_glNormalStream3svATI          glNormalStream3svATI;
-  GdkGLProc_glNormalStream3iATI           glNormalStream3iATI;
-  GdkGLProc_glNormalStream3ivATI          glNormalStream3ivATI;
-  GdkGLProc_glNormalStream3fATI           glNormalStream3fATI;
-  GdkGLProc_glNormalStream3fvATI          glNormalStream3fvATI;
-  GdkGLProc_glNormalStream3dATI           glNormalStream3dATI;
-  GdkGLProc_glNormalStream3dvATI          glNormalStream3dvATI;
+  GdkGLProc_glVertexStream1sATI glVertexStream1sATI;
+  GdkGLProc_glVertexStream1svATI glVertexStream1svATI;
+  GdkGLProc_glVertexStream1iATI glVertexStream1iATI;
+  GdkGLProc_glVertexStream1ivATI glVertexStream1ivATI;
+  GdkGLProc_glVertexStream1fATI glVertexStream1fATI;
+  GdkGLProc_glVertexStream1fvATI glVertexStream1fvATI;
+  GdkGLProc_glVertexStream1dATI glVertexStream1dATI;
+  GdkGLProc_glVertexStream1dvATI glVertexStream1dvATI;
+  GdkGLProc_glVertexStream2sATI glVertexStream2sATI;
+  GdkGLProc_glVertexStream2svATI glVertexStream2svATI;
+  GdkGLProc_glVertexStream2iATI glVertexStream2iATI;
+  GdkGLProc_glVertexStream2ivATI glVertexStream2ivATI;
+  GdkGLProc_glVertexStream2fATI glVertexStream2fATI;
+  GdkGLProc_glVertexStream2fvATI glVertexStream2fvATI;
+  GdkGLProc_glVertexStream2dATI glVertexStream2dATI;
+  GdkGLProc_glVertexStream2dvATI glVertexStream2dvATI;
+  GdkGLProc_glVertexStream3sATI glVertexStream3sATI;
+  GdkGLProc_glVertexStream3svATI glVertexStream3svATI;
+  GdkGLProc_glVertexStream3iATI glVertexStream3iATI;
+  GdkGLProc_glVertexStream3ivATI glVertexStream3ivATI;
+  GdkGLProc_glVertexStream3fATI glVertexStream3fATI;
+  GdkGLProc_glVertexStream3fvATI glVertexStream3fvATI;
+  GdkGLProc_glVertexStream3dATI glVertexStream3dATI;
+  GdkGLProc_glVertexStream3dvATI glVertexStream3dvATI;
+  GdkGLProc_glVertexStream4sATI glVertexStream4sATI;
+  GdkGLProc_glVertexStream4svATI glVertexStream4svATI;
+  GdkGLProc_glVertexStream4iATI glVertexStream4iATI;
+  GdkGLProc_glVertexStream4ivATI glVertexStream4ivATI;
+  GdkGLProc_glVertexStream4fATI glVertexStream4fATI;
+  GdkGLProc_glVertexStream4fvATI glVertexStream4fvATI;
+  GdkGLProc_glVertexStream4dATI glVertexStream4dATI;
+  GdkGLProc_glVertexStream4dvATI glVertexStream4dvATI;
+  GdkGLProc_glNormalStream3bATI glNormalStream3bATI;
+  GdkGLProc_glNormalStream3bvATI glNormalStream3bvATI;
+  GdkGLProc_glNormalStream3sATI glNormalStream3sATI;
+  GdkGLProc_glNormalStream3svATI glNormalStream3svATI;
+  GdkGLProc_glNormalStream3iATI glNormalStream3iATI;
+  GdkGLProc_glNormalStream3ivATI glNormalStream3ivATI;
+  GdkGLProc_glNormalStream3fATI glNormalStream3fATI;
+  GdkGLProc_glNormalStream3fvATI glNormalStream3fvATI;
+  GdkGLProc_glNormalStream3dATI glNormalStream3dATI;
+  GdkGLProc_glNormalStream3dvATI glNormalStream3dvATI;
   GdkGLProc_glClientActiveVertexStreamATI glClientActiveVertexStreamATI;
-  GdkGLProc_glVertexBlendEnviATI          glVertexBlendEnviATI;
-  GdkGLProc_glVertexBlendEnvfATI          glVertexBlendEnvfATI;
+  GdkGLProc_glVertexBlendEnviATI glVertexBlendEnviATI;
+  GdkGLProc_glVertexBlendEnvfATI glVertexBlendEnvfATI;
 };
 
 GdkGL_GL_ATI_vertex_streams *gdk_gl_get_GL_ATI_vertex_streams (void);
 
-/* 
+/*
  * GL_ATI_element_array
  */
 
@@ -6831,14 +6927,14 @@ typedef struct _GdkGL_GL_ATI_element_array GdkGL_GL_ATI_element_array;
 
 struct _GdkGL_GL_ATI_element_array
 {
-  GdkGLProc_glElementPointerATI        glElementPointerATI;
-  GdkGLProc_glDrawElementArrayATI      glDrawElementArrayATI;
+  GdkGLProc_glElementPointerATI glElementPointerATI;
+  GdkGLProc_glDrawElementArrayATI glDrawElementArrayATI;
   GdkGLProc_glDrawRangeElementArrayATI glDrawRangeElementArrayATI;
 };
 
 GdkGL_GL_ATI_element_array *gdk_gl_get_GL_ATI_element_array (void);
 
-/* 
+/*
  * GL_SUN_mesh_array
  */
 
@@ -6859,7 +6955,7 @@ struct _GdkGL_GL_SUN_mesh_array
 
 GdkGL_GL_SUN_mesh_array *gdk_gl_get_GL_SUN_mesh_array (void);
 
-/* 
+/*
  * GL_NV_occlusion_query
  */
 
@@ -6911,18 +7007,18 @@ typedef struct _GdkGL_GL_NV_occlusion_query GdkGL_GL_NV_occlusion_query;
 
 struct _GdkGL_GL_NV_occlusion_query
 {
-  GdkGLProc_glGenOcclusionQueriesNV    glGenOcclusionQueriesNV;
+  GdkGLProc_glGenOcclusionQueriesNV glGenOcclusionQueriesNV;
   GdkGLProc_glDeleteOcclusionQueriesNV glDeleteOcclusionQueriesNV;
-  GdkGLProc_glIsOcclusionQueryNV       glIsOcclusionQueryNV;
-  GdkGLProc_glBeginOcclusionQueryNV    glBeginOcclusionQueryNV;
-  GdkGLProc_glEndOcclusionQueryNV      glEndOcclusionQueryNV;
-  GdkGLProc_glGetOcclusionQueryivNV    glGetOcclusionQueryivNV;
-  GdkGLProc_glGetOcclusionQueryuivNV   glGetOcclusionQueryuivNV;
+  GdkGLProc_glIsOcclusionQueryNV glIsOcclusionQueryNV;
+  GdkGLProc_glBeginOcclusionQueryNV glBeginOcclusionQueryNV;
+  GdkGLProc_glEndOcclusionQueryNV glEndOcclusionQueryNV;
+  GdkGLProc_glGetOcclusionQueryivNV glGetOcclusionQueryivNV;
+  GdkGLProc_glGetOcclusionQueryuivNV glGetOcclusionQueryuivNV;
 };
 
 GdkGL_GL_NV_occlusion_query *gdk_gl_get_GL_NV_occlusion_query (void);
 
-/* 
+/*
  * GL_NV_point_sprite
  */
 
@@ -6944,13 +7040,13 @@ typedef struct _GdkGL_GL_NV_point_sprite GdkGL_GL_NV_point_sprite;
 
 struct _GdkGL_GL_NV_point_sprite
 {
-  GdkGLProc_glPointParameteriNV  glPointParameteriNV;
+  GdkGLProc_glPointParameteriNV glPointParameteriNV;
   GdkGLProc_glPointParameterivNV glPointParameterivNV;
 };
 
 GdkGL_GL_NV_point_sprite *gdk_gl_get_GL_NV_point_sprite (void);
 
-/* 
+/*
  * GL_EXT_stencil_two_side
  */
 
@@ -6972,10 +7068,1917 @@ struct _GdkGL_GL_EXT_stencil_two_side
 GdkGL_GL_EXT_stencil_two_side *gdk_gl_get_GL_EXT_stencil_two_side (void);
 
 /*
- * Microsoft OpenGL Extensions
+ * GL_APPLE_element_array
  */
 
-/* 
+/* glElementPointerAPPLE */
+typedef void (APIENTRY * GdkGLProc_glElementPointerAPPLE) (GLenum type, const GLvoid *pointer);
+GdkGLProc    gdk_gl_get_glElementPointerAPPLE (void);
+#define      gdk_gl_glElementPointerAPPLE(proc, type, pointer) \
+  ( ((GdkGLProc_glElementPointerAPPLE) (proc)) (type, pointer) )
+
+/* glDrawElementArrayAPPLE */
+typedef void (APIENTRY * GdkGLProc_glDrawElementArrayAPPLE) (GLenum mode, GLint first, GLsizei count);
+GdkGLProc    gdk_gl_get_glDrawElementArrayAPPLE (void);
+#define      gdk_gl_glDrawElementArrayAPPLE(proc, mode, first, count) \
+  ( ((GdkGLProc_glDrawElementArrayAPPLE) (proc)) (mode, first, count) )
+
+/* glDrawRangeElementArrayAPPLE */
+typedef void (APIENTRY * GdkGLProc_glDrawRangeElementArrayAPPLE) (GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count);
+GdkGLProc    gdk_gl_get_glDrawRangeElementArrayAPPLE (void);
+#define      gdk_gl_glDrawRangeElementArrayAPPLE(proc, mode, start, end, first, count) \
+  ( ((GdkGLProc_glDrawRangeElementArrayAPPLE) (proc)) (mode, start, end, first, count) )
+
+/* glMultiDrawElementArrayAPPLE */
+typedef void (APIENTRY * GdkGLProc_glMultiDrawElementArrayAPPLE) (GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
+GdkGLProc    gdk_gl_get_glMultiDrawElementArrayAPPLE (void);
+#define      gdk_gl_glMultiDrawElementArrayAPPLE(proc, mode, first, count, primcount) \
+  ( ((GdkGLProc_glMultiDrawElementArrayAPPLE) (proc)) (mode, first, count, primcount) )
+
+/* glMultiDrawRangeElementArrayAPPLE */
+typedef void (APIENTRY * GdkGLProc_glMultiDrawRangeElementArrayAPPLE) (GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount);
+GdkGLProc    gdk_gl_get_glMultiDrawRangeElementArrayAPPLE (void);
+#define      gdk_gl_glMultiDrawRangeElementArrayAPPLE(proc, mode, start, end, first, count, primcount) \
+  ( ((GdkGLProc_glMultiDrawRangeElementArrayAPPLE) (proc)) (mode, start, end, first, count, primcount) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_APPLE_element_array GdkGL_GL_APPLE_element_array;
+
+struct _GdkGL_GL_APPLE_element_array
+{
+  GdkGLProc_glElementPointerAPPLE glElementPointerAPPLE;
+  GdkGLProc_glDrawElementArrayAPPLE glDrawElementArrayAPPLE;
+  GdkGLProc_glDrawRangeElementArrayAPPLE glDrawRangeElementArrayAPPLE;
+  GdkGLProc_glMultiDrawElementArrayAPPLE glMultiDrawElementArrayAPPLE;
+  GdkGLProc_glMultiDrawRangeElementArrayAPPLE glMultiDrawRangeElementArrayAPPLE;
+};
+
+GdkGL_GL_APPLE_element_array *gdk_gl_get_GL_APPLE_element_array (void);
+
+/*
+ * GL_APPLE_fence
+ */
+
+/* glGenFencesAPPLE */
+typedef void (APIENTRY * GdkGLProc_glGenFencesAPPLE) (GLsizei n, GLuint *fences);
+GdkGLProc    gdk_gl_get_glGenFencesAPPLE (void);
+#define      gdk_gl_glGenFencesAPPLE(proc, n, fences) \
+  ( ((GdkGLProc_glGenFencesAPPLE) (proc)) (n, fences) )
+
+/* glDeleteFencesAPPLE */
+typedef void (APIENTRY * GdkGLProc_glDeleteFencesAPPLE) (GLsizei n, const GLuint *fences);
+GdkGLProc    gdk_gl_get_glDeleteFencesAPPLE (void);
+#define      gdk_gl_glDeleteFencesAPPLE(proc, n, fences) \
+  ( ((GdkGLProc_glDeleteFencesAPPLE) (proc)) (n, fences) )
+
+/* glSetFenceAPPLE */
+typedef void (APIENTRY * GdkGLProc_glSetFenceAPPLE) (GLuint fence);
+GdkGLProc    gdk_gl_get_glSetFenceAPPLE (void);
+#define      gdk_gl_glSetFenceAPPLE(proc, fence) \
+  ( ((GdkGLProc_glSetFenceAPPLE) (proc)) (fence) )
+
+/* glIsFenceAPPLE */
+typedef GLboolean (APIENTRY * GdkGLProc_glIsFenceAPPLE) (GLuint fence);
+GdkGLProc    gdk_gl_get_glIsFenceAPPLE (void);
+#define      gdk_gl_glIsFenceAPPLE(proc, fence) \
+  ( ((GdkGLProc_glIsFenceAPPLE) (proc)) (fence) )
+
+/* glTestFenceAPPLE */
+typedef GLboolean (APIENTRY * GdkGLProc_glTestFenceAPPLE) (GLuint fence);
+GdkGLProc    gdk_gl_get_glTestFenceAPPLE (void);
+#define      gdk_gl_glTestFenceAPPLE(proc, fence) \
+  ( ((GdkGLProc_glTestFenceAPPLE) (proc)) (fence) )
+
+/* glFinishFenceAPPLE */
+typedef void (APIENTRY * GdkGLProc_glFinishFenceAPPLE) (GLuint fence);
+GdkGLProc    gdk_gl_get_glFinishFenceAPPLE (void);
+#define      gdk_gl_glFinishFenceAPPLE(proc, fence) \
+  ( ((GdkGLProc_glFinishFenceAPPLE) (proc)) (fence) )
+
+/* glTestObjectAPPLE */
+typedef GLboolean (APIENTRY * GdkGLProc_glTestObjectAPPLE) (GLenum object, GLuint name);
+GdkGLProc    gdk_gl_get_glTestObjectAPPLE (void);
+#define      gdk_gl_glTestObjectAPPLE(proc, object, name) \
+  ( ((GdkGLProc_glTestObjectAPPLE) (proc)) (object, name) )
+
+/* glFinishObjectAPPLE */
+typedef void (APIENTRY * GdkGLProc_glFinishObjectAPPLE) (GLenum object, GLint name);
+GdkGLProc    gdk_gl_get_glFinishObjectAPPLE (void);
+#define      gdk_gl_glFinishObjectAPPLE(proc, object, name) \
+  ( ((GdkGLProc_glFinishObjectAPPLE) (proc)) (object, name) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_APPLE_fence GdkGL_GL_APPLE_fence;
+
+struct _GdkGL_GL_APPLE_fence
+{
+  GdkGLProc_glGenFencesAPPLE glGenFencesAPPLE;
+  GdkGLProc_glDeleteFencesAPPLE glDeleteFencesAPPLE;
+  GdkGLProc_glSetFenceAPPLE glSetFenceAPPLE;
+  GdkGLProc_glIsFenceAPPLE glIsFenceAPPLE;
+  GdkGLProc_glTestFenceAPPLE glTestFenceAPPLE;
+  GdkGLProc_glFinishFenceAPPLE glFinishFenceAPPLE;
+  GdkGLProc_glTestObjectAPPLE glTestObjectAPPLE;
+  GdkGLProc_glFinishObjectAPPLE glFinishObjectAPPLE;
+};
+
+GdkGL_GL_APPLE_fence *gdk_gl_get_GL_APPLE_fence (void);
+
+/*
+ * GL_APPLE_vertex_array_object
+ */
+
+/* glBindVertexArrayAPPLE */
+typedef void (APIENTRY * GdkGLProc_glBindVertexArrayAPPLE) (GLuint array);
+GdkGLProc    gdk_gl_get_glBindVertexArrayAPPLE (void);
+#define      gdk_gl_glBindVertexArrayAPPLE(proc, array) \
+  ( ((GdkGLProc_glBindVertexArrayAPPLE) (proc)) (array) )
+
+/* glDeleteVertexArraysAPPLE */
+typedef void (APIENTRY * GdkGLProc_glDeleteVertexArraysAPPLE) (GLsizei n, const GLuint *arrays);
+GdkGLProc    gdk_gl_get_glDeleteVertexArraysAPPLE (void);
+#define      gdk_gl_glDeleteVertexArraysAPPLE(proc, n, arrays) \
+  ( ((GdkGLProc_glDeleteVertexArraysAPPLE) (proc)) (n, arrays) )
+
+/* glGenVertexArraysAPPLE */
+typedef void (APIENTRY * GdkGLProc_glGenVertexArraysAPPLE) (GLsizei n, const GLuint *arrays);
+GdkGLProc    gdk_gl_get_glGenVertexArraysAPPLE (void);
+#define      gdk_gl_glGenVertexArraysAPPLE(proc, n, arrays) \
+  ( ((GdkGLProc_glGenVertexArraysAPPLE) (proc)) (n, arrays) )
+
+/* glIsVertexArrayAPPLE */
+typedef GLboolean (APIENTRY * GdkGLProc_glIsVertexArrayAPPLE) (GLuint array);
+GdkGLProc    gdk_gl_get_glIsVertexArrayAPPLE (void);
+#define      gdk_gl_glIsVertexArrayAPPLE(proc, array) \
+  ( ((GdkGLProc_glIsVertexArrayAPPLE) (proc)) (array) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_APPLE_vertex_array_object GdkGL_GL_APPLE_vertex_array_object;
+
+struct _GdkGL_GL_APPLE_vertex_array_object
+{
+  GdkGLProc_glBindVertexArrayAPPLE glBindVertexArrayAPPLE;
+  GdkGLProc_glDeleteVertexArraysAPPLE glDeleteVertexArraysAPPLE;
+  GdkGLProc_glGenVertexArraysAPPLE glGenVertexArraysAPPLE;
+  GdkGLProc_glIsVertexArrayAPPLE glIsVertexArrayAPPLE;
+};
+
+GdkGL_GL_APPLE_vertex_array_object *gdk_gl_get_GL_APPLE_vertex_array_object (void);
+
+/*
+ * GL_APPLE_vertex_array_range
+ */
+
+/* glVertexArrayRangeAPPLE */
+typedef void (APIENTRY * GdkGLProc_glVertexArrayRangeAPPLE) (GLsizei length, GLvoid *pointer);
+GdkGLProc    gdk_gl_get_glVertexArrayRangeAPPLE (void);
+#define      gdk_gl_glVertexArrayRangeAPPLE(proc, length, pointer) \
+  ( ((GdkGLProc_glVertexArrayRangeAPPLE) (proc)) (length, pointer) )
+
+/* glFlushVertexArrayRangeAPPLE */
+typedef void (APIENTRY * GdkGLProc_glFlushVertexArrayRangeAPPLE) (GLsizei length, GLvoid *pointer);
+GdkGLProc    gdk_gl_get_glFlushVertexArrayRangeAPPLE (void);
+#define      gdk_gl_glFlushVertexArrayRangeAPPLE(proc, length, pointer) \
+  ( ((GdkGLProc_glFlushVertexArrayRangeAPPLE) (proc)) (length, pointer) )
+
+/* glVertexArrayParameteriAPPLE */
+typedef void (APIENTRY * GdkGLProc_glVertexArrayParameteriAPPLE) (GLenum pname, GLint param);
+GdkGLProc    gdk_gl_get_glVertexArrayParameteriAPPLE (void);
+#define      gdk_gl_glVertexArrayParameteriAPPLE(proc, pname, param) \
+  ( ((GdkGLProc_glVertexArrayParameteriAPPLE) (proc)) (pname, param) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_APPLE_vertex_array_range GdkGL_GL_APPLE_vertex_array_range;
+
+struct _GdkGL_GL_APPLE_vertex_array_range
+{
+  GdkGLProc_glVertexArrayRangeAPPLE glVertexArrayRangeAPPLE;
+  GdkGLProc_glFlushVertexArrayRangeAPPLE glFlushVertexArrayRangeAPPLE;
+  GdkGLProc_glVertexArrayParameteriAPPLE glVertexArrayParameteriAPPLE;
+};
+
+GdkGL_GL_APPLE_vertex_array_range *gdk_gl_get_GL_APPLE_vertex_array_range (void);
+
+/*
+ * GL_ATI_draw_buffers
+ */
+
+/* glDrawBuffersATI */
+typedef void (APIENTRY * GdkGLProc_glDrawBuffersATI) (GLsizei n, const GLenum *bufs);
+GdkGLProc    gdk_gl_get_glDrawBuffersATI (void);
+#define      gdk_gl_glDrawBuffersATI(proc, n, bufs) \
+  ( ((GdkGLProc_glDrawBuffersATI) (proc)) (n, bufs) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_ATI_draw_buffers GdkGL_GL_ATI_draw_buffers;
+
+struct _GdkGL_GL_ATI_draw_buffers
+{
+  GdkGLProc_glDrawBuffersATI glDrawBuffersATI;
+};
+
+GdkGL_GL_ATI_draw_buffers *gdk_gl_get_GL_ATI_draw_buffers (void);
+
+/*
+ * GL_NV_fragment_program
+ */
+
+/* glProgramNamedParameter4fNV */
+typedef void (APIENTRY * GdkGLProc_glProgramNamedParameter4fNV) (GLuint id, GLsizei len, const GLubyte *name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
+GdkGLProc    gdk_gl_get_glProgramNamedParameter4fNV (void);
+#define      gdk_gl_glProgramNamedParameter4fNV(proc, id, len, name, x, y, z, w) \
+  ( ((GdkGLProc_glProgramNamedParameter4fNV) (proc)) (id, len, name, x, y, z, w) )
+
+/* glProgramNamedParameter4dNV */
+typedef void (APIENTRY * GdkGLProc_glProgramNamedParameter4dNV) (GLuint id, GLsizei len, const GLubyte *name, GLdouble x, GLdouble y, GLdouble z, GLdouble w);
+GdkGLProc    gdk_gl_get_glProgramNamedParameter4dNV (void);
+#define      gdk_gl_glProgramNamedParameter4dNV(proc, id, len, name, x, y, z, w) \
+  ( ((GdkGLProc_glProgramNamedParameter4dNV) (proc)) (id, len, name, x, y, z, w) )
+
+/* glProgramNamedParameter4fvNV */
+typedef void (APIENTRY * GdkGLProc_glProgramNamedParameter4fvNV) (GLuint id, GLsizei len, const GLubyte *name, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glProgramNamedParameter4fvNV (void);
+#define      gdk_gl_glProgramNamedParameter4fvNV(proc, id, len, name, v) \
+  ( ((GdkGLProc_glProgramNamedParameter4fvNV) (proc)) (id, len, name, v) )
+
+/* glProgramNamedParameter4dvNV */
+typedef void (APIENTRY * GdkGLProc_glProgramNamedParameter4dvNV) (GLuint id, GLsizei len, const GLubyte *name, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glProgramNamedParameter4dvNV (void);
+#define      gdk_gl_glProgramNamedParameter4dvNV(proc, id, len, name, v) \
+  ( ((GdkGLProc_glProgramNamedParameter4dvNV) (proc)) (id, len, name, v) )
+
+/* glGetProgramNamedParameterfvNV */
+typedef void (APIENTRY * GdkGLProc_glGetProgramNamedParameterfvNV) (GLuint id, GLsizei len, const GLubyte *name, GLfloat *params);
+GdkGLProc    gdk_gl_get_glGetProgramNamedParameterfvNV (void);
+#define      gdk_gl_glGetProgramNamedParameterfvNV(proc, id, len, name, params) \
+  ( ((GdkGLProc_glGetProgramNamedParameterfvNV) (proc)) (id, len, name, params) )
+
+/* glGetProgramNamedParameterdvNV */
+typedef void (APIENTRY * GdkGLProc_glGetProgramNamedParameterdvNV) (GLuint id, GLsizei len, const GLubyte *name, GLdouble *params);
+GdkGLProc    gdk_gl_get_glGetProgramNamedParameterdvNV (void);
+#define      gdk_gl_glGetProgramNamedParameterdvNV(proc, id, len, name, params) \
+  ( ((GdkGLProc_glGetProgramNamedParameterdvNV) (proc)) (id, len, name, params) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_NV_fragment_program GdkGL_GL_NV_fragment_program;
+
+struct _GdkGL_GL_NV_fragment_program
+{
+  GdkGLProc_glProgramNamedParameter4fNV glProgramNamedParameter4fNV;
+  GdkGLProc_glProgramNamedParameter4dNV glProgramNamedParameter4dNV;
+  GdkGLProc_glProgramNamedParameter4fvNV glProgramNamedParameter4fvNV;
+  GdkGLProc_glProgramNamedParameter4dvNV glProgramNamedParameter4dvNV;
+  GdkGLProc_glGetProgramNamedParameterfvNV glGetProgramNamedParameterfvNV;
+  GdkGLProc_glGetProgramNamedParameterdvNV glGetProgramNamedParameterdvNV;
+};
+
+GdkGL_GL_NV_fragment_program *gdk_gl_get_GL_NV_fragment_program (void);
+
+/*
+ * GL_NV_half_float
+ */
+
+/* glVertex2hNV */
+typedef void (APIENTRY * GdkGLProc_glVertex2hNV) (GLhalfNV x, GLhalfNV y);
+GdkGLProc    gdk_gl_get_glVertex2hNV (void);
+#define      gdk_gl_glVertex2hNV(proc, x, y) \
+  ( ((GdkGLProc_glVertex2hNV) (proc)) (x, y) )
+
+/* glVertex2hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertex2hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertex2hvNV (void);
+#define      gdk_gl_glVertex2hvNV(proc, v) \
+  ( ((GdkGLProc_glVertex2hvNV) (proc)) (v) )
+
+/* glVertex3hNV */
+typedef void (APIENTRY * GdkGLProc_glVertex3hNV) (GLhalfNV x, GLhalfNV y, GLhalfNV z);
+GdkGLProc    gdk_gl_get_glVertex3hNV (void);
+#define      gdk_gl_glVertex3hNV(proc, x, y, z) \
+  ( ((GdkGLProc_glVertex3hNV) (proc)) (x, y, z) )
+
+/* glVertex3hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertex3hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertex3hvNV (void);
+#define      gdk_gl_glVertex3hvNV(proc, v) \
+  ( ((GdkGLProc_glVertex3hvNV) (proc)) (v) )
+
+/* glVertex4hNV */
+typedef void (APIENTRY * GdkGLProc_glVertex4hNV) (GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w);
+GdkGLProc    gdk_gl_get_glVertex4hNV (void);
+#define      gdk_gl_glVertex4hNV(proc, x, y, z, w) \
+  ( ((GdkGLProc_glVertex4hNV) (proc)) (x, y, z, w) )
+
+/* glVertex4hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertex4hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertex4hvNV (void);
+#define      gdk_gl_glVertex4hvNV(proc, v) \
+  ( ((GdkGLProc_glVertex4hvNV) (proc)) (v) )
+
+/* glNormal3hNV */
+typedef void (APIENTRY * GdkGLProc_glNormal3hNV) (GLhalfNV nx, GLhalfNV ny, GLhalfNV nz);
+GdkGLProc    gdk_gl_get_glNormal3hNV (void);
+#define      gdk_gl_glNormal3hNV(proc, nx, ny, nz) \
+  ( ((GdkGLProc_glNormal3hNV) (proc)) (nx, ny, nz) )
+
+/* glNormal3hvNV */
+typedef void (APIENTRY * GdkGLProc_glNormal3hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glNormal3hvNV (void);
+#define      gdk_gl_glNormal3hvNV(proc, v) \
+  ( ((GdkGLProc_glNormal3hvNV) (proc)) (v) )
+
+/* glColor3hNV */
+typedef void (APIENTRY * GdkGLProc_glColor3hNV) (GLhalfNV red, GLhalfNV green, GLhalfNV blue);
+GdkGLProc    gdk_gl_get_glColor3hNV (void);
+#define      gdk_gl_glColor3hNV(proc, red, green, blue) \
+  ( ((GdkGLProc_glColor3hNV) (proc)) (red, green, blue) )
+
+/* glColor3hvNV */
+typedef void (APIENTRY * GdkGLProc_glColor3hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glColor3hvNV (void);
+#define      gdk_gl_glColor3hvNV(proc, v) \
+  ( ((GdkGLProc_glColor3hvNV) (proc)) (v) )
+
+/* glColor4hNV */
+typedef void (APIENTRY * GdkGLProc_glColor4hNV) (GLhalfNV red, GLhalfNV green, GLhalfNV blue, GLhalfNV alpha);
+GdkGLProc    gdk_gl_get_glColor4hNV (void);
+#define      gdk_gl_glColor4hNV(proc, red, green, blue, alpha) \
+  ( ((GdkGLProc_glColor4hNV) (proc)) (red, green, blue, alpha) )
+
+/* glColor4hvNV */
+typedef void (APIENTRY * GdkGLProc_glColor4hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glColor4hvNV (void);
+#define      gdk_gl_glColor4hvNV(proc, v) \
+  ( ((GdkGLProc_glColor4hvNV) (proc)) (v) )
+
+/* glTexCoord1hNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord1hNV) (GLhalfNV s);
+GdkGLProc    gdk_gl_get_glTexCoord1hNV (void);
+#define      gdk_gl_glTexCoord1hNV(proc, s) \
+  ( ((GdkGLProc_glTexCoord1hNV) (proc)) (s) )
+
+/* glTexCoord1hvNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord1hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glTexCoord1hvNV (void);
+#define      gdk_gl_glTexCoord1hvNV(proc, v) \
+  ( ((GdkGLProc_glTexCoord1hvNV) (proc)) (v) )
+
+/* glTexCoord2hNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord2hNV) (GLhalfNV s, GLhalfNV t);
+GdkGLProc    gdk_gl_get_glTexCoord2hNV (void);
+#define      gdk_gl_glTexCoord2hNV(proc, s, t) \
+  ( ((GdkGLProc_glTexCoord2hNV) (proc)) (s, t) )
+
+/* glTexCoord2hvNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord2hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glTexCoord2hvNV (void);
+#define      gdk_gl_glTexCoord2hvNV(proc, v) \
+  ( ((GdkGLProc_glTexCoord2hvNV) (proc)) (v) )
+
+/* glTexCoord3hNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord3hNV) (GLhalfNV s, GLhalfNV t, GLhalfNV r);
+GdkGLProc    gdk_gl_get_glTexCoord3hNV (void);
+#define      gdk_gl_glTexCoord3hNV(proc, s, t, r) \
+  ( ((GdkGLProc_glTexCoord3hNV) (proc)) (s, t, r) )
+
+/* glTexCoord3hvNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord3hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glTexCoord3hvNV (void);
+#define      gdk_gl_glTexCoord3hvNV(proc, v) \
+  ( ((GdkGLProc_glTexCoord3hvNV) (proc)) (v) )
+
+/* glTexCoord4hNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord4hNV) (GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q);
+GdkGLProc    gdk_gl_get_glTexCoord4hNV (void);
+#define      gdk_gl_glTexCoord4hNV(proc, s, t, r, q) \
+  ( ((GdkGLProc_glTexCoord4hNV) (proc)) (s, t, r, q) )
+
+/* glTexCoord4hvNV */
+typedef void (APIENTRY * GdkGLProc_glTexCoord4hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glTexCoord4hvNV (void);
+#define      gdk_gl_glTexCoord4hvNV(proc, v) \
+  ( ((GdkGLProc_glTexCoord4hvNV) (proc)) (v) )
+
+/* glMultiTexCoord1hNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1hNV) (GLenum target, GLhalfNV s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1hNV (void);
+#define      gdk_gl_glMultiTexCoord1hNV(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1hNV) (proc)) (target, s) )
+
+/* glMultiTexCoord1hvNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1hvNV) (GLenum target, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1hvNV (void);
+#define      gdk_gl_glMultiTexCoord1hvNV(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1hvNV) (proc)) (target, v) )
+
+/* glMultiTexCoord2hNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2hNV) (GLenum target, GLhalfNV s, GLhalfNV t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2hNV (void);
+#define      gdk_gl_glMultiTexCoord2hNV(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2hNV) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2hvNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2hvNV) (GLenum target, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2hvNV (void);
+#define      gdk_gl_glMultiTexCoord2hvNV(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2hvNV) (proc)) (target, v) )
+
+/* glMultiTexCoord3hNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3hNV) (GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3hNV (void);
+#define      gdk_gl_glMultiTexCoord3hNV(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3hNV) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3hvNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3hvNV) (GLenum target, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3hvNV (void);
+#define      gdk_gl_glMultiTexCoord3hvNV(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3hvNV) (proc)) (target, v) )
+
+/* glMultiTexCoord4hNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4hNV) (GLenum target, GLhalfNV s, GLhalfNV t, GLhalfNV r, GLhalfNV q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4hNV (void);
+#define      gdk_gl_glMultiTexCoord4hNV(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4hNV) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4hvNV */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4hvNV) (GLenum target, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4hvNV (void);
+#define      gdk_gl_glMultiTexCoord4hvNV(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4hvNV) (proc)) (target, v) )
+
+/* glFogCoordhNV */
+typedef void (APIENTRY * GdkGLProc_glFogCoordhNV) (GLhalfNV fog);
+GdkGLProc    gdk_gl_get_glFogCoordhNV (void);
+#define      gdk_gl_glFogCoordhNV(proc, fog) \
+  ( ((GdkGLProc_glFogCoordhNV) (proc)) (fog) )
+
+/* glFogCoordhvNV */
+typedef void (APIENTRY * GdkGLProc_glFogCoordhvNV) (const GLhalfNV *fog);
+GdkGLProc    gdk_gl_get_glFogCoordhvNV (void);
+#define      gdk_gl_glFogCoordhvNV(proc, fog) \
+  ( ((GdkGLProc_glFogCoordhvNV) (proc)) (fog) )
+
+/* glSecondaryColor3hNV */
+typedef void (APIENTRY * GdkGLProc_glSecondaryColor3hNV) (GLhalfNV red, GLhalfNV green, GLhalfNV blue);
+GdkGLProc    gdk_gl_get_glSecondaryColor3hNV (void);
+#define      gdk_gl_glSecondaryColor3hNV(proc, red, green, blue) \
+  ( ((GdkGLProc_glSecondaryColor3hNV) (proc)) (red, green, blue) )
+
+/* glSecondaryColor3hvNV */
+typedef void (APIENTRY * GdkGLProc_glSecondaryColor3hvNV) (const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glSecondaryColor3hvNV (void);
+#define      gdk_gl_glSecondaryColor3hvNV(proc, v) \
+  ( ((GdkGLProc_glSecondaryColor3hvNV) (proc)) (v) )
+
+/* glVertexWeighthNV */
+typedef void (APIENTRY * GdkGLProc_glVertexWeighthNV) (GLhalfNV weight);
+GdkGLProc    gdk_gl_get_glVertexWeighthNV (void);
+#define      gdk_gl_glVertexWeighthNV(proc, weight) \
+  ( ((GdkGLProc_glVertexWeighthNV) (proc)) (weight) )
+
+/* glVertexWeighthvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexWeighthvNV) (const GLhalfNV *weight);
+GdkGLProc    gdk_gl_get_glVertexWeighthvNV (void);
+#define      gdk_gl_glVertexWeighthvNV(proc, weight) \
+  ( ((GdkGLProc_glVertexWeighthvNV) (proc)) (weight) )
+
+/* glVertexAttrib1hNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib1hNV) (GLuint index, GLhalfNV x);
+GdkGLProc    gdk_gl_get_glVertexAttrib1hNV (void);
+#define      gdk_gl_glVertexAttrib1hNV(proc, index, x) \
+  ( ((GdkGLProc_glVertexAttrib1hNV) (proc)) (index, x) )
+
+/* glVertexAttrib1hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib1hvNV) (GLuint index, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttrib1hvNV (void);
+#define      gdk_gl_glVertexAttrib1hvNV(proc, index, v) \
+  ( ((GdkGLProc_glVertexAttrib1hvNV) (proc)) (index, v) )
+
+/* glVertexAttrib2hNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib2hNV) (GLuint index, GLhalfNV x, GLhalfNV y);
+GdkGLProc    gdk_gl_get_glVertexAttrib2hNV (void);
+#define      gdk_gl_glVertexAttrib2hNV(proc, index, x, y) \
+  ( ((GdkGLProc_glVertexAttrib2hNV) (proc)) (index, x, y) )
+
+/* glVertexAttrib2hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib2hvNV) (GLuint index, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttrib2hvNV (void);
+#define      gdk_gl_glVertexAttrib2hvNV(proc, index, v) \
+  ( ((GdkGLProc_glVertexAttrib2hvNV) (proc)) (index, v) )
+
+/* glVertexAttrib3hNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib3hNV) (GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z);
+GdkGLProc    gdk_gl_get_glVertexAttrib3hNV (void);
+#define      gdk_gl_glVertexAttrib3hNV(proc, index, x, y, z) \
+  ( ((GdkGLProc_glVertexAttrib3hNV) (proc)) (index, x, y, z) )
+
+/* glVertexAttrib3hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib3hvNV) (GLuint index, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttrib3hvNV (void);
+#define      gdk_gl_glVertexAttrib3hvNV(proc, index, v) \
+  ( ((GdkGLProc_glVertexAttrib3hvNV) (proc)) (index, v) )
+
+/* glVertexAttrib4hNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib4hNV) (GLuint index, GLhalfNV x, GLhalfNV y, GLhalfNV z, GLhalfNV w);
+GdkGLProc    gdk_gl_get_glVertexAttrib4hNV (void);
+#define      gdk_gl_glVertexAttrib4hNV(proc, index, x, y, z, w) \
+  ( ((GdkGLProc_glVertexAttrib4hNV) (proc)) (index, x, y, z, w) )
+
+/* glVertexAttrib4hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttrib4hvNV) (GLuint index, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttrib4hvNV (void);
+#define      gdk_gl_glVertexAttrib4hvNV(proc, index, v) \
+  ( ((GdkGLProc_glVertexAttrib4hvNV) (proc)) (index, v) )
+
+/* glVertexAttribs1hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttribs1hvNV) (GLuint index, GLsizei n, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttribs1hvNV (void);
+#define      gdk_gl_glVertexAttribs1hvNV(proc, index, n, v) \
+  ( ((GdkGLProc_glVertexAttribs1hvNV) (proc)) (index, n, v) )
+
+/* glVertexAttribs2hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttribs2hvNV) (GLuint index, GLsizei n, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttribs2hvNV (void);
+#define      gdk_gl_glVertexAttribs2hvNV(proc, index, n, v) \
+  ( ((GdkGLProc_glVertexAttribs2hvNV) (proc)) (index, n, v) )
+
+/* glVertexAttribs3hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttribs3hvNV) (GLuint index, GLsizei n, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttribs3hvNV (void);
+#define      gdk_gl_glVertexAttribs3hvNV(proc, index, n, v) \
+  ( ((GdkGLProc_glVertexAttribs3hvNV) (proc)) (index, n, v) )
+
+/* glVertexAttribs4hvNV */
+typedef void (APIENTRY * GdkGLProc_glVertexAttribs4hvNV) (GLuint index, GLsizei n, const GLhalfNV *v);
+GdkGLProc    gdk_gl_get_glVertexAttribs4hvNV (void);
+#define      gdk_gl_glVertexAttribs4hvNV(proc, index, n, v) \
+  ( ((GdkGLProc_glVertexAttribs4hvNV) (proc)) (index, n, v) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_NV_half_float GdkGL_GL_NV_half_float;
+
+struct _GdkGL_GL_NV_half_float
+{
+  GdkGLProc_glVertex2hNV glVertex2hNV;
+  GdkGLProc_glVertex2hvNV glVertex2hvNV;
+  GdkGLProc_glVertex3hNV glVertex3hNV;
+  GdkGLProc_glVertex3hvNV glVertex3hvNV;
+  GdkGLProc_glVertex4hNV glVertex4hNV;
+  GdkGLProc_glVertex4hvNV glVertex4hvNV;
+  GdkGLProc_glNormal3hNV glNormal3hNV;
+  GdkGLProc_glNormal3hvNV glNormal3hvNV;
+  GdkGLProc_glColor3hNV glColor3hNV;
+  GdkGLProc_glColor3hvNV glColor3hvNV;
+  GdkGLProc_glColor4hNV glColor4hNV;
+  GdkGLProc_glColor4hvNV glColor4hvNV;
+  GdkGLProc_glTexCoord1hNV glTexCoord1hNV;
+  GdkGLProc_glTexCoord1hvNV glTexCoord1hvNV;
+  GdkGLProc_glTexCoord2hNV glTexCoord2hNV;
+  GdkGLProc_glTexCoord2hvNV glTexCoord2hvNV;
+  GdkGLProc_glTexCoord3hNV glTexCoord3hNV;
+  GdkGLProc_glTexCoord3hvNV glTexCoord3hvNV;
+  GdkGLProc_glTexCoord4hNV glTexCoord4hNV;
+  GdkGLProc_glTexCoord4hvNV glTexCoord4hvNV;
+  GdkGLProc_glMultiTexCoord1hNV glMultiTexCoord1hNV;
+  GdkGLProc_glMultiTexCoord1hvNV glMultiTexCoord1hvNV;
+  GdkGLProc_glMultiTexCoord2hNV glMultiTexCoord2hNV;
+  GdkGLProc_glMultiTexCoord2hvNV glMultiTexCoord2hvNV;
+  GdkGLProc_glMultiTexCoord3hNV glMultiTexCoord3hNV;
+  GdkGLProc_glMultiTexCoord3hvNV glMultiTexCoord3hvNV;
+  GdkGLProc_glMultiTexCoord4hNV glMultiTexCoord4hNV;
+  GdkGLProc_glMultiTexCoord4hvNV glMultiTexCoord4hvNV;
+  GdkGLProc_glFogCoordhNV glFogCoordhNV;
+  GdkGLProc_glFogCoordhvNV glFogCoordhvNV;
+  GdkGLProc_glSecondaryColor3hNV glSecondaryColor3hNV;
+  GdkGLProc_glSecondaryColor3hvNV glSecondaryColor3hvNV;
+  GdkGLProc_glVertexWeighthNV glVertexWeighthNV;
+  GdkGLProc_glVertexWeighthvNV glVertexWeighthvNV;
+  GdkGLProc_glVertexAttrib1hNV glVertexAttrib1hNV;
+  GdkGLProc_glVertexAttrib1hvNV glVertexAttrib1hvNV;
+  GdkGLProc_glVertexAttrib2hNV glVertexAttrib2hNV;
+  GdkGLProc_glVertexAttrib2hvNV glVertexAttrib2hvNV;
+  GdkGLProc_glVertexAttrib3hNV glVertexAttrib3hNV;
+  GdkGLProc_glVertexAttrib3hvNV glVertexAttrib3hvNV;
+  GdkGLProc_glVertexAttrib4hNV glVertexAttrib4hNV;
+  GdkGLProc_glVertexAttrib4hvNV glVertexAttrib4hvNV;
+  GdkGLProc_glVertexAttribs1hvNV glVertexAttribs1hvNV;
+  GdkGLProc_glVertexAttribs2hvNV glVertexAttribs2hvNV;
+  GdkGLProc_glVertexAttribs3hvNV glVertexAttribs3hvNV;
+  GdkGLProc_glVertexAttribs4hvNV glVertexAttribs4hvNV;
+};
+
+GdkGL_GL_NV_half_float *gdk_gl_get_GL_NV_half_float (void);
+
+/*
+ * GL_NV_pixel_data_range
+ */
+
+/* glPixelDataRangeNV */
+typedef void (APIENTRY * GdkGLProc_glPixelDataRangeNV) (GLenum target, GLsizei length, GLvoid *pointer);
+GdkGLProc    gdk_gl_get_glPixelDataRangeNV (void);
+#define      gdk_gl_glPixelDataRangeNV(proc, target, length, pointer) \
+  ( ((GdkGLProc_glPixelDataRangeNV) (proc)) (target, length, pointer) )
+
+/* glFlushPixelDataRangeNV */
+typedef void (APIENTRY * GdkGLProc_glFlushPixelDataRangeNV) (GLenum target);
+GdkGLProc    gdk_gl_get_glFlushPixelDataRangeNV (void);
+#define      gdk_gl_glFlushPixelDataRangeNV(proc, target) \
+  ( ((GdkGLProc_glFlushPixelDataRangeNV) (proc)) (target) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_NV_pixel_data_range GdkGL_GL_NV_pixel_data_range;
+
+struct _GdkGL_GL_NV_pixel_data_range
+{
+  GdkGLProc_glPixelDataRangeNV glPixelDataRangeNV;
+  GdkGLProc_glFlushPixelDataRangeNV glFlushPixelDataRangeNV;
+};
+
+GdkGL_GL_NV_pixel_data_range *gdk_gl_get_GL_NV_pixel_data_range (void);
+
+/*
+ * GL_NV_primitive_restart
+ */
+
+/* glPrimitiveRestartNV */
+typedef void (APIENTRY * GdkGLProc_glPrimitiveRestartNV) (void);
+GdkGLProc    gdk_gl_get_glPrimitiveRestartNV (void);
+#define      gdk_gl_glPrimitiveRestartNV(proc) \
+  ( ((GdkGLProc_glPrimitiveRestartNV) (proc)) () )
+
+/* glPrimitiveRestartIndexNV */
+typedef void (APIENTRY * GdkGLProc_glPrimitiveRestartIndexNV) (GLuint index);
+GdkGLProc    gdk_gl_get_glPrimitiveRestartIndexNV (void);
+#define      gdk_gl_glPrimitiveRestartIndexNV(proc, index) \
+  ( ((GdkGLProc_glPrimitiveRestartIndexNV) (proc)) (index) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_NV_primitive_restart GdkGL_GL_NV_primitive_restart;
+
+struct _GdkGL_GL_NV_primitive_restart
+{
+  GdkGLProc_glPrimitiveRestartNV glPrimitiveRestartNV;
+  GdkGLProc_glPrimitiveRestartIndexNV glPrimitiveRestartIndexNV;
+};
+
+GdkGL_GL_NV_primitive_restart *gdk_gl_get_GL_NV_primitive_restart (void);
+
+/*
+ * GL_ATI_map_object_buffer
+ */
+
+/* glMapObjectBufferATI */
+typedef GLvoid* (APIENTRY * GdkGLProc_glMapObjectBufferATI) (GLuint buffer);
+GdkGLProc    gdk_gl_get_glMapObjectBufferATI (void);
+#define      gdk_gl_glMapObjectBufferATI(proc, buffer) \
+  ( ((GdkGLProc_glMapObjectBufferATI) (proc)) (buffer) )
+
+/* glUnmapObjectBufferATI */
+typedef void (APIENTRY * GdkGLProc_glUnmapObjectBufferATI) (GLuint buffer);
+GdkGLProc    gdk_gl_get_glUnmapObjectBufferATI (void);
+#define      gdk_gl_glUnmapObjectBufferATI(proc, buffer) \
+  ( ((GdkGLProc_glUnmapObjectBufferATI) (proc)) (buffer) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_ATI_map_object_buffer GdkGL_GL_ATI_map_object_buffer;
+
+struct _GdkGL_GL_ATI_map_object_buffer
+{
+  GdkGLProc_glMapObjectBufferATI glMapObjectBufferATI;
+  GdkGLProc_glUnmapObjectBufferATI glUnmapObjectBufferATI;
+};
+
+GdkGL_GL_ATI_map_object_buffer *gdk_gl_get_GL_ATI_map_object_buffer (void);
+
+/*
+ * GL_ATI_separate_stencil
+ */
+
+/* glStencilOpSeparateATI */
+typedef void (APIENTRY * GdkGLProc_glStencilOpSeparateATI) (GLenum face, GLenum sfail, GLenum dpfail, GLenum dppass);
+GdkGLProc    gdk_gl_get_glStencilOpSeparateATI (void);
+#define      gdk_gl_glStencilOpSeparateATI(proc, face, sfail, dpfail, dppass) \
+  ( ((GdkGLProc_glStencilOpSeparateATI) (proc)) (face, sfail, dpfail, dppass) )
+
+/* glStencilFuncSeparateATI */
+typedef void (APIENTRY * GdkGLProc_glStencilFuncSeparateATI) (GLenum frontfunc, GLenum backfunc, GLint ref, GLuint mask);
+GdkGLProc    gdk_gl_get_glStencilFuncSeparateATI (void);
+#define      gdk_gl_glStencilFuncSeparateATI(proc, frontfunc, backfunc, ref, mask) \
+  ( ((GdkGLProc_glStencilFuncSeparateATI) (proc)) (frontfunc, backfunc, ref, mask) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_ATI_separate_stencil GdkGL_GL_ATI_separate_stencil;
+
+struct _GdkGL_GL_ATI_separate_stencil
+{
+  GdkGLProc_glStencilOpSeparateATI glStencilOpSeparateATI;
+  GdkGLProc_glStencilFuncSeparateATI glStencilFuncSeparateATI;
+};
+
+GdkGL_GL_ATI_separate_stencil *gdk_gl_get_GL_ATI_separate_stencil (void);
+
+/*
+ * GL_ATI_vertex_attrib_array_object
+ */
+
+/* glVertexAttribArrayObjectATI */
+typedef void (APIENTRY * GdkGLProc_glVertexAttribArrayObjectATI) (GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLuint buffer, GLuint offset);
+GdkGLProc    gdk_gl_get_glVertexAttribArrayObjectATI (void);
+#define      gdk_gl_glVertexAttribArrayObjectATI(proc, index, size, type, normalized, stride, buffer, offset) \
+  ( ((GdkGLProc_glVertexAttribArrayObjectATI) (proc)) (index, size, type, normalized, stride, buffer, offset) )
+
+/* glGetVertexAttribArrayObjectfvATI */
+typedef void (APIENTRY * GdkGLProc_glGetVertexAttribArrayObjectfvATI) (GLuint index, GLenum pname, GLfloat *params);
+GdkGLProc    gdk_gl_get_glGetVertexAttribArrayObjectfvATI (void);
+#define      gdk_gl_glGetVertexAttribArrayObjectfvATI(proc, index, pname, params) \
+  ( ((GdkGLProc_glGetVertexAttribArrayObjectfvATI) (proc)) (index, pname, params) )
+
+/* glGetVertexAttribArrayObjectivATI */
+typedef void (APIENTRY * GdkGLProc_glGetVertexAttribArrayObjectivATI) (GLuint index, GLenum pname, GLint *params);
+GdkGLProc    gdk_gl_get_glGetVertexAttribArrayObjectivATI (void);
+#define      gdk_gl_glGetVertexAttribArrayObjectivATI(proc, index, pname, params) \
+  ( ((GdkGLProc_glGetVertexAttribArrayObjectivATI) (proc)) (index, pname, params) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_ATI_vertex_attrib_array_object GdkGL_GL_ATI_vertex_attrib_array_object;
+
+struct _GdkGL_GL_ATI_vertex_attrib_array_object
+{
+  GdkGLProc_glVertexAttribArrayObjectATI glVertexAttribArrayObjectATI;
+  GdkGLProc_glGetVertexAttribArrayObjectfvATI glGetVertexAttribArrayObjectfvATI;
+  GdkGLProc_glGetVertexAttribArrayObjectivATI glGetVertexAttribArrayObjectivATI;
+};
+
+GdkGL_GL_ATI_vertex_attrib_array_object *gdk_gl_get_GL_ATI_vertex_attrib_array_object (void);
+
+/*
+ * GL_APPLE_texture_range
+ */
+
+/* glTextureRangeAPPLE */
+typedef void (APIENTRY * GdkGLProc_glTextureRangeAPPLE) (GLenum target, GLsizei length, const GLvoid *pointer);
+GdkGLProc    gdk_gl_get_glTextureRangeAPPLE (void);
+#define      gdk_gl_glTextureRangeAPPLE(proc, target, length, pointer) \
+  ( ((GdkGLProc_glTextureRangeAPPLE) (proc)) (target, length, pointer) )
+
+/* glGetTexParameterPointervAPPLE */
+typedef void (APIENTRY * GdkGLProc_glGetTexParameterPointervAPPLE) (GLenum target, GLenum pname, GLvoid **params);
+GdkGLProc    gdk_gl_get_glGetTexParameterPointervAPPLE (void);
+#define      gdk_gl_glGetTexParameterPointervAPPLE(proc, target, pname, params) \
+  ( ((GdkGLProc_glGetTexParameterPointervAPPLE) (proc)) (target, pname, params) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_APPLE_texture_range GdkGL_GL_APPLE_texture_range;
+
+struct _GdkGL_GL_APPLE_texture_range
+{
+  GdkGLProc_glTextureRangeAPPLE glTextureRangeAPPLE;
+  GdkGLProc_glGetTexParameterPointervAPPLE glGetTexParameterPointervAPPLE;
+};
+
+GdkGL_GL_APPLE_texture_range *gdk_gl_get_GL_APPLE_texture_range (void);
+
+/*
+ * GL_APPLE_vertex_program_evaluators
+ */
+
+/* glEnableVertexAttribAPPLE */
+typedef void (APIENTRY * GdkGLProc_glEnableVertexAttribAPPLE) (GLuint index, GLenum pname);
+GdkGLProc    gdk_gl_get_glEnableVertexAttribAPPLE (void);
+#define      gdk_gl_glEnableVertexAttribAPPLE(proc, index, pname) \
+  ( ((GdkGLProc_glEnableVertexAttribAPPLE) (proc)) (index, pname) )
+
+/* glDisableVertexAttribAPPLE */
+typedef void (APIENTRY * GdkGLProc_glDisableVertexAttribAPPLE) (GLuint index, GLenum pname);
+GdkGLProc    gdk_gl_get_glDisableVertexAttribAPPLE (void);
+#define      gdk_gl_glDisableVertexAttribAPPLE(proc, index, pname) \
+  ( ((GdkGLProc_glDisableVertexAttribAPPLE) (proc)) (index, pname) )
+
+/* glIsVertexAttribEnabledAPPLE */
+typedef GLboolean (APIENTRY * GdkGLProc_glIsVertexAttribEnabledAPPLE) (GLuint index, GLenum pname);
+GdkGLProc    gdk_gl_get_glIsVertexAttribEnabledAPPLE (void);
+#define      gdk_gl_glIsVertexAttribEnabledAPPLE(proc, index, pname) \
+  ( ((GdkGLProc_glIsVertexAttribEnabledAPPLE) (proc)) (index, pname) )
+
+/* glMapVertexAttrib1dAPPLE */
+typedef void (APIENTRY * GdkGLProc_glMapVertexAttrib1dAPPLE) (GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint stride, GLint order, const GLdouble *points);
+GdkGLProc    gdk_gl_get_glMapVertexAttrib1dAPPLE (void);
+#define      gdk_gl_glMapVertexAttrib1dAPPLE(proc, index, size, u1, u2, stride, order, points) \
+  ( ((GdkGLProc_glMapVertexAttrib1dAPPLE) (proc)) (index, size, u1, u2, stride, order, points) )
+
+/* glMapVertexAttrib1fAPPLE */
+typedef void (APIENTRY * GdkGLProc_glMapVertexAttrib1fAPPLE) (GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint stride, GLint order, const GLfloat *points);
+GdkGLProc    gdk_gl_get_glMapVertexAttrib1fAPPLE (void);
+#define      gdk_gl_glMapVertexAttrib1fAPPLE(proc, index, size, u1, u2, stride, order, points) \
+  ( ((GdkGLProc_glMapVertexAttrib1fAPPLE) (proc)) (index, size, u1, u2, stride, order, points) )
+
+/* glMapVertexAttrib2dAPPLE */
+typedef void (APIENTRY * GdkGLProc_glMapVertexAttrib2dAPPLE) (GLuint index, GLuint size, GLdouble u1, GLdouble u2, GLint ustride, GLint uorder, GLdouble v1, GLdouble v2, GLint vstride, GLint vorder, const GLdouble *points);
+GdkGLProc    gdk_gl_get_glMapVertexAttrib2dAPPLE (void);
+#define      gdk_gl_glMapVertexAttrib2dAPPLE(proc, index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points) \
+  ( ((GdkGLProc_glMapVertexAttrib2dAPPLE) (proc)) (index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points) )
+
+/* glMapVertexAttrib2fAPPLE */
+typedef void (APIENTRY * GdkGLProc_glMapVertexAttrib2fAPPLE) (GLuint index, GLuint size, GLfloat u1, GLfloat u2, GLint ustride, GLint uorder, GLfloat v1, GLfloat v2, GLint vstride, GLint vorder, const GLfloat *points);
+GdkGLProc    gdk_gl_get_glMapVertexAttrib2fAPPLE (void);
+#define      gdk_gl_glMapVertexAttrib2fAPPLE(proc, index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points) \
+  ( ((GdkGLProc_glMapVertexAttrib2fAPPLE) (proc)) (index, size, u1, u2, ustride, uorder, v1, v2, vstride, vorder, points) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_APPLE_vertex_program_evaluators GdkGL_GL_APPLE_vertex_program_evaluators;
+
+struct _GdkGL_GL_APPLE_vertex_program_evaluators
+{
+  GdkGLProc_glEnableVertexAttribAPPLE glEnableVertexAttribAPPLE;
+  GdkGLProc_glDisableVertexAttribAPPLE glDisableVertexAttribAPPLE;
+  GdkGLProc_glIsVertexAttribEnabledAPPLE glIsVertexAttribEnabledAPPLE;
+  GdkGLProc_glMapVertexAttrib1dAPPLE glMapVertexAttrib1dAPPLE;
+  GdkGLProc_glMapVertexAttrib1fAPPLE glMapVertexAttrib1fAPPLE;
+  GdkGLProc_glMapVertexAttrib2dAPPLE glMapVertexAttrib2dAPPLE;
+  GdkGLProc_glMapVertexAttrib2fAPPLE glMapVertexAttrib2fAPPLE;
+};
+
+GdkGL_GL_APPLE_vertex_program_evaluators *gdk_gl_get_GL_APPLE_vertex_program_evaluators (void);
+
+/*
+ * GL_ATI_blend_equation_separate
+ */
+
+/* glBlendEquationSeparateATI */
+typedef void (APIENTRY * GdkGLProc_glBlendEquationSeparateATI) (GLenum equationRGB, GLenum equationAlpha);
+GdkGLProc    gdk_gl_get_glBlendEquationSeparateATI (void);
+#define      gdk_gl_glBlendEquationSeparateATI(proc, equationRGB, equationAlpha) \
+  ( ((GdkGLProc_glBlendEquationSeparateATI) (proc)) (equationRGB, equationAlpha) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_ATI_blend_equation_separate GdkGL_GL_ATI_blend_equation_separate;
+
+struct _GdkGL_GL_ATI_blend_equation_separate
+{
+  GdkGLProc_glBlendEquationSeparateATI glBlendEquationSeparateATI;
+};
+
+GdkGL_GL_ATI_blend_equation_separate *gdk_gl_get_GL_ATI_blend_equation_separate (void);
+
+/*
+ * GL_ATIX_pn_triangles
+ */
+
+/* glPNTrianglesiATIX */
+typedef void (APIENTRY * GdkGLProc_glPNTrianglesiATIX) (GLenum pname, GLint param);
+GdkGLProc    gdk_gl_get_glPNTrianglesiATIX (void);
+#define      gdk_gl_glPNTrianglesiATIX(proc, pname, param) \
+  ( ((GdkGLProc_glPNTrianglesiATIX) (proc)) (pname, param) )
+
+/* glPNTrianglesfATIX */
+typedef void (APIENTRY * GdkGLProc_glPNTrianglesfATIX) (GLenum pname, GLfloat param);
+GdkGLProc    gdk_gl_get_glPNTrianglesfATIX (void);
+#define      gdk_gl_glPNTrianglesfATIX(proc, pname, param) \
+  ( ((GdkGLProc_glPNTrianglesfATIX) (proc)) (pname, param) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_ATIX_pn_triangles GdkGL_GL_ATIX_pn_triangles;
+
+struct _GdkGL_GL_ATIX_pn_triangles
+{
+  GdkGLProc_glPNTrianglesiATIX glPNTrianglesiATIX;
+  GdkGLProc_glPNTrianglesfATIX glPNTrianglesfATIX;
+};
+
+GdkGL_GL_ATIX_pn_triangles *gdk_gl_get_GL_ATIX_pn_triangles (void);
+
+/*
+ * GL_Autodesk_facet_normal
+ */
+
+/* glFacetNormal3b */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3b) (GLbyte nx, GLbyte ny, GLbyte nz);
+GdkGLProc    gdk_gl_get_glFacetNormal3b (void);
+#define      gdk_gl_glFacetNormal3b(proc, nx, ny, nz) \
+  ( ((GdkGLProc_glFacetNormal3b) (proc)) (nx, ny, nz) )
+
+/* glFacetNormal3d */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3d) (GLdouble nx, GLdouble ny, GLdouble nz);
+GdkGLProc    gdk_gl_get_glFacetNormal3d (void);
+#define      gdk_gl_glFacetNormal3d(proc, nx, ny, nz) \
+  ( ((GdkGLProc_glFacetNormal3d) (proc)) (nx, ny, nz) )
+
+/* glFacetNormal3f */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3f) (GLfloat nx, GLfloat ny, GLfloat nz);
+GdkGLProc    gdk_gl_get_glFacetNormal3f (void);
+#define      gdk_gl_glFacetNormal3f(proc, nx, ny, nz) \
+  ( ((GdkGLProc_glFacetNormal3f) (proc)) (nx, ny, nz) )
+
+/* glFacetNormal3i */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3i) (GLint nx, GLint ny, GLint nz);
+GdkGLProc    gdk_gl_get_glFacetNormal3i (void);
+#define      gdk_gl_glFacetNormal3i(proc, nx, ny, nz) \
+  ( ((GdkGLProc_glFacetNormal3i) (proc)) (nx, ny, nz) )
+
+/* glFacetNormal3s */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3s) (GLshort nx, GLshort ny, GLshort nz);
+GdkGLProc    gdk_gl_get_glFacetNormal3s (void);
+#define      gdk_gl_glFacetNormal3s(proc, nx, ny, nz) \
+  ( ((GdkGLProc_glFacetNormal3s) (proc)) (nx, ny, nz) )
+
+/* glFacetNormal3bv */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3bv) (const GLbyte *v);
+GdkGLProc    gdk_gl_get_glFacetNormal3bv (void);
+#define      gdk_gl_glFacetNormal3bv(proc, v) \
+  ( ((GdkGLProc_glFacetNormal3bv) (proc)) (v) )
+
+/* glFacetNormal3dv */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3dv) (const GLdouble *v);
+GdkGLProc    gdk_gl_get_glFacetNormal3dv (void);
+#define      gdk_gl_glFacetNormal3dv(proc, v) \
+  ( ((GdkGLProc_glFacetNormal3dv) (proc)) (v) )
+
+/* glFacetNormal3fv */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3fv) (const GLfloat *v);
+GdkGLProc    gdk_gl_get_glFacetNormal3fv (void);
+#define      gdk_gl_glFacetNormal3fv(proc, v) \
+  ( ((GdkGLProc_glFacetNormal3fv) (proc)) (v) )
+
+/* glFacetNormal3iv */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3iv) (const GLint *v);
+GdkGLProc    gdk_gl_get_glFacetNormal3iv (void);
+#define      gdk_gl_glFacetNormal3iv(proc, v) \
+  ( ((GdkGLProc_glFacetNormal3iv) (proc)) (v) )
+
+/* glFacetNormal3sv */
+typedef void (APIENTRY * GdkGLProc_glFacetNormal3sv) (const GLshort *v);
+GdkGLProc    gdk_gl_get_glFacetNormal3sv (void);
+#define      gdk_gl_glFacetNormal3sv(proc, v) \
+  ( ((GdkGLProc_glFacetNormal3sv) (proc)) (v) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_Autodesk_facet_normal GdkGL_GL_Autodesk_facet_normal;
+
+struct _GdkGL_GL_Autodesk_facet_normal
+{
+  GdkGLProc_glFacetNormal3b glFacetNormal3b;
+  GdkGLProc_glFacetNormal3d glFacetNormal3d;
+  GdkGLProc_glFacetNormal3f glFacetNormal3f;
+  GdkGLProc_glFacetNormal3i glFacetNormal3i;
+  GdkGLProc_glFacetNormal3s glFacetNormal3s;
+  GdkGLProc_glFacetNormal3bv glFacetNormal3bv;
+  GdkGLProc_glFacetNormal3dv glFacetNormal3dv;
+  GdkGLProc_glFacetNormal3fv glFacetNormal3fv;
+  GdkGLProc_glFacetNormal3iv glFacetNormal3iv;
+  GdkGLProc_glFacetNormal3sv glFacetNormal3sv;
+};
+
+GdkGL_GL_Autodesk_facet_normal *gdk_gl_get_GL_Autodesk_facet_normal (void);
+
+/*
+ * GL_Autodesk_valid_back_buffer_hint
+ */
+
+/* glWindowBackBufferHint */
+typedef void (APIENTRY * GdkGLProc_glWindowBackBufferHint) (void);
+GdkGLProc    gdk_gl_get_glWindowBackBufferHint (void);
+#define      gdk_gl_glWindowBackBufferHint(proc) \
+  ( ((GdkGLProc_glWindowBackBufferHint) (proc)) () )
+
+/* glValidBackBufferHint */
+typedef GLboolean (APIENTRY * GdkGLProc_glValidBackBufferHint) (GLint x, GLint y, GLsizei width, GLsizei height);
+GdkGLProc    gdk_gl_get_glValidBackBufferHint (void);
+#define      gdk_gl_glValidBackBufferHint(proc, x, y, width, height) \
+  ( ((GdkGLProc_glValidBackBufferHint) (proc)) (x, y, width, height) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_Autodesk_valid_back_buffer_hint GdkGL_GL_Autodesk_valid_back_buffer_hint;
+
+struct _GdkGL_GL_Autodesk_valid_back_buffer_hint
+{
+  GdkGLProc_glWindowBackBufferHint glWindowBackBufferHint;
+  GdkGLProc_glValidBackBufferHint glValidBackBufferHint;
+};
+
+GdkGL_GL_Autodesk_valid_back_buffer_hint *gdk_gl_get_GL_Autodesk_valid_back_buffer_hint (void);
+
+/*
+ * GL_EXT_depth_bounds_test
+ */
+
+/* glDepthBoundsEXT */
+typedef void (APIENTRY * GdkGLProc_glDepthBoundsEXT) (GLclampd zmin, GLclampd zmax);
+GdkGLProc    gdk_gl_get_glDepthBoundsEXT (void);
+#define      gdk_gl_glDepthBoundsEXT(proc, zmin, zmax) \
+  ( ((GdkGLProc_glDepthBoundsEXT) (proc)) (zmin, zmax) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_EXT_depth_bounds_test GdkGL_GL_EXT_depth_bounds_test;
+
+struct _GdkGL_GL_EXT_depth_bounds_test
+{
+  GdkGLProc_glDepthBoundsEXT glDepthBoundsEXT;
+};
+
+GdkGL_GL_EXT_depth_bounds_test *gdk_gl_get_GL_EXT_depth_bounds_test (void);
+
+/*
+ * GL_EXT_fragment_lighting
+ */
+
+/* glFragmentLightModelfEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightModelfEXT) (GLenum pname, GLfloat param);
+GdkGLProc    gdk_gl_get_glFragmentLightModelfEXT (void);
+#define      gdk_gl_glFragmentLightModelfEXT(proc, pname, param) \
+  ( ((GdkGLProc_glFragmentLightModelfEXT) (proc)) (pname, param) )
+
+/* glFragmentLightModelfvEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightModelfvEXT) (GLenum pname, GLfloat *params);
+GdkGLProc    gdk_gl_get_glFragmentLightModelfvEXT (void);
+#define      gdk_gl_glFragmentLightModelfvEXT(proc, pname, params) \
+  ( ((GdkGLProc_glFragmentLightModelfvEXT) (proc)) (pname, params) )
+
+/* glFragmentLightModeliEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightModeliEXT) (GLenum pname, GLint param);
+GdkGLProc    gdk_gl_get_glFragmentLightModeliEXT (void);
+#define      gdk_gl_glFragmentLightModeliEXT(proc, pname, param) \
+  ( ((GdkGLProc_glFragmentLightModeliEXT) (proc)) (pname, param) )
+
+/* glFragmentLightModelivEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightModelivEXT) (GLenum pname, GLint *params);
+GdkGLProc    gdk_gl_get_glFragmentLightModelivEXT (void);
+#define      gdk_gl_glFragmentLightModelivEXT(proc, pname, params) \
+  ( ((GdkGLProc_glFragmentLightModelivEXT) (proc)) (pname, params) )
+
+/* glFragmentLightfEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightfEXT) (GLenum light, GLenum pname, GLfloat param);
+GdkGLProc    gdk_gl_get_glFragmentLightfEXT (void);
+#define      gdk_gl_glFragmentLightfEXT(proc, light, pname, param) \
+  ( ((GdkGLProc_glFragmentLightfEXT) (proc)) (light, pname, param) )
+
+/* glFragmentLightfvEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightfvEXT) (GLenum light, GLenum pname, GLfloat *params);
+GdkGLProc    gdk_gl_get_glFragmentLightfvEXT (void);
+#define      gdk_gl_glFragmentLightfvEXT(proc, light, pname, params) \
+  ( ((GdkGLProc_glFragmentLightfvEXT) (proc)) (light, pname, params) )
+
+/* glFragmentLightiEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightiEXT) (GLenum light, GLenum pname, GLint param);
+GdkGLProc    gdk_gl_get_glFragmentLightiEXT (void);
+#define      gdk_gl_glFragmentLightiEXT(proc, light, pname, param) \
+  ( ((GdkGLProc_glFragmentLightiEXT) (proc)) (light, pname, param) )
+
+/* glFragmentLightivEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentLightivEXT) (GLenum light, GLenum pname, GLint *params);
+GdkGLProc    gdk_gl_get_glFragmentLightivEXT (void);
+#define      gdk_gl_glFragmentLightivEXT(proc, light, pname, params) \
+  ( ((GdkGLProc_glFragmentLightivEXT) (proc)) (light, pname, params) )
+
+/* glGetFragmentLightfvEXT */
+typedef void (APIENTRY * GdkGLProc_glGetFragmentLightfvEXT) (GLenum light, GLenum pname, GLfloat *params);
+GdkGLProc    gdk_gl_get_glGetFragmentLightfvEXT (void);
+#define      gdk_gl_glGetFragmentLightfvEXT(proc, light, pname, params) \
+  ( ((GdkGLProc_glGetFragmentLightfvEXT) (proc)) (light, pname, params) )
+
+/* glGetFragmentLightivEXT */
+typedef void (APIENTRY * GdkGLProc_glGetFragmentLightivEXT) (GLenum light, GLenum pname, GLint *params);
+GdkGLProc    gdk_gl_get_glGetFragmentLightivEXT (void);
+#define      gdk_gl_glGetFragmentLightivEXT(proc, light, pname, params) \
+  ( ((GdkGLProc_glGetFragmentLightivEXT) (proc)) (light, pname, params) )
+
+/* glFragmentMaterialfEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentMaterialfEXT) (GLenum face, GLenum pname, const GLfloat param);
+GdkGLProc    gdk_gl_get_glFragmentMaterialfEXT (void);
+#define      gdk_gl_glFragmentMaterialfEXT(proc, face, pname, param) \
+  ( ((GdkGLProc_glFragmentMaterialfEXT) (proc)) (face, pname, param) )
+
+/* glFragmentMaterialfvEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentMaterialfvEXT) (GLenum face, GLenum pname, const GLfloat *params);
+GdkGLProc    gdk_gl_get_glFragmentMaterialfvEXT (void);
+#define      gdk_gl_glFragmentMaterialfvEXT(proc, face, pname, params) \
+  ( ((GdkGLProc_glFragmentMaterialfvEXT) (proc)) (face, pname, params) )
+
+/* glFragmentMaterialiEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentMaterialiEXT) (GLenum face, GLenum pname, const GLint param);
+GdkGLProc    gdk_gl_get_glFragmentMaterialiEXT (void);
+#define      gdk_gl_glFragmentMaterialiEXT(proc, face, pname, param) \
+  ( ((GdkGLProc_glFragmentMaterialiEXT) (proc)) (face, pname, param) )
+
+/* glFragmentMaterialivEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentMaterialivEXT) (GLenum face, GLenum pname, const GLint *params);
+GdkGLProc    gdk_gl_get_glFragmentMaterialivEXT (void);
+#define      gdk_gl_glFragmentMaterialivEXT(proc, face, pname, params) \
+  ( ((GdkGLProc_glFragmentMaterialivEXT) (proc)) (face, pname, params) )
+
+/* glFragmentColorMaterialEXT */
+typedef void (APIENTRY * GdkGLProc_glFragmentColorMaterialEXT) (GLenum face, GLenum mode);
+GdkGLProc    gdk_gl_get_glFragmentColorMaterialEXT (void);
+#define      gdk_gl_glFragmentColorMaterialEXT(proc, face, mode) \
+  ( ((GdkGLProc_glFragmentColorMaterialEXT) (proc)) (face, mode) )
+
+/* glGetFragmentMaterialfvEXT */
+typedef void (APIENTRY * GdkGLProc_glGetFragmentMaterialfvEXT) (GLenum face, GLenum pname, const GLfloat *params);
+GdkGLProc    gdk_gl_get_glGetFragmentMaterialfvEXT (void);
+#define      gdk_gl_glGetFragmentMaterialfvEXT(proc, face, pname, params) \
+  ( ((GdkGLProc_glGetFragmentMaterialfvEXT) (proc)) (face, pname, params) )
+
+/* glGetFragmentMaterialivEXT */
+typedef void (APIENTRY * GdkGLProc_glGetFragmentMaterialivEXT) (GLenum face, GLenum pname, const GLint *params);
+GdkGLProc    gdk_gl_get_glGetFragmentMaterialivEXT (void);
+#define      gdk_gl_glGetFragmentMaterialivEXT(proc, face, pname, params) \
+  ( ((GdkGLProc_glGetFragmentMaterialivEXT) (proc)) (face, pname, params) )
+
+/* glLightEnviEXT */
+typedef void (APIENTRY * GdkGLProc_glLightEnviEXT) (GLenum pname, GLint param);
+GdkGLProc    gdk_gl_get_glLightEnviEXT (void);
+#define      gdk_gl_glLightEnviEXT(proc, pname, param) \
+  ( ((GdkGLProc_glLightEnviEXT) (proc)) (pname, param) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_EXT_fragment_lighting GdkGL_GL_EXT_fragment_lighting;
+
+struct _GdkGL_GL_EXT_fragment_lighting
+{
+  GdkGLProc_glFragmentLightModelfEXT glFragmentLightModelfEXT;
+  GdkGLProc_glFragmentLightModelfvEXT glFragmentLightModelfvEXT;
+  GdkGLProc_glFragmentLightModeliEXT glFragmentLightModeliEXT;
+  GdkGLProc_glFragmentLightModelivEXT glFragmentLightModelivEXT;
+  GdkGLProc_glFragmentLightfEXT glFragmentLightfEXT;
+  GdkGLProc_glFragmentLightfvEXT glFragmentLightfvEXT;
+  GdkGLProc_glFragmentLightiEXT glFragmentLightiEXT;
+  GdkGLProc_glFragmentLightivEXT glFragmentLightivEXT;
+  GdkGLProc_glGetFragmentLightfvEXT glGetFragmentLightfvEXT;
+  GdkGLProc_glGetFragmentLightivEXT glGetFragmentLightivEXT;
+  GdkGLProc_glFragmentMaterialfEXT glFragmentMaterialfEXT;
+  GdkGLProc_glFragmentMaterialfvEXT glFragmentMaterialfvEXT;
+  GdkGLProc_glFragmentMaterialiEXT glFragmentMaterialiEXT;
+  GdkGLProc_glFragmentMaterialivEXT glFragmentMaterialivEXT;
+  GdkGLProc_glFragmentColorMaterialEXT glFragmentColorMaterialEXT;
+  GdkGLProc_glGetFragmentMaterialfvEXT glGetFragmentMaterialfvEXT;
+  GdkGLProc_glGetFragmentMaterialivEXT glGetFragmentMaterialivEXT;
+  GdkGLProc_glLightEnviEXT glLightEnviEXT;
+};
+
+GdkGL_GL_EXT_fragment_lighting *gdk_gl_get_GL_EXT_fragment_lighting (void);
+
+/*
+ * GL_EXT_multitexture
+ */
+
+/* glMultiTexCoord1dEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1dEXT) (GLenum target, GLdouble s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1dEXT (void);
+#define      gdk_gl_glMultiTexCoord1dEXT(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1dEXT) (proc)) (target, s) )
+
+/* glMultiTexCoord1dvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1dvEXT) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1dvEXT (void);
+#define      gdk_gl_glMultiTexCoord1dvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1dvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord1fEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1fEXT) (GLenum target, GLfloat s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1fEXT (void);
+#define      gdk_gl_glMultiTexCoord1fEXT(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1fEXT) (proc)) (target, s) )
+
+/* glMultiTexCoord1fvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1fvEXT) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1fvEXT (void);
+#define      gdk_gl_glMultiTexCoord1fvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1fvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord1iEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1iEXT) (GLenum target, GLint s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1iEXT (void);
+#define      gdk_gl_glMultiTexCoord1iEXT(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1iEXT) (proc)) (target, s) )
+
+/* glMultiTexCoord1ivEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1ivEXT) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1ivEXT (void);
+#define      gdk_gl_glMultiTexCoord1ivEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1ivEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord1sEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1sEXT) (GLenum target, GLshort s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1sEXT (void);
+#define      gdk_gl_glMultiTexCoord1sEXT(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1sEXT) (proc)) (target, s) )
+
+/* glMultiTexCoord1svEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1svEXT) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1svEXT (void);
+#define      gdk_gl_glMultiTexCoord1svEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1svEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord2dEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2dEXT) (GLenum target, GLdouble s, GLdouble t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2dEXT (void);
+#define      gdk_gl_glMultiTexCoord2dEXT(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2dEXT) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2dvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2dvEXT) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2dvEXT (void);
+#define      gdk_gl_glMultiTexCoord2dvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2dvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord2fEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2fEXT) (GLenum target, GLfloat s, GLfloat t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2fEXT (void);
+#define      gdk_gl_glMultiTexCoord2fEXT(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2fEXT) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2fvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2fvEXT) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2fvEXT (void);
+#define      gdk_gl_glMultiTexCoord2fvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2fvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord2iEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2iEXT) (GLenum target, GLint s, GLint t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2iEXT (void);
+#define      gdk_gl_glMultiTexCoord2iEXT(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2iEXT) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2ivEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2ivEXT) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2ivEXT (void);
+#define      gdk_gl_glMultiTexCoord2ivEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2ivEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord2sEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2sEXT) (GLenum target, GLshort s, GLshort t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2sEXT (void);
+#define      gdk_gl_glMultiTexCoord2sEXT(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2sEXT) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2svEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2svEXT) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2svEXT (void);
+#define      gdk_gl_glMultiTexCoord2svEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2svEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord3dEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3dEXT) (GLenum target, GLdouble s, GLdouble t, GLdouble r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3dEXT (void);
+#define      gdk_gl_glMultiTexCoord3dEXT(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3dEXT) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3dvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3dvEXT) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3dvEXT (void);
+#define      gdk_gl_glMultiTexCoord3dvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3dvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord3fEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3fEXT) (GLenum target, GLfloat s, GLfloat t, GLfloat r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3fEXT (void);
+#define      gdk_gl_glMultiTexCoord3fEXT(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3fEXT) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3fvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3fvEXT) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3fvEXT (void);
+#define      gdk_gl_glMultiTexCoord3fvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3fvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord3iEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3iEXT) (GLenum target, GLint s, GLint t, GLint r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3iEXT (void);
+#define      gdk_gl_glMultiTexCoord3iEXT(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3iEXT) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3ivEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3ivEXT) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3ivEXT (void);
+#define      gdk_gl_glMultiTexCoord3ivEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3ivEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord3sEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3sEXT) (GLenum target, GLshort s, GLshort t, GLshort r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3sEXT (void);
+#define      gdk_gl_glMultiTexCoord3sEXT(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3sEXT) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3svEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3svEXT) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3svEXT (void);
+#define      gdk_gl_glMultiTexCoord3svEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3svEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord4dEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4dEXT) (GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4dEXT (void);
+#define      gdk_gl_glMultiTexCoord4dEXT(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4dEXT) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4dvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4dvEXT) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4dvEXT (void);
+#define      gdk_gl_glMultiTexCoord4dvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4dvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord4fEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4fEXT) (GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4fEXT (void);
+#define      gdk_gl_glMultiTexCoord4fEXT(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4fEXT) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4fvEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4fvEXT) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4fvEXT (void);
+#define      gdk_gl_glMultiTexCoord4fvEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4fvEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord4iEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4iEXT) (GLenum target, GLint s, GLint t, GLint r, GLint q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4iEXT (void);
+#define      gdk_gl_glMultiTexCoord4iEXT(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4iEXT) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4ivEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4ivEXT) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4ivEXT (void);
+#define      gdk_gl_glMultiTexCoord4ivEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4ivEXT) (proc)) (target, v) )
+
+/* glMultiTexCoord4sEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4sEXT) (GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4sEXT (void);
+#define      gdk_gl_glMultiTexCoord4sEXT(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4sEXT) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4svEXT */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4svEXT) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4svEXT (void);
+#define      gdk_gl_glMultiTexCoord4svEXT(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4svEXT) (proc)) (target, v) )
+
+/* glInterleavedTextureCoordSetsEXT */
+typedef void (APIENTRY * GdkGLProc_glInterleavedTextureCoordSetsEXT) (GLint factor);
+GdkGLProc    gdk_gl_get_glInterleavedTextureCoordSetsEXT (void);
+#define      gdk_gl_glInterleavedTextureCoordSetsEXT(proc, factor) \
+  ( ((GdkGLProc_glInterleavedTextureCoordSetsEXT) (proc)) (factor) )
+
+/* glSelectTextureEXT */
+typedef void (APIENTRY * GdkGLProc_glSelectTextureEXT) (GLenum target);
+GdkGLProc    gdk_gl_get_glSelectTextureEXT (void);
+#define      gdk_gl_glSelectTextureEXT(proc, target) \
+  ( ((GdkGLProc_glSelectTextureEXT) (proc)) (target) )
+
+/* glSelectTextureCoordSetEXT */
+typedef void (APIENTRY * GdkGLProc_glSelectTextureCoordSetEXT) (GLenum target);
+GdkGLProc    gdk_gl_get_glSelectTextureCoordSetEXT (void);
+#define      gdk_gl_glSelectTextureCoordSetEXT(proc, target) \
+  ( ((GdkGLProc_glSelectTextureCoordSetEXT) (proc)) (target) )
+
+/* glSelectTextureTransformEXT */
+typedef void (APIENTRY * GdkGLProc_glSelectTextureTransformEXT) (GLenum target);
+GdkGLProc    gdk_gl_get_glSelectTextureTransformEXT (void);
+#define      gdk_gl_glSelectTextureTransformEXT(proc, target) \
+  ( ((GdkGLProc_glSelectTextureTransformEXT) (proc)) (target) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_EXT_multitexture GdkGL_GL_EXT_multitexture;
+
+struct _GdkGL_GL_EXT_multitexture
+{
+  GdkGLProc_glMultiTexCoord1dEXT glMultiTexCoord1dEXT;
+  GdkGLProc_glMultiTexCoord1dvEXT glMultiTexCoord1dvEXT;
+  GdkGLProc_glMultiTexCoord1fEXT glMultiTexCoord1fEXT;
+  GdkGLProc_glMultiTexCoord1fvEXT glMultiTexCoord1fvEXT;
+  GdkGLProc_glMultiTexCoord1iEXT glMultiTexCoord1iEXT;
+  GdkGLProc_glMultiTexCoord1ivEXT glMultiTexCoord1ivEXT;
+  GdkGLProc_glMultiTexCoord1sEXT glMultiTexCoord1sEXT;
+  GdkGLProc_glMultiTexCoord1svEXT glMultiTexCoord1svEXT;
+  GdkGLProc_glMultiTexCoord2dEXT glMultiTexCoord2dEXT;
+  GdkGLProc_glMultiTexCoord2dvEXT glMultiTexCoord2dvEXT;
+  GdkGLProc_glMultiTexCoord2fEXT glMultiTexCoord2fEXT;
+  GdkGLProc_glMultiTexCoord2fvEXT glMultiTexCoord2fvEXT;
+  GdkGLProc_glMultiTexCoord2iEXT glMultiTexCoord2iEXT;
+  GdkGLProc_glMultiTexCoord2ivEXT glMultiTexCoord2ivEXT;
+  GdkGLProc_glMultiTexCoord2sEXT glMultiTexCoord2sEXT;
+  GdkGLProc_glMultiTexCoord2svEXT glMultiTexCoord2svEXT;
+  GdkGLProc_glMultiTexCoord3dEXT glMultiTexCoord3dEXT;
+  GdkGLProc_glMultiTexCoord3dvEXT glMultiTexCoord3dvEXT;
+  GdkGLProc_glMultiTexCoord3fEXT glMultiTexCoord3fEXT;
+  GdkGLProc_glMultiTexCoord3fvEXT glMultiTexCoord3fvEXT;
+  GdkGLProc_glMultiTexCoord3iEXT glMultiTexCoord3iEXT;
+  GdkGLProc_glMultiTexCoord3ivEXT glMultiTexCoord3ivEXT;
+  GdkGLProc_glMultiTexCoord3sEXT glMultiTexCoord3sEXT;
+  GdkGLProc_glMultiTexCoord3svEXT glMultiTexCoord3svEXT;
+  GdkGLProc_glMultiTexCoord4dEXT glMultiTexCoord4dEXT;
+  GdkGLProc_glMultiTexCoord4dvEXT glMultiTexCoord4dvEXT;
+  GdkGLProc_glMultiTexCoord4fEXT glMultiTexCoord4fEXT;
+  GdkGLProc_glMultiTexCoord4fvEXT glMultiTexCoord4fvEXT;
+  GdkGLProc_glMultiTexCoord4iEXT glMultiTexCoord4iEXT;
+  GdkGLProc_glMultiTexCoord4ivEXT glMultiTexCoord4ivEXT;
+  GdkGLProc_glMultiTexCoord4sEXT glMultiTexCoord4sEXT;
+  GdkGLProc_glMultiTexCoord4svEXT glMultiTexCoord4svEXT;
+  GdkGLProc_glInterleavedTextureCoordSetsEXT glInterleavedTextureCoordSetsEXT;
+  GdkGLProc_glSelectTextureEXT glSelectTextureEXT;
+  GdkGLProc_glSelectTextureCoordSetEXT glSelectTextureCoordSetEXT;
+  GdkGLProc_glSelectTextureTransformEXT glSelectTextureTransformEXT;
+};
+
+GdkGL_GL_EXT_multitexture *gdk_gl_get_GL_EXT_multitexture (void);
+
+/*
+ * GL_EXT_scene_marker
+ */
+
+/* glBeginSceneEXT */
+typedef void (APIENTRY * GdkGLProc_glBeginSceneEXT) (void);
+GdkGLProc    gdk_gl_get_glBeginSceneEXT (void);
+#define      gdk_gl_glBeginSceneEXT(proc) \
+  ( ((GdkGLProc_glBeginSceneEXT) (proc)) () )
+
+/* glEndSceneEXT */
+typedef void (APIENTRY * GdkGLProc_glEndSceneEXT) (void);
+GdkGLProc    gdk_gl_get_glEndSceneEXT (void);
+#define      gdk_gl_glEndSceneEXT(proc) \
+  ( ((GdkGLProc_glEndSceneEXT) (proc)) () )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_EXT_scene_marker GdkGL_GL_EXT_scene_marker;
+
+struct _GdkGL_GL_EXT_scene_marker
+{
+  GdkGLProc_glBeginSceneEXT glBeginSceneEXT;
+  GdkGLProc_glEndSceneEXT glEndSceneEXT;
+};
+
+GdkGL_GL_EXT_scene_marker *gdk_gl_get_GL_EXT_scene_marker (void);
+
+/*
+ * GL_IBM_static_data
+ */
+
+/* glFlushStaticDataIBM */
+typedef void (APIENTRY * GdkGLProc_glFlushStaticDataIBM) (GLenum target);
+GdkGLProc    gdk_gl_get_glFlushStaticDataIBM (void);
+#define      gdk_gl_glFlushStaticDataIBM(proc, target) \
+  ( ((GdkGLProc_glFlushStaticDataIBM) (proc)) (target) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_IBM_static_data GdkGL_GL_IBM_static_data;
+
+struct _GdkGL_GL_IBM_static_data
+{
+  GdkGLProc_glFlushStaticDataIBM glFlushStaticDataIBM;
+};
+
+GdkGL_GL_IBM_static_data *gdk_gl_get_GL_IBM_static_data (void);
+
+/*
+ * GL_KTX_buffer_region
+ */
+
+/* glBufferRegionEnabled */
+typedef GLuint (APIENTRY * GdkGLProc_glBufferRegionEnabled) (void);
+GdkGLProc    gdk_gl_get_glBufferRegionEnabled (void);
+#define      gdk_gl_glBufferRegionEnabled(proc) \
+  ( ((GdkGLProc_glBufferRegionEnabled) (proc)) () )
+
+/* glNewBufferRegion */
+typedef GLuint (APIENTRY * GdkGLProc_glNewBufferRegion) (GLenum region);
+GdkGLProc    gdk_gl_get_glNewBufferRegion (void);
+#define      gdk_gl_glNewBufferRegion(proc, region) \
+  ( ((GdkGLProc_glNewBufferRegion) (proc)) (region) )
+
+/* glDeleteBufferRegion */
+typedef void (APIENTRY * GdkGLProc_glDeleteBufferRegion) (GLenum region);
+GdkGLProc    gdk_gl_get_glDeleteBufferRegion (void);
+#define      gdk_gl_glDeleteBufferRegion(proc, region) \
+  ( ((GdkGLProc_glDeleteBufferRegion) (proc)) (region) )
+
+/* glReadBufferRegion */
+typedef void (APIENTRY * GdkGLProc_glReadBufferRegion) (GLuint region, GLint x, GLint y, GLsizei width, GLsizei height);
+GdkGLProc    gdk_gl_get_glReadBufferRegion (void);
+#define      gdk_gl_glReadBufferRegion(proc, region, x, y, width, height) \
+  ( ((GdkGLProc_glReadBufferRegion) (proc)) (region, x, y, width, height) )
+
+/* glDrawBufferRegion */
+typedef void (APIENTRY * GdkGLProc_glDrawBufferRegion) (GLuint region, GLint x, GLint y, GLsizei width, GLsizei height, GLint xDest, GLint yDest);
+GdkGLProc    gdk_gl_get_glDrawBufferRegion (void);
+#define      gdk_gl_glDrawBufferRegion(proc, region, x, y, width, height, xDest, yDest) \
+  ( ((GdkGLProc_glDrawBufferRegion) (proc)) (region, x, y, width, height, xDest, yDest) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_KTX_buffer_region GdkGL_GL_KTX_buffer_region;
+
+struct _GdkGL_GL_KTX_buffer_region
+{
+  GdkGLProc_glBufferRegionEnabled glBufferRegionEnabled;
+  GdkGLProc_glNewBufferRegion glNewBufferRegion;
+  GdkGLProc_glDeleteBufferRegion glDeleteBufferRegion;
+  GdkGLProc_glReadBufferRegion glReadBufferRegion;
+  GdkGLProc_glDrawBufferRegion glDrawBufferRegion;
+};
+
+GdkGL_GL_KTX_buffer_region *gdk_gl_get_GL_KTX_buffer_region (void);
+
+/*
+ * GL_NV_element_array
+ */
+
+/* glElementPointerNV */
+typedef void (APIENTRY * GdkGLProc_glElementPointerNV) (GLenum type, const GLvoid *pointer);
+GdkGLProc    gdk_gl_get_glElementPointerNV (void);
+#define      gdk_gl_glElementPointerNV(proc, type, pointer) \
+  ( ((GdkGLProc_glElementPointerNV) (proc)) (type, pointer) )
+
+/* glDrawElementArrayNV */
+typedef void (APIENTRY * GdkGLProc_glDrawElementArrayNV) (GLenum mode, GLint first, GLsizei count);
+GdkGLProc    gdk_gl_get_glDrawElementArrayNV (void);
+#define      gdk_gl_glDrawElementArrayNV(proc, mode, first, count) \
+  ( ((GdkGLProc_glDrawElementArrayNV) (proc)) (mode, first, count) )
+
+/* glDrawRangeElementArrayNV */
+typedef void (APIENTRY * GdkGLProc_glDrawRangeElementArrayNV) (GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count);
+GdkGLProc    gdk_gl_get_glDrawRangeElementArrayNV (void);
+#define      gdk_gl_glDrawRangeElementArrayNV(proc, mode, start, end, first, count) \
+  ( ((GdkGLProc_glDrawRangeElementArrayNV) (proc)) (mode, start, end, first, count) )
+
+/* glMultiDrawElementArrayNV */
+typedef void (APIENTRY * GdkGLProc_glMultiDrawElementArrayNV) (GLenum mode, const GLint *first, const GLsizei *count, GLsizei primcount);
+GdkGLProc    gdk_gl_get_glMultiDrawElementArrayNV (void);
+#define      gdk_gl_glMultiDrawElementArrayNV(proc, mode, first, count, primcount) \
+  ( ((GdkGLProc_glMultiDrawElementArrayNV) (proc)) (mode, first, count, primcount) )
+
+/* glMultiDrawRangeElementArrayNV */
+typedef void (APIENTRY * GdkGLProc_glMultiDrawRangeElementArrayNV) (GLenum mode, GLuint start, GLuint end, const GLint *first, const GLsizei *count, GLsizei primcount);
+GdkGLProc    gdk_gl_get_glMultiDrawRangeElementArrayNV (void);
+#define      gdk_gl_glMultiDrawRangeElementArrayNV(proc, mode, start, end, first, count, primcount) \
+  ( ((GdkGLProc_glMultiDrawRangeElementArrayNV) (proc)) (mode, start, end, first, count, primcount) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_NV_element_array GdkGL_GL_NV_element_array;
+
+struct _GdkGL_GL_NV_element_array
+{
+  GdkGLProc_glElementPointerNV glElementPointerNV;
+  GdkGLProc_glDrawElementArrayNV glDrawElementArrayNV;
+  GdkGLProc_glDrawRangeElementArrayNV glDrawRangeElementArrayNV;
+  GdkGLProc_glMultiDrawElementArrayNV glMultiDrawElementArrayNV;
+  GdkGLProc_glMultiDrawRangeElementArrayNV glMultiDrawRangeElementArrayNV;
+};
+
+GdkGL_GL_NV_element_array *gdk_gl_get_GL_NV_element_array (void);
+
+/*
+ * GL_NV_stencil_two_side
+ */
+
+/* glActiveStencilFaceNV */
+typedef void (APIENTRY * GdkGLProc_glActiveStencilFaceNV) (GLenum face);
+GdkGLProc    gdk_gl_get_glActiveStencilFaceNV (void);
+#define      gdk_gl_glActiveStencilFaceNV(proc, face) \
+  ( ((GdkGLProc_glActiveStencilFaceNV) (proc)) (face) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_NV_stencil_two_side GdkGL_GL_NV_stencil_two_side;
+
+struct _GdkGL_GL_NV_stencil_two_side
+{
+  GdkGLProc_glActiveStencilFaceNV glActiveStencilFaceNV;
+};
+
+GdkGL_GL_NV_stencil_two_side *gdk_gl_get_GL_NV_stencil_two_side (void);
+
+/*
+ * GL_SGIS_multitexture
+ */
+
+/* glMultiTexCoord1dSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1dSGIS) (GLenum target, GLdouble s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1dSGIS (void);
+#define      gdk_gl_glMultiTexCoord1dSGIS(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1dSGIS) (proc)) (target, s) )
+
+/* glMultiTexCoord1dvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1dvSGIS) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1dvSGIS (void);
+#define      gdk_gl_glMultiTexCoord1dvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1dvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord1fSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1fSGIS) (GLenum target, GLfloat s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1fSGIS (void);
+#define      gdk_gl_glMultiTexCoord1fSGIS(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1fSGIS) (proc)) (target, s) )
+
+/* glMultiTexCoord1fvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1fvSGIS) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1fvSGIS (void);
+#define      gdk_gl_glMultiTexCoord1fvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1fvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord1iSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1iSGIS) (GLenum target, GLint s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1iSGIS (void);
+#define      gdk_gl_glMultiTexCoord1iSGIS(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1iSGIS) (proc)) (target, s) )
+
+/* glMultiTexCoord1ivSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1ivSGIS) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1ivSGIS (void);
+#define      gdk_gl_glMultiTexCoord1ivSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1ivSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord1sSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1sSGIS) (GLenum target, GLshort s);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1sSGIS (void);
+#define      gdk_gl_glMultiTexCoord1sSGIS(proc, target, s) \
+  ( ((GdkGLProc_glMultiTexCoord1sSGIS) (proc)) (target, s) )
+
+/* glMultiTexCoord1svSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord1svSGIS) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord1svSGIS (void);
+#define      gdk_gl_glMultiTexCoord1svSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord1svSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord2dSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2dSGIS) (GLenum target, GLdouble s, GLdouble t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2dSGIS (void);
+#define      gdk_gl_glMultiTexCoord2dSGIS(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2dSGIS) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2dvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2dvSGIS) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2dvSGIS (void);
+#define      gdk_gl_glMultiTexCoord2dvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2dvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord2fSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2fSGIS) (GLenum target, GLfloat s, GLfloat t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2fSGIS (void);
+#define      gdk_gl_glMultiTexCoord2fSGIS(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2fSGIS) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2fvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2fvSGIS) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2fvSGIS (void);
+#define      gdk_gl_glMultiTexCoord2fvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2fvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord2iSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2iSGIS) (GLenum target, GLint s, GLint t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2iSGIS (void);
+#define      gdk_gl_glMultiTexCoord2iSGIS(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2iSGIS) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2ivSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2ivSGIS) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2ivSGIS (void);
+#define      gdk_gl_glMultiTexCoord2ivSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2ivSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord2sSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2sSGIS) (GLenum target, GLshort s, GLshort t);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2sSGIS (void);
+#define      gdk_gl_glMultiTexCoord2sSGIS(proc, target, s, t) \
+  ( ((GdkGLProc_glMultiTexCoord2sSGIS) (proc)) (target, s, t) )
+
+/* glMultiTexCoord2svSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord2svSGIS) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord2svSGIS (void);
+#define      gdk_gl_glMultiTexCoord2svSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord2svSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord3dSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3dSGIS) (GLenum target, GLdouble s, GLdouble t, GLdouble r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3dSGIS (void);
+#define      gdk_gl_glMultiTexCoord3dSGIS(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3dSGIS) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3dvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3dvSGIS) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3dvSGIS (void);
+#define      gdk_gl_glMultiTexCoord3dvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3dvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord3fSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3fSGIS) (GLenum target, GLfloat s, GLfloat t, GLfloat r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3fSGIS (void);
+#define      gdk_gl_glMultiTexCoord3fSGIS(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3fSGIS) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3fvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3fvSGIS) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3fvSGIS (void);
+#define      gdk_gl_glMultiTexCoord3fvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3fvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord3iSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3iSGIS) (GLenum target, GLint s, GLint t, GLint r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3iSGIS (void);
+#define      gdk_gl_glMultiTexCoord3iSGIS(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3iSGIS) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3ivSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3ivSGIS) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3ivSGIS (void);
+#define      gdk_gl_glMultiTexCoord3ivSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3ivSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord3sSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3sSGIS) (GLenum target, GLshort s, GLshort t, GLshort r);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3sSGIS (void);
+#define      gdk_gl_glMultiTexCoord3sSGIS(proc, target, s, t, r) \
+  ( ((GdkGLProc_glMultiTexCoord3sSGIS) (proc)) (target, s, t, r) )
+
+/* glMultiTexCoord3svSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord3svSGIS) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord3svSGIS (void);
+#define      gdk_gl_glMultiTexCoord3svSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord3svSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord4dSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4dSGIS) (GLenum target, GLdouble s, GLdouble t, GLdouble r, GLdouble q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4dSGIS (void);
+#define      gdk_gl_glMultiTexCoord4dSGIS(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4dSGIS) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4dvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4dvSGIS) (GLenum target, const GLdouble *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4dvSGIS (void);
+#define      gdk_gl_glMultiTexCoord4dvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4dvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord4fSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4fSGIS) (GLenum target, GLfloat s, GLfloat t, GLfloat r, GLfloat q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4fSGIS (void);
+#define      gdk_gl_glMultiTexCoord4fSGIS(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4fSGIS) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4fvSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4fvSGIS) (GLenum target, const GLfloat *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4fvSGIS (void);
+#define      gdk_gl_glMultiTexCoord4fvSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4fvSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord4iSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4iSGIS) (GLenum target, GLint s, GLint t, GLint r, GLint q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4iSGIS (void);
+#define      gdk_gl_glMultiTexCoord4iSGIS(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4iSGIS) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4ivSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4ivSGIS) (GLenum target, const GLint *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4ivSGIS (void);
+#define      gdk_gl_glMultiTexCoord4ivSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4ivSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoord4sSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4sSGIS) (GLenum target, GLshort s, GLshort t, GLshort r, GLshort q);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4sSGIS (void);
+#define      gdk_gl_glMultiTexCoord4sSGIS(proc, target, s, t, r, q) \
+  ( ((GdkGLProc_glMultiTexCoord4sSGIS) (proc)) (target, s, t, r, q) )
+
+/* glMultiTexCoord4svSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoord4svSGIS) (GLenum target, const GLshort *v);
+GdkGLProc    gdk_gl_get_glMultiTexCoord4svSGIS (void);
+#define      gdk_gl_glMultiTexCoord4svSGIS(proc, target, v) \
+  ( ((GdkGLProc_glMultiTexCoord4svSGIS) (proc)) (target, v) )
+
+/* glMultiTexCoordPointerSGIS */
+typedef void (APIENTRY * GdkGLProc_glMultiTexCoordPointerSGIS) (GLenum target, GLint size, GLenum type, GLsizei stride, const void *pointer);
+GdkGLProc    gdk_gl_get_glMultiTexCoordPointerSGIS (void);
+#define      gdk_gl_glMultiTexCoordPointerSGIS(proc, target, size, type, stride, pointer) \
+  ( ((GdkGLProc_glMultiTexCoordPointerSGIS) (proc)) (target, size, type, stride, pointer) )
+
+/* glSelectTextureSGIS */
+typedef void (APIENTRY * GdkGLProc_glSelectTextureSGIS) (GLenum target);
+GdkGLProc    gdk_gl_get_glSelectTextureSGIS (void);
+#define      gdk_gl_glSelectTextureSGIS(proc, target) \
+  ( ((GdkGLProc_glSelectTextureSGIS) (proc)) (target) )
+
+/* glSelectTextureCoordSetSGIS */
+typedef void (APIENTRY * GdkGLProc_glSelectTextureCoordSetSGIS) (GLenum target);
+GdkGLProc    gdk_gl_get_glSelectTextureCoordSetSGIS (void);
+#define      gdk_gl_glSelectTextureCoordSetSGIS(proc, target) \
+  ( ((GdkGLProc_glSelectTextureCoordSetSGIS) (proc)) (target) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_SGIS_multitexture GdkGL_GL_SGIS_multitexture;
+
+struct _GdkGL_GL_SGIS_multitexture
+{
+  GdkGLProc_glMultiTexCoord1dSGIS glMultiTexCoord1dSGIS;
+  GdkGLProc_glMultiTexCoord1dvSGIS glMultiTexCoord1dvSGIS;
+  GdkGLProc_glMultiTexCoord1fSGIS glMultiTexCoord1fSGIS;
+  GdkGLProc_glMultiTexCoord1fvSGIS glMultiTexCoord1fvSGIS;
+  GdkGLProc_glMultiTexCoord1iSGIS glMultiTexCoord1iSGIS;
+  GdkGLProc_glMultiTexCoord1ivSGIS glMultiTexCoord1ivSGIS;
+  GdkGLProc_glMultiTexCoord1sSGIS glMultiTexCoord1sSGIS;
+  GdkGLProc_glMultiTexCoord1svSGIS glMultiTexCoord1svSGIS;
+  GdkGLProc_glMultiTexCoord2dSGIS glMultiTexCoord2dSGIS;
+  GdkGLProc_glMultiTexCoord2dvSGIS glMultiTexCoord2dvSGIS;
+  GdkGLProc_glMultiTexCoord2fSGIS glMultiTexCoord2fSGIS;
+  GdkGLProc_glMultiTexCoord2fvSGIS glMultiTexCoord2fvSGIS;
+  GdkGLProc_glMultiTexCoord2iSGIS glMultiTexCoord2iSGIS;
+  GdkGLProc_glMultiTexCoord2ivSGIS glMultiTexCoord2ivSGIS;
+  GdkGLProc_glMultiTexCoord2sSGIS glMultiTexCoord2sSGIS;
+  GdkGLProc_glMultiTexCoord2svSGIS glMultiTexCoord2svSGIS;
+  GdkGLProc_glMultiTexCoord3dSGIS glMultiTexCoord3dSGIS;
+  GdkGLProc_glMultiTexCoord3dvSGIS glMultiTexCoord3dvSGIS;
+  GdkGLProc_glMultiTexCoord3fSGIS glMultiTexCoord3fSGIS;
+  GdkGLProc_glMultiTexCoord3fvSGIS glMultiTexCoord3fvSGIS;
+  GdkGLProc_glMultiTexCoord3iSGIS glMultiTexCoord3iSGIS;
+  GdkGLProc_glMultiTexCoord3ivSGIS glMultiTexCoord3ivSGIS;
+  GdkGLProc_glMultiTexCoord3sSGIS glMultiTexCoord3sSGIS;
+  GdkGLProc_glMultiTexCoord3svSGIS glMultiTexCoord3svSGIS;
+  GdkGLProc_glMultiTexCoord4dSGIS glMultiTexCoord4dSGIS;
+  GdkGLProc_glMultiTexCoord4dvSGIS glMultiTexCoord4dvSGIS;
+  GdkGLProc_glMultiTexCoord4fSGIS glMultiTexCoord4fSGIS;
+  GdkGLProc_glMultiTexCoord4fvSGIS glMultiTexCoord4fvSGIS;
+  GdkGLProc_glMultiTexCoord4iSGIS glMultiTexCoord4iSGIS;
+  GdkGLProc_glMultiTexCoord4ivSGIS glMultiTexCoord4ivSGIS;
+  GdkGLProc_glMultiTexCoord4sSGIS glMultiTexCoord4sSGIS;
+  GdkGLProc_glMultiTexCoord4svSGIS glMultiTexCoord4svSGIS;
+  GdkGLProc_glMultiTexCoordPointerSGIS glMultiTexCoordPointerSGIS;
+  GdkGLProc_glSelectTextureSGIS glSelectTextureSGIS;
+  GdkGLProc_glSelectTextureCoordSetSGIS glSelectTextureCoordSetSGIS;
+};
+
+GdkGL_GL_SGIS_multitexture *gdk_gl_get_GL_SGIS_multitexture (void);
+
+/*
+ * GL_SGIX_fog_texture
+ */
+
+/* glTextureFogSGIX */
+typedef void (APIENTRY * GdkGLProc_glTextureFogSGIX) (GLenum pname);
+GdkGLProc    gdk_gl_get_glTextureFogSGIX (void);
+#define      gdk_gl_glTextureFogSGIX(proc, pname) \
+  ( ((GdkGLProc_glTextureFogSGIX) (proc)) (pname) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_SGIX_fog_texture GdkGL_GL_SGIX_fog_texture;
+
+struct _GdkGL_GL_SGIX_fog_texture
+{
+  GdkGLProc_glTextureFogSGIX glTextureFogSGIX;
+};
+
+GdkGL_GL_SGIX_fog_texture *gdk_gl_get_GL_SGIX_fog_texture (void);
+
+/*
+ * GL_SUN_multi_draw_arrays
+ */
+
+/* glMultiDrawArraysSUN */
+typedef void (APIENTRY * GdkGLProc_glMultiDrawArraysSUN) (GLenum mode, GLint *first, GLsizei *count, GLsizei primcount);
+GdkGLProc    gdk_gl_get_glMultiDrawArraysSUN (void);
+#define      gdk_gl_glMultiDrawArraysSUN(proc, mode, first, count, primcount) \
+  ( ((GdkGLProc_glMultiDrawArraysSUN) (proc)) (mode, first, count, primcount) )
+
+/* glMultiDrawElementsSUN */
+typedef void (APIENTRY * GdkGLProc_glMultiDrawElementsSUN) (GLenum mode, const GLsizei *count, GLenum type, const GLvoid* *indices, GLsizei primcount);
+GdkGLProc    gdk_gl_get_glMultiDrawElementsSUN (void);
+#define      gdk_gl_glMultiDrawElementsSUN(proc, mode, count, type, indices, primcount) \
+  ( ((GdkGLProc_glMultiDrawElementsSUN) (proc)) (mode, count, type, indices, primcount) )
+
+/* proc struct */
+
+typedef struct _GdkGL_GL_SUN_multi_draw_arrays GdkGL_GL_SUN_multi_draw_arrays;
+
+struct _GdkGL_GL_SUN_multi_draw_arrays
+{
+  GdkGLProc_glMultiDrawArraysSUN glMultiDrawArraysSUN;
+  GdkGLProc_glMultiDrawElementsSUN glMultiDrawElementsSUN;
+};
+
+GdkGL_GL_SUN_multi_draw_arrays *gdk_gl_get_GL_SUN_multi_draw_arrays (void);
+
+/*
  * GL_WIN_swap_hint
  */
 

@@ -14,7 +14,7 @@ INCLUDES = \
 	-I$(top_builddir)/gdk		\
 	-I$(top_builddir)/gtk		\
 	$(GTKGLEXT_DEBUG_FLAGS)		\
-	$(GTKGLEXT_DEP_CFLAGS)		\
+	$(EXAMPLES_DEP_CFLAGS)		\
 	-DG_DISABLE_DEPRECATED		\
 	-DGDK_DISABLE_DEPRECATED	\
 	-DGDK_PIXBUF_DISABLE_DEPRECATED	\
@@ -29,6 +29,11 @@ LDADDS = \
 	$(top_builddir)/gtk/$(gtkglext_targetlib)	\
 	$(GTKGLEXT_DEP_LIBS)
 
+LDADDS_WITH_PANGOFT2 = \
+	$(top_builddir)/gdk/$(gdkglext_targetlib)	\
+	$(top_builddir)/gtk/$(gtkglext_targetlib)	\
+	$(GTKGLEXT_DEP_LIBS_WITH_PANGOFT2)
+
 common_programs = \
 	low-level	\
 	simple		\
@@ -38,6 +43,7 @@ common_programs = \
 	share-lists	\
 	color		\
 	font		\
+	button		\
 	shapes		\
 	logo		\
 	gears		\
@@ -45,7 +51,9 @@ common_programs = \
 	viewlw		\
 	rotating-square	\
 	coolwave	\
-	template
+	template	\
+	scribble-gl	\
+	font-pangoft2
 
 x11_programs = \
 	glxinfo
@@ -91,6 +99,10 @@ font_SOURCES = font.c
 font_DEPENDENCIES = $(DEPS)
 font_LDADD = $(LDADDS)
 
+button_SOURCES = button.c
+button_DEPENDENCIES = $(DEPS)
+button_LDADD = $(LDADDS)
+
 shapes_SOURCES = trackball.h trackball.c shapes.c
 shapes_DEPENDENCIES = $(DEPS)
 shapes_LDADD = $(LDADDS)
@@ -123,6 +135,14 @@ coolwave_LDADD = $(LDADDS)
 template_SOURCES = template.c
 template_DEPENDENCIES = $(DEPS)
 template_LDADD = $(LDADDS)
+
+scribble_gl_SOURCES = scribble-gl.c
+scribble_gl_DEPENDENCIES = $(DEPS)
+scribble_gl_LDADD = $(LDADDS)
+
+font_pangoft2_SOURCES = font-pangoft2.c
+font_pangoft2_DEPENDENCIES = $(DEPS)
+font_pangoft2_LDADD = $(LDADDS_WITH_PANGOFT2)
 
 glxinfo_SOURCES = glxinfo.c
 glxinfo_DEPENDENCIES = $(DEPS)

@@ -35,7 +35,7 @@ PKGCONFIG_CFLAGS =
 PKGCONFIG_CFLAGS_MAK = PKGCONFIG_CFLAGS.mak
 !if [echo PKGCONFIG_CFLAGS = \> $(PKGCONFIG_CFLAGS_MAK)]
 !else
-!if [pkg-config --msvc-syntax --cflags gtkglext-1.0 >> $(PKGCONFIG_CFLAGS_MAK)]
+!if [pkg-config --msvc-syntax --cflags gtkglext-1.0 pangoft2 >> $(PKGCONFIG_CFLAGS_MAK)]
 !else
 !include $(PKGCONFIG_CFLAGS_MAK)
 !endif
@@ -52,9 +52,21 @@ PKGCONFIG_LIBS_MAK = PKGCONFIG_LIBS.mak
 !endif
 !endif
 
+# Generate makefile using 'pkg-config --libs' command.
+PKGCONFIG_LIBS_WITH_PANGOFT2 = 
+PKGCONFIG_LIBS_WITH_PANGOFT2_MAK = PKGCONFIG_LIBS_WITH_PANGOFT2.mak
+!if [echo PKGCONFIG_LIBS_WITH_PANGOFT2 = \> $(PKGCONFIG_LIBS_WITH_PANGOFT2_MAK)]
+!else
+!if [pkg-config --msvc-syntax --libs gtkglext-1.0 pangoft2 >> $(PKGCONFIG_LIBS_WITH_PANGOFT2_MAK)]
+!else
+!include $(PKGCONFIG_LIBS_WITH_PANGOFT2_MAK)
+!endif
+!endif
+
 # required includes and libs
 INCLUDES = $(PKGCONFIG_CFLAGS)
 LIBS = $(PKGCONFIG_LIBS)
+LIBS_WITH_PANGOFT2 = $(PKGCONFIG_LIBS_WITH_PANGOFT2)
 DEFINES = 
 
 # debug flags (from win32.mak)
@@ -96,6 +108,7 @@ SOURCES = \
 	share-lists.c		\
 	color.c			\
 	font.c			\
+	button.c		\
 	trackball.c		\
 	shapes.c		\
 	logo-model.c		\
@@ -108,6 +121,8 @@ SOURCES = \
 	rotating-square.c	\
 	coolwave.c		\
 	template.c		\
+	scribble-gl.c		\
+	font-pangoft2.c		\
 	wglinfo.c
 
 EXTRA_SOURCES = \
@@ -126,6 +141,7 @@ PROGRAMS = \
 	share-lists$(EXEEXT)		\
 	color$(EXEEXT)			\
 	font$(EXEEXT)			\
+	button$(EXEEXT)			\
 	shapes$(EXEEXT)			\
 	logo$(EXEEXT)			\
 	gears$(EXEEXT)			\
@@ -134,6 +150,8 @@ PROGRAMS = \
 	rotating-square$(EXEEXT)	\
 	coolwave$(EXEEXT)		\
 	template$(EXEEXT)		\
+	scribble-gl$(EXEEXT)		\
+	font-pangoft2$(EXEEXT)		\
 	wglinfo$(EXEEXT)
 
 .SUFFIXES:
@@ -176,6 +194,9 @@ color$(EXEEXT): color.obj
 font$(EXEEXT): font.obj
 	$(link) $(linkdebug) -out:$@ $** $(LIBS)
 
+button$(EXEEXT): button.obj
+	$(link) $(linkdebug) -out:$@ $** $(LIBS)
+
 shapes$(EXEEXT): trackball.obj shapes.obj
 	$(link) $(linkdebug) -out:$@ $** $(LIBS)
 
@@ -199,6 +220,12 @@ coolwave$(EXEEXT): coolwave.obj
 
 template$(EXEEXT): template.obj
 	$(link) $(linkdebug) -out:$@ $** $(LIBS)
+
+scribble-gl$(EXEEXT): scribble-gl.obj
+	$(link) $(linkdebug) -out:$@ $** $(LIBS)
+
+font-pangoft2$(EXEEXT): font-pangoft2.obj
+	$(link) $(linkdebug) -out:$@ $** $(LIBS_WITH_PANGOFT2)
 
 wglinfo$(EXEEXT): wglinfo.obj
 	$(link) $(linkdebug) -out:$@ $** opengl32.lib $(guilibs)

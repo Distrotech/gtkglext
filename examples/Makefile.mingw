@@ -6,8 +6,9 @@
 
 SHELL = /bin/sh
 
-INCLUDES := $(shell pkg-config --cflags gtkglext-1.0)
+INCLUDES := $(shell pkg-config --cflags gtkglext-1.0 pangoft2)
 LIBS := $(shell pkg-config --libs gtkglext-1.0)
+LIBS_WITH_PANGOFT2 := $(shell pkg-config --libs gtkglext-1.0 pangoft2)
 DEFINES = 
 
 CC = gcc
@@ -39,6 +40,7 @@ SOURCES = \
 	share-lists.c		\
 	color.c			\
 	font.c			\
+	button.c		\
 	trackball.c		\
 	shapes.c		\
 	logo-model.c		\
@@ -51,6 +53,8 @@ SOURCES = \
 	rotating-square.c	\
 	coolwave.c		\
 	template.c		\
+	scribble-gl.c		\
+	font-pangoft2.c		\
 	wglinfo.c
 
 EXTRA_SOURCES = \
@@ -69,6 +73,7 @@ PROGRAMS = \
 	share-lists$(EXEEXT)		\
 	color$(EXEEXT)			\
 	font$(EXEEXT)			\
+	button$(EXEEXT)			\
 	shapes$(EXEEXT)			\
 	logo$(EXEEXT)			\
 	gears$(EXEEXT)			\
@@ -77,6 +82,8 @@ PROGRAMS = \
 	rotating-square$(EXEEXT)	\
 	coolwave$(EXEEXT)		\
 	template$(EXEEXT)		\
+	scribble-gl$(EXEEXT)		\
+	font-pangoft2$(EXEEXT)		\
 	wglinfo$(EXEEXT)
 
 .PHONY: all clean clean-deps distclean
@@ -135,6 +142,9 @@ color$(EXEEXT): color.o
 font$(EXEEXT): font.o
 	$(LINK) -o $@ $^ $(LIBS)
 
+button$(EXEEXT): button.o
+	$(LINK) -o $@ $^ $(LIBS)
+
 shapes$(EXEEXT): trackball.o shapes.o
 	$(LINK) -o $@ $^ $(LIBS)
 
@@ -158,6 +168,12 @@ coolwave$(EXEEXT): coolwave.o
 
 template$(EXEEXT): template.o
 	$(LINK) -o $@ $^ $(LIBS)
+
+scribble-gl$(EXEEXT): scribble-gl.o
+	$(LINK) -o $@ $^ $(LIBS)
+
+font-pangoft2$(EXEEXT): font-pangoft2.o
+	$(LINK) -o $@ $^ $(LIBS_WITH_PANGOFT2)
 
 wglinfo$(EXEEXT): wglinfo.o
 	$(LINK) -o $@ $^ -lopengl32 -lgdi32
