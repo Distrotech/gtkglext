@@ -72,7 +72,7 @@ configure_event (GtkWidget         *widget,
   if (pixmap != NULL)
     g_object_unref (G_OBJECT (pixmap));
 
-  pixmap = gdk_pixmap_new (widget->window,
+  pixmap = gdk_pixmap_new (NULL,
 			   widget->allocation.width,
 			   widget->allocation.height,
 			   gdk_gl_config_get_depth (glconfig));
@@ -126,7 +126,7 @@ configure_event (GtkWidget         *widget,
 
   /* GDK rendering. */
   gdk_draw_rectangle (GDK_DRAWABLE (gldrawable),
-		      widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
+		      widget->style->black_gc,
 		      TRUE,
 		      widget->allocation.width/10,
 		      widget->allocation.height/10,
