@@ -1,3 +1,9 @@
+2003-09-15  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
+
+	* ==== Released 1.0.4 ====
+
+	* configure.in: Version 1.0.4, Binary age 4, interface age 2.
+
 2003-09-14  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
 	* examples/low-level.c (realize, configure_event, expose_event):
