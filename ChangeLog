@@ -1,5 +1,11 @@
 2003-07-29  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
 
+	* ==== Released 1.0.2 ====
+
+	* configure.in: Version 1.0.2, Binary age 2, interface age 0.
+
+2003-07-29  Naofumi Yasufuku  <naofumi@users.sourceforge.net>
+
 	* examples/button.c (timeout): Modified animation.
 	(unrealize): Remove timeout handler.
 
