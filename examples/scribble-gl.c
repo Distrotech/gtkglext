@@ -216,7 +216,7 @@ motion_notify_event (GtkWidget      *widget,
       coord->y = widget->allocation.height - event->y;
 
       brushStrokeList = g_list_append(brushStrokeList, coord);
-      gtk_widget_queue_draw(widget);
+      gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
       return TRUE;
     }
 
@@ -242,7 +242,7 @@ button_press_event (GtkWidget      *widget,
       coord->y = widget->allocation.height - event->y;
 
       brushStrokeList = g_list_append(brushStrokeList, coord);
-      gtk_widget_queue_draw(widget);
+      gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
       return TRUE;
     }
 
@@ -287,10 +287,6 @@ create_window (GdkGLConfig *glconfig)
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), DEFAULT_TITLE);
 
-#ifndef G_OS_WIN32
-  /* Perform the resizes immediately */
-  gtk_container_set_resize_mode (GTK_CONTAINER (window), GTK_RESIZE_IMMEDIATE);
-#endif
   /* Get automatically redrawn if any of their children changed allocation. */
   gtk_container_set_reallocate_redraws (GTK_CONTAINER (window), TRUE);
 

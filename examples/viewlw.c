@@ -319,7 +319,7 @@ motion_notify(GtkWidget      *widget,
   info->beginy = y;
 
   if (redraw && !info->animate)
-    gtk_widget_queue_draw(widget);
+    gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
 
   return TRUE;
 }
@@ -327,7 +327,11 @@ motion_notify(GtkWidget      *widget,
 static gboolean
 timeout(GtkWidget *widget)
 {
-  gtk_widget_queue_draw (widget);
+  /* Invalidate the whole window. */
+  gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
+
+  /* Update synchronously. */
+  gdk_window_process_updates (widget->window, FALSE);
 
   return TRUE;
 }
@@ -375,7 +379,7 @@ toggle_animation(GtkWidget *widget)
       info->dquat[1] = 0.0;
       info->dquat[2] = 0.0;
       info->dquat[3] = 1.0;
-      gtk_widget_queue_draw(widget);
+      gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
     }
 }
 
@@ -431,7 +435,7 @@ key_press_event(GtkWidget   *widget,
       if (info->zoom < 5.0) info->zoom = 5.0;
       if (info->zoom > 120.0) info->zoom = 120.0;
       /* zoom has changed, redraw mesh */
-      gtk_widget_queue_draw(widget);
+      gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
       break;
 
     case GDK_minus:
@@ -440,7 +444,7 @@ key_press_event(GtkWidget   *widget,
       if (info->zoom < 5.0) info->zoom = 5.0;
       if (info->zoom > 120.0) info->zoom = 120.0;
       /* zoom has changed, redraw mesh */
-      gtk_widget_queue_draw(widget);
+      gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
       break;
 
     case GDK_Escape:
@@ -605,9 +609,6 @@ show_lwobject(const char *lwobject_name)
   window = gtk_window_new( GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title(GTK_WINDOW(window), lwobject_name);
   gtk_container_set_border_width(GTK_CONTAINER(window), 10);
-#ifndef G_OS_WIN32
-  gtk_container_set_resize_mode(GTK_CONTAINER (window), GTK_RESIZE_IMMEDIATE);
-#endif
   gtk_container_set_reallocate_redraws(GTK_CONTAINER (window), TRUE);
   create_popup_menu(window); /* add popup menu to window */
   /* key_press_event handler for top-level window */

@@ -158,7 +158,11 @@ timeout (GtkWidget *widget)
 
   pos_y = 2.0 * (sin (t) + 0.4 * sin (3.0*t)) - 1.0;
 
-  gtk_widget_queue_draw (widget);
+  /* Invalidate the whole window. */
+  gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
+
+  /* Update synchronously (fast). */
+  gdk_window_process_updates (widget->window, FALSE);
 
   return TRUE;
 }
@@ -242,7 +246,7 @@ toggle_animation (GtkWidget *widget)
   else
     {
       timeout_remove (widget);
-      gtk_widget_queue_draw (widget);
+      gdk_window_invalidate_rect (widget->window, &widget->allocation, FALSE);
     }
 }
 
@@ -368,10 +372,6 @@ main (int   argc,
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), "button");
 
-#ifndef G_OS_WIN32
-  /* Perform the resizes immediately */
-  gtk_container_set_resize_mode (GTK_CONTAINER (window), GTK_RESIZE_IMMEDIATE);
-#endif
   /* Get automatically redrawn if any of their children changed allocation. */
   gtk_container_set_reallocate_redraws (GTK_CONTAINER (window), TRUE);
   /* Set border width. */
