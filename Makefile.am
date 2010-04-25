@@ -3,7 +3,7 @@
 
 SUBDIRS = gdk gtk docs examples
 
-ACLOCAL_AMFLAGS = -I m4macros
+ACLOCAL_AMFLAGS = -I m4macros ${ACLOCAL_FLAGS}
 DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc
 
 EXTRA_DIST = \

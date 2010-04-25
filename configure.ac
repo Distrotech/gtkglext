@@ -40,11 +40,11 @@ m4_define([gtkglext_debug_default],
           [m4_if(m4_eval(gtkglext_minor_version % 2), [1], [yes], [minimum])])dnl
 
 # Process this file with autoconf to produce a configure script.
-AC_INIT([gtkglext], [gtkglext_version],
-        [gtkglext-list@gnome.org])
-
+AC_INIT([gtkglext],[gtkglext_version],[https://bugzilla.gnome.org/enter_bug.cgi?product=gtkglext],[gtkglext])
 AC_PREREQ([2.63])
 
+# Specify a configuration file
+AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_SRCDIR([gdk/gdkgl.h])
 AC_CONFIG_MACRO_DIR([m4macros])
 
@@ -54,8 +54,10 @@ cflags_set=${CFLAGS+set}
 # Initialize automake stuff
 AM_INIT_AUTOMAKE([1.11 no-define dist-bzip2 dist-zip dist-xz])
 
-# Specify a configuration file
-AM_CONFIG_HEADER([config.h])
+# Support silent build rules, requires at least automake-1.11. Enable
+# by either passing --enable-silent-rules to configure or passing V=0
+# to make
+AM_SILENT_RULES([no])
 
 AC_CANONICAL_HOST
 
@@ -84,6 +86,16 @@ AC_SUBST([GTKGLEXT_API_VERSION])
 AC_SUBST([API_MJ])
 AC_SUBST([API_MI])
 
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_CC_C_O
+AC_PROG_OBJC
+AC_PROG_LN_S
+
+AC_CHECK_PROG([ms_librarian], [lib.exe], [yes], [no])
+
+AC_PATH_PROGS([PERL], [perl5 perl])
+
 # libtool versioning
 GTKGLEXT_RELEASE=gtkglext_lt_release
 GTKGLEXT_CURRENT=gtkglext_lt_current
@@ -96,15 +108,9 @@ AC_SUBST([GTKGLEXT_REVISION])
 AC_SUBST([GTKGLEXT_AGE])
 AC_SUBST([GTKGLEXT_CURRENT_MINUS_AGE])
 
-# Checks for programs.
-
 dnl Initialize libtool
-AC_PROG_CC
-AM_PROG_CC_C_O
-AC_PROG_OBJC
-AM_DISABLE_STATIC
 LT_PREREQ([2.2.6])
-LT_INIT([win32-dll])
+LT_INIT([win32-dll disable-static])
 LT_LANG([C++])
 
 AC_CHECK_PROG([ms_librarian], [lib.exe], [yes], [no])
