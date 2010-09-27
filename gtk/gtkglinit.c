@@ -42,8 +42,8 @@ static const guint gtk_gl_ndebug_keys = G_N_ELEMENTS (gtk_gl_debug_keys);
 
 /**
  * gtk_gl_parse_args:
- * @argc: the number of command line arguments.
- * @argv: the array of command line arguments.
+ * @argc: (inout): the number of command line arguments.
+ * @argv: (array length=argc) (inout) (allow-none): the array of command line arguments.
  *
  * Parses command line arguments, and initializes global
  * attributes of GtkGLExt.
@@ -168,10 +168,10 @@ gtk_gl_parse_args (int    *argc,
 
 /**
  * gtk_gl_init_check:
- * @argc: Address of the <parameter>argc</parameter> parameter of your
+ * @argc: (inout): Address of the <parameter>argc</parameter> parameter of your
  *        <function>main()</function> function. Changed if any arguments
  *        were handled.
- * @argv: Address of the <parameter>argv</parameter> parameter of
+ * @argv: (array length=argc) (inout) (allow-none): Address of the <parameter>argv</parameter> parameter of
  *        <function>main()</function>. Any parameters understood by
  *        gtk_gl_init() are stripped before return.
  *
@@ -201,10 +201,10 @@ gtk_gl_init_check (int    *argc,
 
 /**
  * gtk_gl_init:
- * @argc: Address of the <parameter>argc</parameter> parameter of your
+ * @argc: (inout): Address of the <parameter>argc</parameter> parameter of your
  *        <function>main()</function> function. Changed if any arguments
  *        were handled.
- * @argv: Address of the <parameter>argv</parameter> parameter of
+ * @argv: (array length=argc) (inout) (allow-none): Address of the <parameter>argv</parameter> parameter of
  *        <function>main()</function>. Any parameters understood by
  *        gtk_gl_init() are stripped before return.
  *

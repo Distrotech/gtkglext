@@ -170,7 +170,7 @@ gdk_gl_drawable_gl_end (GdkGLDrawable *gldrawable)
  *
  * Gets #GdkGLConfig with which the @gldrawable is configured.
  *
- * Return value: the #GdkGLConfig.
+ * Return value: (transfer none): the #GdkGLConfig.
  **/
 GdkGLConfig *
 gdk_gl_drawable_get_gl_config (GdkGLDrawable *gldrawable)
@@ -183,8 +183,8 @@ gdk_gl_drawable_get_gl_config (GdkGLDrawable *gldrawable)
 /**
  * gdk_gl_drawable_get_size:
  * @gldrawable: a #GdkGLDrawable.
- * @width: location to store drawable's width, or NULL.
- * @height: location to store drawable's height, or NULL.
+ * @width: (out) (allow-none): location to store drawable's width, or NULL.
+ * @height: (out) (allow-none): location to store drawable's height, or NULL.
  *
  * Fills *width and *height with the size of GL drawable.
  * width or height can be NULL if you only want the other one.
@@ -205,7 +205,7 @@ gdk_gl_drawable_get_size (GdkGLDrawable *gldrawable,
  *
  * Returns the current #GdkGLDrawable.
  *
- * Return value: the current #GdkGLDrawable or NULL if there is no current drawable.
+ * Return value: (transfer none): the current #GdkGLDrawable or NULL if there is no current drawable.
  **/
 GdkGLDrawable *
 gdk_gl_drawable_get_current (void)

@@ -741,7 +741,7 @@ _gdk_gl_window_get_size (GdkGLDrawable *gldrawable,
  * Notice that #GdkGLWindow is not #GdkWindow, but another
  * #GdkDrawable which have an associated #GdkWindow.
  *
- * Return value: the #GdkWindow associated with @glwindow.
+ * Return value: (transfer none): the #GdkWindow associated with @glwindow.
  **/
 GdkWindow *
 gdk_gl_window_get_window (GdkGLWindow *glwindow)
@@ -762,14 +762,14 @@ static GQuark quark_gl_window = 0;
  * gdk_window_set_gl_capability:
  * @window: the #GdkWindow to be used as the rendering area.
  * @glconfig: a #GdkGLConfig.
- * @attrib_list: this must be set to NULL or empty (first attribute of None).
+ * @attrib_list: (array) (allow-none): this must be set to NULL or empty (first attribute of None).
  *
  * Set the OpenGL-capability to the @window.
  * This function creates a new #GdkGLWindow held by the @window.
  * attrib_list is currently unused. This must be set to NULL or empty
  * (first attribute of None).
  *
- * Return value: the #GdkGLWindow used by the @window if it is successful,
+ * Return value: (transfer none): the #GdkGLWindow used by the @window if it is successful,
  *               NULL otherwise.
  **/
 GdkGLWindow *
@@ -876,7 +876,7 @@ gdk_window_is_gl_capable (GdkWindow *window)
  *
  * Returns the #GdkGLWindow held by the @window.
  *
- * Return value: the #GdkGLWindow.
+ * Return value: (transfer none): the #GdkGLWindow.
  **/
 GdkGLWindow *
 gdk_window_get_gl_window (GdkWindow *window)

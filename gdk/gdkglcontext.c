@@ -47,7 +47,7 @@ gdk_gl_context_class_init (GdkGLContextClass *klass)
 /**
  * gdk_gl_context_new:
  * @gldrawable: a #GdkGLDrawable.
- * @share_list: the #GdkGLContext with which to share display lists and texture
+ * @share_list: (allow-none): the #GdkGLContext with which to share display lists and texture
  *              objects. NULL indicates that no sharing is to take place.
  * @direct: whether rendering is to be done with a direct connection to
  *          the graphics system.

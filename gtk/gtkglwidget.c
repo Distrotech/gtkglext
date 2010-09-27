@@ -233,7 +233,7 @@ gl_widget_private_destroy (GLWidgetPrivate *private)
  * gtk_widget_set_gl_capability:
  * @widget: the #GtkWidget to be used as the rendering area.
  * @glconfig: a #GdkGLConfig.
- * @share_list: the #GdkGLContext with which to share display lists and texture
+ * @share_list: (allow-none): the #GdkGLContext with which to share display lists and texture
  *              objects. NULL indicates that no sharing is to take place.
  * @direct: whether rendering is to be done with a direct connection to
  *          the graphics system.
@@ -396,7 +396,7 @@ gtk_widget_is_gl_capable (GtkWidget *widget)
  *
  * Returns the #GdkGLConfig referred by the @widget.
  *
- * Return value: the #GdkGLConfig.
+ * Return value: (transfer none): the #GdkGLConfig.
  **/
 GdkGLConfig *
 gtk_widget_get_gl_config (GtkWidget *widget)
@@ -415,7 +415,7 @@ gtk_widget_get_gl_config (GtkWidget *widget)
 /**
  * gtk_widget_create_gl_context:
  * @widget: a #GtkWidget.
- * @share_list: the #GdkGLContext with which to share display lists and texture
+ * @share_list: (allow-none): the #GdkGLContext with which to share display lists and texture
  *              objects. NULL indicates that no sharing is to take place.
  * @direct: whether rendering is to be done with a direct connection to
  *          the graphics system.
@@ -426,7 +426,7 @@ gtk_widget_get_gl_config (GtkWidget *widget)
  * for this widget. The GL context must be freed when you're
  * finished with it. See also gtk_widget_get_gl_context().
  *
- * Return value: the new #GdkGLContext.
+ * Return value: (transfer full): the new #GdkGLContext.
  **/
 GdkGLContext *
 gtk_widget_create_gl_context (GtkWidget    *widget,
@@ -474,7 +474,7 @@ gtk_widget_create_gl_context (GtkWidget    *widget,
  * #GdkGLContext is needed for the function gdk_gl_drawable_begin,
  * or for sharing display lists (see gtk_widget_set_gl_capability()).
  *
- * Return value: the #GdkGLContext.
+ * Return value: (transfer none): the #GdkGLContext.
  **/
 GdkGLContext *
 gtk_widget_get_gl_context (GtkWidget *widget)
@@ -503,7 +503,7 @@ gtk_widget_get_gl_context (GtkWidget *widget)
  *
  * Returns the #GdkGLWindow owned by the @widget.
  *
- * Return value: the #GdkGLWindow.
+ * Return value: (transfer none): the #GdkGLWindow.
  **/
 GdkGLWindow *
 gtk_widget_get_gl_window (GtkWidget *widget)

@@ -439,7 +439,7 @@ gdk_gl_config_new_common (GdkScreen *screen,
 
 /**
  * gdk_gl_config_new:
- * @attrib_list: a list of attribute/value pairs. The last attribute must
+ * @attrib_list: (array): a list of attribute/value pairs. The last attribute must
  *               be GDK_GL_ATTRIB_LIST_NONE.
  *
  * Returns an OpenGL frame buffer configuration that match the specified
@@ -472,7 +472,7 @@ gdk_gl_config_new (const int *attrib_list)
 /**
  * gdk_gl_config_new_for_screen:
  * @screen: target screen.
- * @attrib_list: a list of attribute/value pairs. The last attribute must
+ * @attrib_list: (array): a list of attribute/value pairs. The last attribute must
  *               be GDK_GL_ATTRIB_LIST_NONE.
  *
  * Returns an OpenGL frame buffer configuration that match the specified
@@ -652,7 +652,7 @@ gdk_x11_gl_config_new_from_visualid_for_screen (GdkScreen *screen,
  *
  * Gets #GdkScreen.
  *
- * Return value: the #GdkScreen.
+ * Return value: (transfer none): the #GdkScreen.
  **/
 GdkScreen *
 gdk_gl_config_get_screen (GdkGLConfig *glconfig)
@@ -666,7 +666,7 @@ gdk_gl_config_get_screen (GdkGLConfig *glconfig)
  * gdk_gl_config_get_attrib:
  * @glconfig: a #GdkGLConfig.
  * @attribute: the attribute to be returned.
- * @value: returns the requested value.
+ * @value: (out): returns the requested value.
  *
  * Gets information about a OpenGL frame buffer configuration.
  *
@@ -696,7 +696,7 @@ gdk_gl_config_get_attrib (GdkGLConfig *glconfig,
  * Gets the #GdkColormap that is appropriate for the OpenGL frame buffer
  * configuration.
  *
- * Return value: the appropriate #GdkColormap.
+ * Return value: (transfer none): the appropriate #GdkColormap.
  **/
 GdkColormap *
 gdk_gl_config_get_colormap (GdkGLConfig *glconfig)
@@ -713,7 +713,7 @@ gdk_gl_config_get_colormap (GdkGLConfig *glconfig)
  * Gets the #GdkVisual that is appropriate for the OpenGL frame buffer
  * configuration.
  *
- * Return value: the appropriate #GdkVisual.
+ * Return value: (transfer none): the appropriate #GdkVisual.
  **/
 GdkVisual *
 gdk_gl_config_get_visual (GdkGLConfig *glconfig)
@@ -745,7 +745,7 @@ gdk_gl_config_get_depth (GdkGLConfig *glconfig)
  *
  * Gets X Display.
  *
- * Return value: pointer to the Display.
+ * Return value: (transfer none): pointer to the Display.
  **/
 Display *
 gdk_x11_gl_config_get_xdisplay (GdkGLConfig *glconfig)
@@ -777,7 +777,7 @@ gdk_x11_gl_config_get_screen_number (GdkGLConfig *glconfig)
  *
  * Gets XVisualInfo data.
  *
- * Return value: pointer to the XVisualInfo data.
+ * Return value: (transfer none): pointer to the XVisualInfo data.
  **/
 XVisualInfo *
 gdk_x11_gl_config_get_xvinfo (GdkGLConfig *glconfig)

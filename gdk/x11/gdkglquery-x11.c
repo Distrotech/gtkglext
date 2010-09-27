@@ -70,8 +70,8 @@ gdk_gl_query_extension_for_display (GdkDisplay *display)
 
 /**
  * gdk_gl_query_version:
- * @major: returns the major version number of the OpenGL extension.
- * @minor: returns the minor version number of the OpenGL extension.
+ * @major: (out): returns the major version number of the OpenGL extension.
+ * @minor: (out): returns the minor version number of the OpenGL extension.
  *
  * Returns the version numbers of the OpenGL extension to the window system.
  *
@@ -92,8 +92,8 @@ gdk_gl_query_version (int *major,
 /**
  * gdk_gl_query_version_for_display:
  * @display: the #GdkDisplay where the query is sent to.
- * @major: returns the major version number of the OpenGL extension.
- * @minor: returns the minor version number of the OpenGL extension.
+ * @major: (out): returns the major version number of the OpenGL extension.
+ * @minor: (out): returns the minor version number of the OpenGL extension.
  *
  * Returns the version numbers of the OpenGL extension to the window system.
  *
@@ -194,7 +194,7 @@ gdk_x11_gl_query_glx_extension (GdkGLConfig *glconfig,
  *
  * Returns the address of the OpenGL, GLU, or GLX function.
  *
- * Return value: the address of the function named by @proc_name.
+ * Return value: (type gpointer) (transfer none): the address of the function named by @proc_name.
  **/
 
 #ifdef __APPLE__

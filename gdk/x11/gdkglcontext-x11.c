@@ -247,7 +247,7 @@ _gdk_x11_gl_context_new (GdkGLDrawable *gldrawable,
 /**
  * gdk_x11_gl_context_foreign_new:
  * @glconfig: #GdkGLConfig that represents the visual the GLXContext uses.
- * @share_list: the #GdkGLContext which shares display lists with the
+ * @share_list: (allow-none): the #GdkGLContext which shares display lists with the
  *              GLXContext, or NULL.
  * @glxcontext: exsisting GLXContext.
  *
@@ -385,7 +385,7 @@ _gdk_gl_context_set_gl_drawable_read (GdkGLContext  *glcontext,
  *
  * Gets #GdkGLDrawable to which the @glcontext is bound.
  *
- * Return value: the #GdkGLDrawable or NULL if no #GdkGLDrawable is bound.
+ * Return value: (transfer none): the #GdkGLDrawable or NULL if no #GdkGLDrawable is bound.
  **/
 GdkGLDrawable *
 gdk_gl_context_get_gl_drawable (GdkGLContext *glcontext)
@@ -401,7 +401,7 @@ gdk_gl_context_get_gl_drawable (GdkGLContext *glcontext)
  *
  * Gets #GdkGLConfig with which the @glcontext is configured.
  *
- * Return value: the #GdkGLConfig.
+ * Return value: (transfer none): the #GdkGLConfig.
  **/
 GdkGLConfig *
 gdk_gl_context_get_gl_config (GdkGLContext *glcontext)
@@ -418,7 +418,7 @@ gdk_gl_context_get_gl_config (GdkGLContext *glcontext)
  * Gets #GdkGLContext with which the @glcontext shares the display lists and
  * texture objects.
  *
- * Return value: the #GdkGLContext.
+ * Return value: (transfer none): the #GdkGLContext.
  **/
 GdkGLContext *
 gdk_gl_context_get_share_list (GdkGLContext *glcontext)
@@ -465,7 +465,7 @@ gdk_gl_context_get_render_type (GdkGLContext *glcontext)
  *
  * Returns the current #GdkGLContext.
  *
- * Return value: the current #GdkGLContext or NULL if there is no current
+ * Return value: (transfer none): the current #GdkGLContext or NULL if there is no current
  *               context.
  **/
 GdkGLContext *

@@ -740,7 +740,7 @@ _gdk_gl_pixmap_get_size (GdkGLDrawable *gldrawable,
  * Notice that #GdkGLPixmap is not #GdkPixmap, but another
  * #GdkDrawable which have an associated #GdkPixmap.
  *
- * Return value: the #GdkPixmap associated with @glpixmap.
+ * Return value: (transfer none): the #GdkPixmap associated with @glpixmap.
  **/
 GdkPixmap *
 gdk_gl_pixmap_get_pixmap (GdkGLPixmap *glpixmap)
@@ -761,14 +761,14 @@ static GQuark quark_gl_pixmap = 0;
  * gdk_pixmap_set_gl_capability:
  * @pixmap: the #GdkPixmap to be used as the rendering area.
  * @glconfig: a #GdkGLConfig.
- * @attrib_list: this must be set to NULL or empty (first attribute of None).
+ * @attrib_list: (array) (allow-none): this must be set to NULL or empty (first attribute of None).
  *
  * Set the OpenGL-capability to the @pixmap.
  * This function creates a new #GdkGLPixmap held by the @pixmap.
  * attrib_list is currently unused. This must be set to NULL or empty
  * (first attribute of None).
  *
- * Return value: the #GdkGLPixmap used by the @pixmap if it is successful,
+ * Return value: (transfer none): the #GdkGLPixmap used by the @pixmap if it is successful,
  *               NULL otherwise.
  **/
 GdkGLPixmap *
@@ -861,7 +861,7 @@ gdk_pixmap_is_gl_capable (GdkPixmap *pixmap)
  *
  * Returns the #GdkGLPixmap held by the @pixmap.
  *
- * Return value: the #GdkGLPixmap.
+ * Return value: (transfer none): the #GdkGLPixmap.
  **/
 GdkGLPixmap *
 gdk_pixmap_get_gl_pixmap (GdkPixmap *pixmap)

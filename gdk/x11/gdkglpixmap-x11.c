@@ -130,7 +130,7 @@ gdk_gl_pixmap_impl_x11_gl_drawable_interface_init (GdkGLDrawableClass *iface)
  * gdk_gl_pixmap_new:
  * @glconfig: a #GdkGLConfig.
  * @pixmap: the #GdkPixmap to be used as the rendering area.
- * @attrib_list: this must be set to NULL or empty (first attribute of None).
+ * @attrib_list: (array) (allow-none): this must be set to NULL or empty (first attribute of None).
  *
  * Creates an off-screen rendering area.
  * attrib_list is currently unused. This must be set to NULL or empty
