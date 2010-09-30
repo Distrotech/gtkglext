@@ -4,7 +4,7 @@
 SUBDIRS = gdk gtk docs examples
 
 ACLOCAL_AMFLAGS = -I m4macros ${ACLOCAL_FLAGS}
-DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc
+DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --enable-introspection
 
 EXTRA_DIST = \
 	README.win32			\
@@ -16,7 +16,8 @@ EXTRA_DIST = \
 	gtkglext-uninstalled.pc.in	\
 	gtkglext.nsi.in			\
 	gtkglext.nsi			\
-	setup-gtkglext.sh
+	setup-gtkglext.sh		\
+	m4macros/introspection.m4
 
 ## Copy .pc files to target-specific names
 GDK_TARGET = @gdktarget@

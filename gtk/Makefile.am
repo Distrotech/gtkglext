@@ -1,6 +1,8 @@
 ## -*- Makefile -*-
 ## Makefile.am for gtkglext/gtk
 
+CLEANFILES =
+
 EXTRA_DIST = \
 	gtkglversion.h.in	\
 	gtkglext.def
@@ -98,3 +100,38 @@ libgtkglext_win32_@API_MJ@_@API_MI@_la_SOURCES = $(gtkglext_sources)
 libgtkglext_win32_@API_MJ@_@API_MI@_la_LDFLAGS = $(common_ldflags)
 libgtkglext_win32_@API_MJ@_@API_MI@_la_LIBADD = $(common_libadd)
 libgtkglext_win32_@API_MJ@_@API_MI@_la_DEPENDENCIES = $(gtkglext_def)
+
+#
+# Introspection
+#
+
+-include $(INTROSPECTION_MAKEFILE)
+INTROSPECTION_GIRS =
+INTROSPECTION_SCANNER_ARGS = --add-include-path=../gdk
+INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir) --includedir=../gdk
+
+if HAVE_INTROSPECTION
+introspection_sources = \
+	$(gtkglext_public_h_sources) \
+	$(gtkglext_c_sources)
+
+GtkGLExt-1.0.gir: $(gtkglext_targetlib)
+GtkGLExt_1_0_gir_INCLUDES = Gtk-3.0 GdkGLExt-1.0
+GtkGLExt_1_0_gir_SCANNERFLAGS = \
+	--warn-all \
+	--identifier-prefix=GtkGL \
+	--symbol-prefix=gtk_gl \
+	--symbol-prefix=gtk
+GtkGLExt_1_0_gir_CFLAGS = $(common_includes)
+GtkGLExt_1_0_gir_LIBS = $(gtkglext_targetlib)
+GtkGLExt_1_0_gir_FILES = $(introspection_sources)
+INTROSPECTION_GIRS += GtkGLExt-1.0.gir
+
+girdir = $(datadir)/gir-1.0
+gir_DATA = $(INTROSPECTION_GIRS)
+
+typelibdir = $(libdir)/girepository-1.0
+typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
+
+CLEANFILES += $(gir_DATA) $(typelib_DATA)
+endif # HAVE_INTROSPECTION

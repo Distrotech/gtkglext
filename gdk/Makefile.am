@@ -4,6 +4,8 @@
 SUBDIRS = $(gdktarget)
 DIST_SUBDIRS = x11 win32 quartz
 
+CLEANFILES =
+
 EXTRA_DIST = \
 	gdkglversion.h.in	\
 	gdkglext.def
@@ -197,6 +199,53 @@ glext/wglext-extra.h
 
 gdkglextglextincludedir = $(includedir)/gtkglext-@GTKGLEXT_API_VERSION@/gdk/glext
 gdkglextglextinclude_HEADERS = $(gdkglext_glext_public_h_sources)
+
+#
+# Introspection
+#
+
+-include $(INTROSPECTION_MAKEFILE)
+INTROSPECTION_GIRS =
+INTROSPECTION_SCANNER_ARGS =
+INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir)
+
+if HAVE_INTROSPECTION
+introspection_sources = \
+	$(filter-out gdkgldebug.h gdkglglext.h, $(gdkglext_headers)) \
+	$(gdkglext_c_sources) \
+	$(gdkglext_built_c_sources)
+
+if USE_X11
+introspection_sources += \
+	x11/gdkglconfig-x11.c	\
+	x11/gdkglcontext-x11.c	\
+	x11/gdkgldrawable-x11.c	\
+	x11/gdkgloverlay-x11.c	\
+	x11/gdkglpixmap-x11.c	\
+	x11/gdkglquery-x11.c	\
+	x11/gdkglwindow-x11.c
+endif # USE_X11
+
+GdkGLExt-1.0.gir: $(gdkglext_targetlib)
+GdkGLExt_1_0_gir_INCLUDES = Gdk-3.0
+GdkGLExt_1_0_gir_SCANNERFLAGS = \
+	--warn-all \
+	--identifier-prefix=GdkGL \
+	--symbol-prefix=gdk_gl \
+	--symbol-prefix=gdk
+GdkGLExt_1_0_gir_CFLAGS = $(common_includes)
+GdkGLExt_1_0_gir_LIBS = $(gdkglext_targetlib)
+GdkGLExt_1_0_gir_FILES = $(introspection_sources)
+INTROSPECTION_GIRS += GdkGLExt-1.0.gir
+
+girdir = $(datadir)/gir-1.0
+gir_DATA = $(INTROSPECTION_GIRS)
+
+typelibdir = $(libdir)/girepository-1.0
+typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
+
+CLEANFILES += $(gir_DATA) $(typelib_DATA)
+endif # HAVE_INTROSPECTION
 
 #
 # Extra rules
