@@ -16,8 +16,7 @@ EXTRA_DIST = \
 	gtkglext-uninstalled.pc.in	\
 	gtkglext.nsi.in			\
 	gtkglext.nsi			\
-	setup-gtkglext.sh		\
-	m4macros/introspection.m4
+	setup-gtkglext.sh
 
 ## Copy .pc files to target-specific names
 GDK_TARGET = @gdktarget@

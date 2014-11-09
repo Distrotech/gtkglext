@@ -123,7 +123,7 @@ AC_PATH_PROGS([PERL], [perl5 perl])
 # GObject introspection
 ##################################################
 
-GOBJECT_INTROSPECTION_CHECK([0.9.3])
+GOBJECT_INTROSPECTION_CHECK([1.40.0])
 
 ##################################################
 # Checks for gtk-doc and docbook-tools

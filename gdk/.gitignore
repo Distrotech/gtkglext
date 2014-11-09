@@ -4,3 +4,5 @@ gdkglext-config.h
 gdkglversion.h
 stamp-gdkglenumtypes-h
 stamp-gdkglext-config-h
+GdkGLExt-1.0.gir
+GdkGLExt-1.0.typelib
