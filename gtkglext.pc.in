@@ -6,7 +6,7 @@ includedir=@includedir@
 target=@gdktarget@
 api_version=@GTKGLEXT_API_VERSION@
 
-multihead=@GDKGLEXT_MULTIHEAD_SUPPORT@
+multihead=yes
 
 Name: GtkGLExt
 Description: OpenGL Extension to GTK+ (${target} target)

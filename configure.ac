@@ -409,7 +409,6 @@ _______EOF
 
 	cat >>$outfile <<_______EOF
 $gdkglext_windowing
-$gdkglext_multihead_support
 _______EOF
 
 	cat >>$outfile <<_______EOF

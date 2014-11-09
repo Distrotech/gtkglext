@@ -25,9 +25,7 @@
 #include "gdkglconfig-quartz.h"
 #include "gdkglquery.h"
 
-#ifdef GDKGLEXT_MULTIHEAD_SUPPORT
 #include <gdk/gdkdisplay.h>
-#endif /* GDKGLEXT_MULTIHEAD_SUPPORT */
 
 /**
  * gdk_gl_query_extension:
